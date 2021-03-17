@@ -1,8 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppWrapper } from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import HomePage from "./Components/HomePage/HomePage";
 
-ReactDOM.render(
-  <AppWrapper />,
-  document.getElementById('root')
-);
+ReactDOM.render(<HomePage />, document.getElementById("root"));
