@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { IconsEnumSvg } from "../../Common/Icon/IconsEnum";
 import SmallIcon from "../../Common/Icon/SmallIcon/SmallIcon";
 
 const PageList: FC = () => {
@@ -6,19 +7,19 @@ const PageList: FC = () => {
         <div>
             <ol>
                 <li>
-                    <SmallIcon />
+                    <SmallIcon image={IconsEnumSvg.house} alt="missing"/>
                     Home
                 </li>
                 <li>
-                    <SmallIcon />
+                    <SmallIcon image={IconsEnumSvg.house} alt="missing"/>
                     Strona jeden
                 </li>
                 <li>
-                    <SmallIcon />
+                    <SmallIcon image={IconsEnumSvg.house} alt="missing"/>
                     Strona dwa
                 </li>
                 <li>
-                    <SmallIcon />
+                    <SmallIcon image={IconsEnumSvg.house} alt="missing"/>
                     Strona trzy
                 </li>
             </ol>

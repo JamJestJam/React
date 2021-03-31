@@ -1,14 +1,21 @@
 import React, { FC } from "react";
+import styled from "styled-components";
+import { IconsEnumSvg } from "../Icon/IconsEnum";
 
 import SmallIcon from "../Icon/SmallIcon/SmallIcon";
-import FindImg from "./search.svg";
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Search: FC = () => {
   return (
-    <div>
+    <Content>
       <input type="text" placeholder="Search Legalcluster" />
-      <SmallIcon />
-    </div>
+      <SmallIcon image={IconsEnumSvg.search} alt="Szukaj"/>
+    </Content>
   );
 };
 
