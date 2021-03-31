@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { Colors } from "../../styledHelpers/Colors";
 import { Size } from "../../styledHelpers/Size";
 import { IconsEnumSvg } from "../Common/Icon/IconsEnum";
 import Button from "./Buttons/Button";

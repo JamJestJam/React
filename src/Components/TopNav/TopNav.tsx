@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 import IconMenu from "./IconMenu/IconMenu";
 import Logo from "./Logo/Logo";
-import PageList from "./PageList/PageList";
 import Search from "../Common/Search/Search";
 import { Size } from "../../styledHelpers/Size";
 import { Colors } from "../../styledHelpers/Colors";
+import { Link } from "react-router-dom";
 
 const Content = styled.div`
     display: flex;
@@ -36,7 +36,9 @@ const TopNav: FC = () => {
     return (
         <Content>
             <FlexLeft>
-                <Logo />
+                <Link to="/">
+                    <Logo />
+                </Link>
                 {/* <PageList /> */}
             </FlexLeft>
             <FlexCenter>

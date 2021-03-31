@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Colors } from "../../../styledHelpers/Colors";
 import { Size } from "../../../styledHelpers/Size";
@@ -10,7 +11,6 @@ const Content = styled.div`
     background-color: ${Colors.Bg1};
     border-radius: ${Size.Space};
     box-shadow: ${Colors.Shadow} ${Size.Shadow};
-    margin: ${Size.Space} 0;
     padding-top: ${Size.Space};
 `;
 
@@ -27,12 +27,22 @@ const Job = styled.div`
 const UserData: FC = () => {
     return (
         <Content>
-            <RoundImage Image="Face.jpg" alt=""/>
+            <Link to="/profil">
+                <RoundImage Image="Face.jpg" alt="" />
+            </Link>
             <Name>Homberta Swift</Name>
             <Job>Job title - Company</Job>
             <hr />
-            <Button value="Your network" Icon={IconsEnumSvg.ecosystem} SIcon={IconsEnumSvg.user_plus} />
-            <Button value="Your Publications" Icon={IconsEnumSvg.publications} SIcon={IconsEnumSvg.plus} />
+            <Button
+                value="Your network"
+                Icon={IconsEnumSvg.ecosystem}
+                SIcon={IconsEnumSvg.user_plus}
+            />
+            <Button
+                value="Your Publications"
+                Icon={IconsEnumSvg.publications}
+                SIcon={IconsEnumSvg.plus}
+            />
         </Content>
     );
 };
