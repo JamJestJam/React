@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import ImageS from "./css";
 import IImage from "./IImage";
 const Image: FC<IImage> = (props) => {
-    const Width = props.MaxWidth ? props.MaxWidth : 40;
-    const Height = props.MaxHeight ? props.MaxHeight : 40;
+    const Width = props.MaxWidth  || 40;
+    const Height = props.MaxHeight || 40;
 
     return (
         <ImageS

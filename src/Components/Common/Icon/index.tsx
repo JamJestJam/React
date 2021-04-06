@@ -1,13 +1,13 @@
 import { FC } from "react";
 
 import IIcon from "./IIcon";
-import SIcon from "./css";
+import IconS from "./css";
 
 const Icon: FC<IIcon> = (props) => {
     return (
-        <SIcon
+        <IconS
             Size={props.IconSize}
-            Border={props.Bordered ? true : false}
+            Border={props.Bordered || false}
             src={props.IconType}
             alt={props.Alt}
         />

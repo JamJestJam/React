@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const TriangleConentChild = styled.div`
     align-items: center;
@@ -19,4 +20,9 @@ export const TriangleConent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
+
+export const LinkS = styled(Link)`
+    color: inherit;
+    text-decoration: inherit;
 `;

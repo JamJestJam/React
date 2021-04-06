@@ -5,7 +5,6 @@ import { IconSize } from "../../Common/Icon/IconSize";
 
 export const ButtonS = styled.div`
     color: ${Colors.MainFont};
-    cursor: pointer;
     display: flex;
 `;
 

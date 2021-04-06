@@ -11,6 +11,7 @@ import Icon from "../Common/Icon";
 import BoxIcon from "../Common/Icon/Boxing";
 import { IconSize } from "../Common/Icon/IconSize";
 import { IconType } from "../Common/Icon/IconType";
+import Search from "../Common/Input/Search";
 import { STobBar } from "./css";
 
 const TopBar: FC = () => {
@@ -23,7 +24,9 @@ const TopBar: FC = () => {
                     Alt="Logo"
                 />
             </TriangleConentLeft>
-            <TriangleConentCenter>Środek</TriangleConentCenter>
+            <TriangleConentCenter>
+                <Search Label="Szukaj" Width={500}/>
+            </TriangleConentCenter>
             <TriangleConentRight>
                 <BoxIcon
                     IconSize={IconSize.Small}

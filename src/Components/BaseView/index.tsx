@@ -1,16 +1,16 @@
 import React, { FC } from "react";
 import LeftMenu from "../LeftMenu";
 import TopBar from "../TopBar";
-import { PageContent } from "./css";
+import { PageContentS, PageFillS } from "./css";
 
 const BaseView: FC = (Props) => {
     return (
         <React.Fragment>
             <TopBar />
-            <PageContent>
+            <PageContentS>
                 <LeftMenu />
-                {Props.children}
-            </PageContent>
+                <PageFillS>{Props.children}</PageFillS>
+            </PageContentS>
         </React.Fragment>
     );
 };

@@ -11,7 +11,7 @@ function App() {
             <React.Fragment>
                 <GlobalStyles />
                 <Switch>
-                    <Route path="/" component={HomePage} />
+                    <Route path="/" component={HomePage} exact/>
                     <Route path="/Profile" component={Profile} />
                 </Switch>
             </React.Fragment>
