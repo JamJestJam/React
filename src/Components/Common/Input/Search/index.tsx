@@ -13,6 +13,8 @@ const Search: FC<ISearch> = (props) => {
     });
 
     const InputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+        props.Focus && props.Focus(event);
+
         SetState({
             ...State,
             Focus: true,
@@ -20,6 +22,8 @@ const Search: FC<ISearch> = (props) => {
     };
 
     const InputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+        props.Blur && props.Blur(event);
+
         SetState({
             ...State,
             Focus: false,
@@ -27,6 +31,8 @@ const Search: FC<ISearch> = (props) => {
     };
 
     const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        props.Change && props.Change(event);
+
         SetState({
             ...State,
             Value: event.target.value,
@@ -34,7 +40,7 @@ const Search: FC<ISearch> = (props) => {
     };
 
     return (
-        <FieldS>
+        <FieldS Focus={State.Focus}>
             <Input
                 BorderColor={props.BorderColor}
                 Background={props.Background}

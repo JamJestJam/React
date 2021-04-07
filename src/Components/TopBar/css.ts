@@ -2,10 +2,15 @@ import styled from "styled-components";
 import { Colors } from "../../StyledHelpers/Colors";
 import { TriangleConent } from "../../StyledHelpers/Controls";
 
-export const STobBar = styled(TriangleConent)`
+export const TobBarS = styled(TriangleConent)`
     background-color: ${Colors.Bg1};
     height: 45px;
     padding: 0 20px;
 `;
 
-export default STobBar;
+export const EmElementS = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export default TobBarS;

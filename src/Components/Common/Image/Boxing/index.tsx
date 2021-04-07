@@ -9,6 +9,7 @@ const BoxImage: FC<IBoxImage> = (props) => {
 
     return (
         <BoxImageS
+            Margin={props.Margin || false}
             Background={props.Background}
             Shadow={props.BoxShadow}
             Rounded={props.Rounded}

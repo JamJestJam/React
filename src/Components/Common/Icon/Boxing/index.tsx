@@ -1,11 +1,11 @@
 import { FC } from "react";
 import Icon from "..";
-import { SBoxIcon, SBoxIconValue } from "./css";
+import { SBoxIcon as BoxIconS, SBoxIconValue } from "./css";
 import IBoxIcon from "./IBoxIcon";
 
 const BoxIcon: FC<IBoxIcon> = (props) => {
     return (
-        <SBoxIcon
+        <BoxIconS
             Size={props.IconSize}
             Rounded={props.Rounded}
             Background={props.Background}
@@ -20,7 +20,7 @@ const BoxIcon: FC<IBoxIcon> = (props) => {
                 Bordered={props.Bordered}
             />
             {props.Value && <SBoxIconValue>{props.Value}</SBoxIconValue>}
-        </SBoxIcon>
+        </BoxIconS>
     );
 };
 

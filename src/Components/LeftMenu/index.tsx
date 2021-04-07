@@ -21,10 +21,11 @@ const LeftMenu: FC = () => {
                     Background={Colors.Bg3}
                     Alt="Zdj. profilowe"
                     BoxShadow={true}
+                    Rounded={true}
                     MaxHeight={70}
                     MaxWidth={70}
-                    Rounded={true}
-                />
+                    Margin={true}
+                    />
                 <br />
                 <UserNameS>Humberta Swift</UserNameS>
                 <JobSubtitleS>Job title - Company</JobSubtitleS>

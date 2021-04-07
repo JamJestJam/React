@@ -1,5 +1,5 @@
 
 
-export default interface ILabelS{
+export default interface IElementFocus{
     Focus: boolean;
 }
