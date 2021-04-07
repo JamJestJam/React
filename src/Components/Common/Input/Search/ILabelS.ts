@@ -1,5 +1,7 @@
+import { FontSizeType } from './../../../../StyledHelpers/Fonts';
 
 
-export default interface IElementFocus{
+export default interface ILabelS{
     Focus: boolean;
+    FontSize: FontSizeType;
 }

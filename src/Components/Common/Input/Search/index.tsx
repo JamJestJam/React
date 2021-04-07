@@ -40,7 +40,7 @@ const Search: FC<ISearch> = (props) => {
     };
 
     return (
-        <FieldS Focus={State.Focus}>
+        <FieldS Focus={State.Focus} Border={props.Border}>
             <Input
                 BorderColor={props.BorderColor}
                 Background={props.Background}
@@ -54,10 +54,13 @@ const Search: FC<ISearch> = (props) => {
                 Focus={InputFocus}
                 Change={InputChange}
             />
-            <LabelS Focus={State.Focus || State.Value.length > 0}>
+            <LabelS Focus={State.Focus || State.Value.length > 0} FontSize={(props.FontSize || "18")}>
                 {props.Label}
             </LabelS>
-            <BoxIcon IconSize={IconSize.Small} IconType={IconType.search} Alt="Szukaj"/>
+            {
+                props.Button &&
+                <BoxIcon IconSize={IconSize.Small} IconType={IconType.search} Alt="Szukaj"/>
+            }
         </FieldS>
     );
 };

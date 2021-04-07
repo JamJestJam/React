@@ -1,9 +1,10 @@
+import { FontSizeType } from './../../../StyledHelpers/Fonts';
 import React from "react";
 
 export default interface IImput {
     BorderColor?: string;
     Background?: string;
-    FontSize?: number;
+    FontSize?: FontSizeType;
     Height?: number;
     Width?: number;
     Color?: string;

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import {
     TriangleConentLeft,
     TriangleConentRight,
@@ -6,7 +6,7 @@ import {
 import BoxIcon from "../Icon/Boxing";
 import { IconSize } from "../Icon/IconSize";
 import { IconType } from "../Icon/IconType";
-import { ContentS, ExpanderButtonS, ExpanderS } from "./css";
+import { ContentS, ExpanderButtonS, ExpanderS, RoundS } from "./css";
 import IDropDown from "./IDropDown";
 
 const DropDown: FC<IDropDown> = (props) => {
@@ -23,7 +23,7 @@ const DropDown: FC<IDropDown> = (props) => {
 
     return (
         <ExpanderS>
-            <ExpanderButtonS onClick={ChangeExpand}>
+            <ExpanderButtonS onClick={ChangeExpand} Expanded={State.Expanded}>
                 <TriangleConentLeft>
                     <BoxIcon
                         IconType={props.LeftIcon}
@@ -33,11 +33,14 @@ const DropDown: FC<IDropDown> = (props) => {
                     {props.Text}
                 </TriangleConentLeft>
                 <TriangleConentRight>
+                    <RoundS Expanded={State.Expanded}>
                     <BoxIcon
+                        // Expanded={State.Expanded}
                         IconType={IconType.arrow_down}
                         IconSize={IconSize.Small}
                         Alt="Icon"
                     />
+                    </RoundS>
                 </TriangleConentRight>
             </ExpanderButtonS>
             <ContentS Expanded={State.Expanded}>{props.children}</ContentS>

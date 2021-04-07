@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { Colors } from "../../../../StyledHelpers/Colors";
-import { fontSize } from "../../../../StyledHelpers/Fonts";
+import { FontSize } from "../../../../StyledHelpers/Fonts";
 import IBoxIconStyle from "./IBoxIconStyle";
 
 export const SBoxIcon = styled.div<IBoxIconStyle>`
@@ -22,7 +22,7 @@ export const SBoxIcon = styled.div<IBoxIconStyle>`
 export const SBoxIconValue = styled.div`
     background-color: ${Colors.Bg4};
     color: ${Colors.WhiteFont};
-    font-size: ${fontSize[10]};
+    font-size: ${FontSize[10]};
     border-radius: 100%;
     position: absolute;
     padding: 2px 5px;
