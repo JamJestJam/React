@@ -13,5 +13,5 @@ export const Colors = {
     BlackFont: "62687B",
 
     IconBorder: "#000",
-    Shadow: "#000",
+    Shadow: "rgba(0, 0, 0, 0.3)",
 };

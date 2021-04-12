@@ -5,13 +5,13 @@ import ILabelS from "./ILabelS";
 import IFieldS from "./IFieldS";
 
 export const FieldS = styled.div<IFieldS>`
-    border: 1px solid ${(props) => (props.Border ? "gray" : "transparent")};
+    border: 1px solid ${(props) => (props.Border ? Colors.Shadow : "transparent")};
     transition: 0.2s ease all;
     position: relative;
     display: flex;
 
     border-bottom: ${(props) =>
-        props.Focus ? "2px solid " + Colors.Bg4 : "2px solid gray"};
+        props.Focus ? "2px solid " + Colors.Bg4 : "2px solid " + Colors.Shadow};
 `;
 
 export const LabelS = styled.label<ILabelS>`
@@ -23,5 +23,6 @@ export const LabelS = styled.label<ILabelS>`
     top: ${(props) => (props.Focus ? "0px" : "8px")};
     transition: 0.2s ease all;
     position: absolute;
-    left: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 `;

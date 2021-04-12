@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Colors } from "../../../StyledHelpers/Colors";
 import { TriangleConent } from "../../../StyledHelpers/Controls";
-import BoxIcon from "../Icon/Boxing";
 import IDropDownElement from "./IEmContent";
 
 export const ExpanderS = styled.div`
@@ -12,12 +11,11 @@ export const ExpanderS = styled.div`
 
 export const ExpanderButtonS = styled(TriangleConent)<IDropDownElement>`
     box-shadow: 0px 0px 2px
-        ${(props) => (props.Expanded ? "rgba(200,200,200,0.8)" : "transparent")};
+        ${(props) => (props.Expanded ? Colors.Shadow : "transparent")};
     transition: 1s all;
 `;
 
 export const ContentS = styled.div<IDropDownElement>`
-    /* display: ${(props) => (props.Expanded ? "block" : "none")}; */
     position: absolute;
     background-color: ${Colors.Bg1};
     z-index: 200;
@@ -25,11 +23,11 @@ export const ContentS = styled.div<IDropDownElement>`
     padding: 0 5px;
     max-height: ${(props) => (props.Expanded ? "100vh" : "0vh")};
     overflow: hidden;
-    transition: 1s all ease-in;
-    box-shadow: 0px 0px 2px rgba(200, 200, 200, 0.8);
+    transition: 0.4s all ease-in;
+    box-shadow: 0px 0px 2px ${Colors.Shadow};
 `;
 
 export const RoundS = styled.div<IDropDownElement>`
-    transition: 0.2s all ease-in;
+    transition: 0.3s all ease-in;
     transform: rotate(${(props) => (props.Expanded ? "180deg" : "0deg")});
 `;

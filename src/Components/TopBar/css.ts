@@ -1,16 +1,12 @@
 import styled from "styled-components";
 import { Colors } from "../../StyledHelpers/Colors";
-import { TriangleConent } from "../../StyledHelpers/Controls";
 
 export const TobBarS = styled.div`
     background-color: ${Colors.Bg1};
-    height: 45px;
+    height: 50px;
     padding: 0 20px;
-`;
-
-export const TopBarContentS = styled(TriangleConent)`
-width: 1200px;
-margin: 0 auto;
+    display: flex;
+    justify-content: center;
 `;
 
 export const EmElementS = styled.div`
@@ -24,4 +20,6 @@ export const EmLastElementS = styled.div`
     justify-content: center;
 `;
 
-export default TobBarS;
+export const IconBoxS = styled.div`
+    margin: 0 2px;
+`;

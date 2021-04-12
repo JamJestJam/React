@@ -24,7 +24,6 @@ const LeftMenu: FC = () => {
                     Rounded={true}
                     MaxHeight={70}
                     MaxWidth={70}
-                    Margin={true}
                     />
                 <br />
                 <UserNameS>Humberta Swift</UserNameS>

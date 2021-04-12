@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import {
     TriangleConentLeft,
     TriangleConentRight,
@@ -21,8 +21,27 @@ const DropDown: FC<IDropDown> = (props) => {
         });
     };
 
+    const Close = () => {
+        SetState({
+            ...State,
+            Expanded: false,
+        });
+    };
+
+    const StopProp = (event: React.MouseEvent) => {
+        event.stopPropagation();
+    };
+
+    useEffect(() => {
+        document.addEventListener("click", Close);
+
+        return () => {
+            document.removeEventListener("click", Close);
+        };
+    });
+
     return (
-        <ExpanderS>
+        <ExpanderS onClick={StopProp}>
             <ExpanderButtonS onClick={ChangeExpand} Expanded={State.Expanded}>
                 <TriangleConentLeft>
                     <BoxIcon
@@ -34,12 +53,12 @@ const DropDown: FC<IDropDown> = (props) => {
                 </TriangleConentLeft>
                 <TriangleConentRight>
                     <RoundS Expanded={State.Expanded}>
-                    <BoxIcon
-                        // Expanded={State.Expanded}
-                        IconType={IconType.arrow_down}
-                        IconSize={IconSize.Small}
-                        Alt="Icon"
-                    />
+                        <BoxIcon
+                            // Expanded={State.Expanded}
+                            IconType={IconType.arrow_down}
+                            IconSize={IconSize.Small}
+                            Alt="Icon"
+                        />
                     </RoundS>
                 </TriangleConentRight>
             </ExpanderButtonS>

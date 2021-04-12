@@ -18,8 +18,6 @@ export const TriangleConentRight = styled(TriangleConentChild)`
 `;
 export const TriangleConent = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
 `;
 
 export const LinkS = styled(Link)`

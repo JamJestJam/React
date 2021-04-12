@@ -4,5 +4,5 @@ export default interface IBoxImage extends IImage{
     Background?: string;
     BoxShadow?: boolean;
     Rounded?: boolean;
-    Margin?: boolean;
+    Margin?: string;
 };

@@ -6,29 +6,32 @@ import {
     TriangleConentLeft,
     TriangleConentRight,
 } from "../../StyledHelpers/Controls";
-import { FontSize } from "../../StyledHelpers/Fonts";
 import DropDown from "../Common/DropDown";
 import Icon from "../Common/Icon";
-
 import BoxIcon from "../Common/Icon/Boxing";
 import { IconSize } from "../Common/Icon/IconSize";
 import { IconType } from "../Common/Icon/IconType";
 import BoxImage from "../Common/Image/Boxing";
 import Search from "../Common/Input/Search";
-import { EmElementS, EmLastElementS, TobBarS, TopBarContentS } from "./css";
+import {
+    EmElementS,
+    EmLastElementS,
+    TobBarS,
+    IconBoxS,
+} from "./css";
+import ITopBar from "./ITopBar";
 
-const TopBar: FC = () => {
+const TopBar: FC<ITopBar> = (props) => {
     return (
         <TobBarS>
-            <TopBarContentS>
                 <TriangleConentLeft>
                     <Icon
                         IconType={IconType.logo}
                         IconSize={IconSize.Medium}
                         Alt="Logo"
                     />
-                    <DropDown Text="Home" LeftIcon={IconType.house}>
-                        <Search Label="Filter..." Width={150} FontSize={"12"}/>
+                    <DropDown Text={props.SiteName} LeftIcon={props.Icon}>
+                        <Search Label="Filter..." Width={150} FontSize={"12"} />
                         <span>Platform</span>
                         <EmElementS>
                             <BoxIcon
@@ -106,7 +109,7 @@ const TopBar: FC = () => {
                                 Rounded={true}
                                 MaxHeight={40}
                                 MaxWidth={40}
-                                Margin={false}
+                                Margin="0"
                             />
                             Joane-Marie de la cli...
                         </EmElementS>
@@ -138,32 +141,42 @@ const TopBar: FC = () => {
                     </DropDown>
                 </TriangleConentLeft>
                 <TriangleConentCenter>
-                    <Search Label="Szukaj" Width={500} Button={true} Border={true}/>
+                    <Search
+                        Label="Search Legalcluster"
+                        Width={500}
+                        Button={true}
+                        Border={true}
+                    />
                 </TriangleConentCenter>
                 <TriangleConentRight>
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={IconType.house}
-                        Alt="Domek"
-                    />
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={IconType.comments}
-                        Background={Colors.Bg3}
-                        Alt="Czat"
-                        Rounded={true}
-                        Value={3}
-                    />
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={IconType.bell}
-                        Background={Colors.Bg3}
-                        Alt="Dzwoneczek"
-                        Rounded={true}
-                        Value={3}
-                    />
+                    <IconBoxS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.house}
+                            Alt="Domek"
+                        />
+                    </IconBoxS>
+                    <IconBoxS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.comments}
+                            Background={Colors.Bg3}
+                            Alt="Czat"
+                            Rounded={true}
+                            Value={3}
+                        />
+                    </IconBoxS>
+                    <IconBoxS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.bell}
+                            Background={Colors.Bg3}
+                            Alt="Dzwoneczek"
+                            Rounded={true}
+                            Value={3}
+                        />
+                    </IconBoxS>
                 </TriangleConentRight>
-            </TopBarContentS>
         </TobBarS>
     );
 };

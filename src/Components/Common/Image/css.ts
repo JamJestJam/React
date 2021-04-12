@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Colors } from "../../../StyledHelpers/Colors";
 import IImageStyle from "./IImageStyle";
 
 const ImageS = styled.img<IImageStyle>`
-    border: 1px ${(props) => (props.Bordered ? "black" : "transparent")} solid;
-    max-height: ${(props) => props.MaxHeight + "px"};
-    max-width: ${(props) => props.MaxWidth + "px"};
+    border: 1px ${(props) => (props.Bordered ? Colors.Shadow : "transparent")} solid;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 `;
 
 export default ImageS;

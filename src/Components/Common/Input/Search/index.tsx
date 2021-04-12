@@ -39,6 +39,8 @@ const Search: FC<ISearch> = (props) => {
         });
     };
 
+
+
     return (
         <FieldS Focus={State.Focus} Border={props.Border}>
             <Input
