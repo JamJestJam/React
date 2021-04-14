@@ -5,5 +5,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${Colors.Bg2};
     margin: 0;
+    color: ${Colors.MainFont};
   }
 `;

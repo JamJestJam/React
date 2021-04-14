@@ -13,7 +13,6 @@ export const TobBarS = styled.div`
 export const EmElementS = styled.div`
     display: flex;
     align-items: center;
-    color: ${Colors.MainFont};
 `;
 
 export const PlatformS = styled.div`

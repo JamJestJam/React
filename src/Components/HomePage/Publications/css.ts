@@ -30,6 +30,7 @@ export const TitleS = styled.div`
     color: ${Colors.BlueFont};
     font-size: ${FontSize[24]};
     height: fit-content;
+    font-weight: bolder;
 `;
 
 export const SeeMoreS = styled.div`
