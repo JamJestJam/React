@@ -62,7 +62,12 @@ const DropDown: FC<IDropDown> = (props) => {
                     </RoundS>
                 </TriangleConentRight>
             </ExpanderButtonS>
-            <ContentS Expanded={State.Expanded}>{props.children}</ContentS>
+            <ContentS
+                Expanded={State.Expanded}
+                Height={props.Height || "100vh"}
+            >
+                {props.children}
+            </ContentS>
         </ExpanderS>
     );
 };

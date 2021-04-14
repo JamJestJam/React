@@ -21,7 +21,7 @@ export const ContentS = styled.div<IDropDownElement>`
     z-index: 200;
     width: 220px;
     padding: 0 5px;
-    max-height: ${(props) => (props.Expanded ? "100vh" : "0vh")};
+    max-height: ${(props) => (props.Expanded ? props.Height : "0vh")};
     overflow: hidden;
     transition: 0.4s all ease-in;
     box-shadow: 0px 0px 2px ${Colors.Shadow};
