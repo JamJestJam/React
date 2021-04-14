@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import BoxImage from "../../../Common/Image/Boxing";
-import { ContentS, PubDataS, PublicationS, PublicationTextS } from "./css";
+import { ContentS, NameS, PubDataS, PublicationS, PublicationTextS } from "./css";
 
 const Publication: FC = () => {
     return (
@@ -22,12 +22,12 @@ const Publication: FC = () => {
                     <BoxImage
                         ImageName="./Image/Face.jpg"
                         Alt=""
-                        MaxWidth={30}
-                        MaxHeight={30}
+                        MaxWidth={20}
+                        MaxHeight={20}
                         Rounded={true}
-                        Margin="10px"
+                        Margin="5px"
                     />
-                    <div>Humberta Swift</div>
+                    <NameS>Humberta Swift</NameS>
                 </PubDataS>
             </PublicationS>
         </ContentS>

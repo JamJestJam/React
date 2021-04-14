@@ -61,7 +61,7 @@ const DropDown: FC<IDropDown> = (props) => {
                             <BoxIcon
                                 // Expanded={State.Expanded}
                                 IconType={IconType.arrow_down}
-                                IconSize={IconSize.Small}
+                                IconSize={IconSize.Mini}
                                 Alt="Icon"
                             />
                         </RoundS>

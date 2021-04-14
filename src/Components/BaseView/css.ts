@@ -10,4 +10,6 @@ export const PageContentS = styled.div`
 
 export const PageFillS = styled.div`
     flex: 20 1 auto;
+    overflow: hidden;
+    width: 950px;
 `;

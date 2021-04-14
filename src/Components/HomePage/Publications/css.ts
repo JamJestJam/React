@@ -27,9 +27,9 @@ export const RightS = styled.div`
 
 export const TitleS = styled.div`
     flex: 1;
+    height: fit-content;
     color: ${Colors.BlueFont};
     font-size: ${FontSize[24]};
-    height: fit-content;
     font-weight: bolder;
 `;
 

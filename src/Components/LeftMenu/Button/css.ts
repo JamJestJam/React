@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Colors } from "../../../StyledHelpers/Colors";
 import { IconSize } from "../../Common/Icon/IconSize";
 
 

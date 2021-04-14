@@ -8,8 +8,8 @@ const BoxImageS = styled.div<IBoxImageStyle>`
     box-shadow: 0 0 3px
         ${(props) => (props.Shadow ? Colors.Shadow : "transparent")};
     border-radius: ${(props) => (props.Rounded ? "100%" : "0")};
-    height: ${(props) => props.Width + "px"};
-    width: ${(props) => props.Height + "px"};
+    height: ${(props) => props.Height + "px"};
+    width: ${(props) => props.Width + "px"};
     justify-content: center;
     align-items: center;
     position: relative;
