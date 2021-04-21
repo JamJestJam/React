@@ -1,4 +1,4 @@
-export default interface IUserE{
+export default interface IEnUser{
     id: number;
     name: string;
     username: string;
@@ -12,7 +12,7 @@ export default interface IUserE{
             lat: string;
             lng: string;
         }
-    };
+    },
     phone: string;
     website: string;
     company: {

@@ -1,4 +1,4 @@
-import IUsersReducer from "./users/IUsers";
+import IUsersReducer from "./users/IUsersReducer";
 
 export default interface IState{
     user: IUsersReducer

@@ -11,16 +11,15 @@ import BoxImage from "../Common/Image/Boxing";
 import * as CSS from "./css";
 //interface
 import IState from "../../Reduces/IState";
-import IUsersReducer from "../../Reduces/users/IUsers";
+import IUsersReducer from "../../Reduces/users/IUsersReducer";
 
 const LeftMenu: FC = () => {
-    const { userList } = useSelector<IState, IUsersReducer>((GS) => ({
+    const { users } = useSelector<IState, IUsersReducer>((GS) => ({
         ...GS.user,
     }));
 
     return (
         <CSS.LeftMenuS>
-            {console.log({ userList })}
             <CSS.UserDataS>
                 <BoxImage
                     ImageName="./Image/Face.jpg"
@@ -32,8 +31,8 @@ const LeftMenu: FC = () => {
                     MaxWidth={70}
                 />
                 <br />
-                <CSS.UserNameS></CSS.UserNameS>
-                <CSS.JobSubtitleS>Job title - Company</CSS.JobSubtitleS>
+                <CSS.UserNameS>{users[0]?.name}</CSS.UserNameS>
+                <CSS.JobSubtitleS>{users[0]?.company.bs}</CSS.JobSubtitleS>
                 <hr />
                 <LinkS to="/Profile">
                     <Button
