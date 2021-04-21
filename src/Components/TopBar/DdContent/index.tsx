@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
 //data
 import { Colors } from "../../../StyledHelpers/Colors";
@@ -16,96 +16,128 @@ import IState from "../../../Reduces/IState";
 import IUsersReducer from "../../../Reduces/users/IUsersReducer";
 
 const DdContent: FC = () => {
+    const [State, SetState] = useState({
+        Value: "",
+    });
+
     const { users } = useSelector<IState, IUsersReducer>((GS) => ({
         ...GS.user,
     }));
 
+    const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        SetState({
+            ...State,
+            Value: event.target.value,
+        });
+    };
+
     return (
         <>
-            <Search Label="Filter..." Width={150} FontSize={"12"} />
+            <Search
+                Label="Filter..."
+                Width={150}
+                FontSize={"12"}
+                Change={InputChange}
+            />
             <CSS.PlatformS>
                 <CSS.EbSpanS>Platform</CSS.EbSpanS>
-                <LinkS to="/">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.house}
-                            Alt=""
-                        />
-                        Home
-                    </CSS.EmElementS>
-                </LinkS>
-                <LinkS to="/Publications">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.publications}
-                            Alt=""
-                        />
-                        Publications
-                    </CSS.EmElementS>
-                </LinkS>
-                <LinkS to="/People">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.people}
-                            Alt=""
-                        />
-                        People
-                    </CSS.EmElementS>
-                </LinkS>
-                <LinkS to="/Entities">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.entities2}
-                            Alt=""
-                        />
-                        Entities
-                    </CSS.EmElementS>
-                </LinkS>
-                <LinkS to="/Administration">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.administration}
-                            Alt=""
-                        />
-                        Administration
-                    </CSS.EmElementS>
-                </LinkS>
+                {"home".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.house}
+                                Alt=""
+                            />
+                            Home
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
+                {"publications".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/Publications">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.publications}
+                                Alt=""
+                            />
+                            Publications
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
+                {"people".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/People">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.people}
+                                Alt=""
+                            />
+                            People
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
+                {"entities".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/Entities">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.entities2}
+                                Alt=""
+                            />
+                            Entities
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
+                {"administration".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/Administration">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.administration}
+                                Alt=""
+                            />
+                            Administration
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
                 <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
-                <LinkS to="/ClientContract">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.logo}
-                            Alt=""
-                        />
-                        Client contract
-                    </CSS.EmElementS>
-                </LinkS>
-                <LinkS to="/SupplierContract">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.logo}
-                            Alt=""
-                        />
-                        Supplier contract
-                    </CSS.EmElementS>
-                </LinkS>
-                <LinkS to="/Administration">
-                    <CSS.EmElementS>
-                        <BoxIcon
-                            IconSize={IconSize.Small}
-                            IconType={IconType.logo}
-                            Alt=""
-                        />
-                        Administration
-                    </CSS.EmElementS>
-                </LinkS>
+                {"client contract".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/ClientContract">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.logo}
+                                Alt=""
+                            />
+                            Client contract
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
+                {"supplier contract".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/SupplierContract">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.logo}
+                                Alt=""
+                            />
+                            Supplier contract
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
+                {"administration".includes(State.Value.toLowerCase()) && (
+                    <LinkS to="/Administration">
+                        <CSS.EmElementS>
+                            <BoxIcon
+                                IconSize={IconSize.Small}
+                                IconType={IconType.logo}
+                                Alt=""
+                            />
+                            Administration
+                        </CSS.EmElementS>
+                    </LinkS>
+                )}
             </CSS.PlatformS>
             <CSS.EbSpanS>Account</CSS.EbSpanS>
             <LinkS to="/Profile">

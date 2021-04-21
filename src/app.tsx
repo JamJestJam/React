@@ -16,6 +16,7 @@ import Profile from "./Components/Profile/";
 import Network from "./Components/Network";
 import Privacy from "./Components/Privacy";
 import People from "./Components/People";
+import Logout from "./Components/Logout";
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                     <Route path="/Network" component={Network} />
                     <Route path="/Profile" component={Profile} />
                     <Route path="/" component={HomePage} exact />
+                    <Route path="/Logout" component={Logout} />
                     <Route path="/People" component={People} />
                 </Switch>
             </BaseView>

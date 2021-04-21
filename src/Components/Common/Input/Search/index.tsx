@@ -43,8 +43,6 @@ const Search: FC<ISearch> = (props) => {
         });
     };
 
-
-
     return (
         <CSS.FieldS Focus={State.Focus} Border={props.Border}>
             <Input
