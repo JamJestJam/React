@@ -1,12 +1,15 @@
 import React, { FC } from "react";
-import { ElementsS, TitleS } from "./css";
+//components
+import Slider from "../../Common/HorizontalSlider";
 import WorkspacesEl from "./Element";
+//css
+import * as CSS from "./css";
 
 const Workspaces: FC = () => {
     return (
-        <div>
-            <TitleS>Workspaces</TitleS>
-            <ElementsS>
+        <>
+            <CSS.TitleS>Workspaces</CSS.TitleS>
+            <Slider>
                 <WorkspacesEl />
                 <WorkspacesEl />
                 <WorkspacesEl />
@@ -20,8 +23,8 @@ const Workspaces: FC = () => {
                 <WorkspacesEl />
                 <WorkspacesEl />
                 <WorkspacesEl />
-            </ElementsS>
-        </div>
+            </Slider>
+        </>
     );
 };
 

@@ -1,10 +1,12 @@
 import React, { FC } from "react";
+//components
 import BoxImage from "../../../Common/Image/Boxing";
-import { ContentS, NameS, PubDataS, PublicationS, PublicationTextS } from "./css";
+//css
+import * as CSS from "./css";
 
 const Publication: FC = () => {
     return (
-        <ContentS>
+        <CSS.ContentS>
             <BoxImage
                 ImageName="./Image/Sample2.jpg"
                 Alt=""
@@ -12,12 +14,12 @@ const Publication: FC = () => {
                 MaxWidth={80}
                 Margin="0"
             />
-            <PublicationS>
-                <PublicationTextS>
+            <CSS.PublicationS>
+                <CSS.PublicationTextS>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit...
                     and one more line for the demo
-                </PublicationTextS>
-                <PubDataS>
+                </CSS.PublicationTextS>
+                <CSS.PubDataS>
                     <div>7 jan. 2020 </div>
                     <BoxImage
                         ImageName="./Image/Face.jpg"
@@ -27,10 +29,10 @@ const Publication: FC = () => {
                         Rounded={true}
                         Margin="5px"
                     />
-                    <NameS>Humberta Swift</NameS>
-                </PubDataS>
-            </PublicationS>
-        </ContentS>
+                    <CSS.NameS>Humberta Swift</CSS.NameS>
+                </CSS.PubDataS>
+            </CSS.PublicationS>
+        </CSS.ContentS>
     );
 };
 

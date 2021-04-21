@@ -1,22 +1,26 @@
 import React, { FC } from "react";
-import BoxIcon from "../../Common/Icon/Boxing";
+//data
 import { IconSize } from "../../Common/Icon/IconSize";
-import { ButtonLeftS, ButtonRightS, ButtonS } from "./css";
+//components
+import BoxIcon from "../../Common/Icon/Boxing";
+//css
+import * as CSS from "./css";
+//inteface
 import IButton from "./IButton";
 
 const Button: FC<IButton> = (props) => {
     return (
-        <ButtonS>
-            <ButtonLeftS>
+        <CSS.ButtonS>
+            <CSS.ButtonLeftS>
                 <BoxIcon IconType={props.Icon} IconSize={IconSize.Small } Alt="Przycisk"/>
                 {props.children}
-            </ButtonLeftS>
+            </CSS.ButtonLeftS>
             {props.SIcon && (
-                <ButtonRightS>
+                <CSS.ButtonRightS>
                     <BoxIcon IconType={props.SIcon} IconSize={IconSize.Small} Alt="Przycisk" BoxShadow={true} BoxWidth={30} BoxHeight={20}/>
-                </ButtonRightS>
+                </CSS.ButtonRightS>
             )}
-        </ButtonS>
+        </CSS.ButtonS>
     );
 };
 

@@ -1,6 +1,9 @@
 import { FC } from "react";
-import Icon from "..";
+//components
+import Icon from "../";
+//css
 import { SBoxIcon as BoxIconS, SBoxIconValue } from "./css";
+//interface
 import IBoxIcon from "./IBoxIcon";
 
 const BoxIcon: FC<IBoxIcon> = (props) => {

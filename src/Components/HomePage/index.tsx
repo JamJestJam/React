@@ -1,6 +1,8 @@
 import React, { FC } from "react";
-import BaseView from "../BaseView";
+//data
 import { IconType } from "../Common/Icon/IconType";
+//components
+import BaseView from "../BaseView";
 import Publications from "./Publications";
 import ResumeYourWork from "./ResumeYourWork";
 import Workspaces from "./Workspaces";

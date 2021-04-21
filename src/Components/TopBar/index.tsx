@@ -1,32 +1,24 @@
 import React, { FC } from "react";
+//data
 import { Colors } from "../../StyledHelpers/Colors";
-
-import {
-    TriangleConentCenter,
-    TriangleConentLeft,
-    TriangleConentRight,
-} from "../../StyledHelpers/Controls";
-import DropDown from "../Common/DropDown";
-import Icon from "../Common/Icon";
-import BoxIcon from "../Common/Icon/Boxing";
 import { IconSize } from "../Common/Icon/IconSize";
 import { IconType } from "../Common/Icon/IconType";
-import BoxImage from "../Common/Image/Boxing";
+//components
+import Icon from "../Common/Icon";
 import Search from "../Common/Input/Search";
-import {
-    EmElementS,
-    EmLastElementS,
-    TobBarS,
-    IconBoxS,
-    EbSpanS,
-    PlatformS,
-} from "./css";
+import BoxIcon from "../Common/Icon/Boxing";
+import BoxImage from "../Common/Image/Boxing";
+import DropDown from "../Common/DropDown";
+//styles
+import * as CSS from "./css";
+import * as Controls from "../../StyledHelpers/Controls";
+//interfaces
 import ITopBar from "./ITopBar";
 
 const TopBar: FC<ITopBar> = (props) => {
     return (
-        <TobBarS>
-            <TriangleConentLeft>
+        <CSS.TobBarS>
+            <Controls.TriangleConentLeft>
                 <Icon
                     IconType={IconType.logo}
                     IconSize={IconSize.Medium}
@@ -34,76 +26,76 @@ const TopBar: FC<ITopBar> = (props) => {
                 />
                 <DropDown Text={props.SiteName} LeftIcon={props.Icon} Height="466px">
                     <Search Label="Filter..." Width={150} FontSize={"12"} />
-                    <PlatformS>
-                        <EbSpanS>Platform</EbSpanS>
-                        <EmElementS>
+                    <CSS.PlatformS>
+                        <CSS.EbSpanS>Platform</CSS.EbSpanS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.house}
                                 Alt=""
                             />
                             Home
-                        </EmElementS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.publications}
                                 Alt=""
                             />
                             Publications
-                        </EmElementS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.people}
                                 Alt=""
                             />
                             People
-                        </EmElementS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.entities2}
                                 Alt=""
                             />
                             Entities
-                        </EmElementS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.administration}
                                 Alt=""
                             />
                             Administration
-                        </EmElementS>
-                        <EbSpanS>Workspaces</EbSpanS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.logo}
                                 Alt=""
                             />
                             Client contract
-                        </EmElementS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.logo}
                                 Alt=""
                             />
                             Supplier contract
-                        </EmElementS>
-                        <EmElementS>
+                        </CSS.EmElementS>
+                        <CSS.EmElementS>
                             <BoxIcon
                                 IconSize={IconSize.Small}
                                 IconType={IconType.logo}
                                 Alt=""
                             />
                             Administration
-                        </EmElementS>
-                    </PlatformS>
-                    <EbSpanS>Account</EbSpanS>
-                    <EmElementS>
+                        </CSS.EmElementS>
+                    </CSS.PlatformS>
+                    <CSS.EbSpanS>Account</CSS.EbSpanS>
+                    <CSS.EmElementS>
                         <BoxImage
                             ImageName="./Image/Face.jpg"
                             Background={Colors.Bg3}
@@ -115,51 +107,51 @@ const TopBar: FC<ITopBar> = (props) => {
                             Margin="5px"
                         />
                         Joane-Marie de la cli...
-                    </EmElementS>
-                    <EmElementS>
+                    </CSS.EmElementS>
+                    <CSS.EmElementS>
                         <BoxIcon
                             IconSize={IconSize.Small}
                             IconType={IconType.privacy}
                             Alt=""
                         />
                         Privacy
-                    </EmElementS>
-                    <EmElementS>
+                    </CSS.EmElementS>
+                    <CSS.EmElementS>
                         <BoxIcon
                             IconSize={IconSize.Small}
                             IconType={IconType.settings}
                             Alt=""
                         />
                         Settings
-                    </EmElementS>
+                    </CSS.EmElementS>
                     <hr />
-                    <EmLastElementS>
+                    <CSS.EmLastElementS>
                         <BoxIcon
                             IconSize={IconSize.Small}
                             IconType={IconType.logout}
                             Alt=""
                         />
                         Logout
-                    </EmLastElementS>
+                    </CSS.EmLastElementS>
                 </DropDown>
-            </TriangleConentLeft>
-            <TriangleConentCenter>
+            </Controls.TriangleConentLeft>
+            <Controls.TriangleConentCenter>
                 <Search
                     Label="Search Legalcluster"
                     Width={500}
                     Button={true}
                     Border={true}
                 />
-            </TriangleConentCenter>
-            <TriangleConentRight>
-                <IconBoxS>
+            </Controls.TriangleConentCenter>
+            <Controls.TriangleConentRight>
+                <CSS.IconBoxS>
                     <BoxIcon
                         IconSize={IconSize.Small}
                         IconType={IconType.house}
                         Alt="Domek"
                     />
-                </IconBoxS>
-                <IconBoxS>
+                </CSS.IconBoxS>
+                <CSS.IconBoxS>
                     <BoxIcon
                         IconSize={IconSize.Small}
                         IconType={IconType.comments}
@@ -168,8 +160,8 @@ const TopBar: FC<ITopBar> = (props) => {
                         Rounded={true}
                         Value={3}
                     />
-                </IconBoxS>
-                <IconBoxS>
+                </CSS.IconBoxS>
+                <CSS.IconBoxS>
                     <BoxIcon
                         IconSize={IconSize.Small}
                         IconType={IconType.bell}
@@ -178,9 +170,9 @@ const TopBar: FC<ITopBar> = (props) => {
                         Rounded={true}
                         Value={3}
                     />
-                </IconBoxS>
-            </TriangleConentRight>
-        </TobBarS>
+                </CSS.IconBoxS>
+            </Controls.TriangleConentRight>
+        </CSS.TobBarS>
     );
 };
 

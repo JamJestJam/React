@@ -1,6 +1,9 @@
 import { FC } from "react";
-
+//data
+import { GetIcon } from "./IconType";
+//components
 import IIcon from "./IIcon";
+//css
 import IconS from "./css";
 
 const Icon: FC<IIcon> = (props) => {
@@ -8,7 +11,7 @@ const Icon: FC<IIcon> = (props) => {
         <IconS
             Size={props.IconSize}
             Border={props.Bordered || false}
-            src={props.IconType}
+            src={GetIcon(props.IconType)}
             alt={props.Alt}
         />
     );

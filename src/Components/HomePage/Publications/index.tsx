@@ -1,31 +1,24 @@
 import React, { FC } from "react";
+//components
 import BoxImage from "../../Common/Image/Boxing";
-import {
-    ContentS,
-    LeftS,
-    PubDataS,
-    PublicationS,
-    RightS,
-    SeeMoreS,
-    TitleS,
-    TopPublicationS,
-} from "./css";
 import Publication from "./Publication";
+//css
+import * as CSS from "./css";
 
 const Publications: FC = () => {
     return (
-        <ContentS>
-            <LeftS>
+        <CSS.ContentS>
+            <CSS.LeftS>
                 <BoxImage
                     ImageName="./Image/Sample1.jpg"
                     Alt=""
                     MaxWidth={300}
                     MaxHeight={300}
                 />
-                <PublicationS>
+                <CSS.PublicationS>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit...
                     and one more line for the demo
-                    <PubDataS>
+                    <CSS.PubDataS>
                         <div>7 jan. 2020 </div>
                         <BoxImage
                             ImageName="./Image/Face.jpg"
@@ -36,19 +29,19 @@ const Publications: FC = () => {
                             Margin="10px"
                         />
                         <div>Humberta Swift</div>
-                    </PubDataS>
-                </PublicationS>
-            </LeftS>
-            <RightS>
-                <TitleS>Latest publications</TitleS>
-                <TopPublicationS>
+                    </CSS.PubDataS>
+                </CSS.PublicationS>
+            </CSS.LeftS>
+            <CSS.RightS>
+                <CSS.TitleS>Latest publications</CSS.TitleS>
+                <CSS.TopPublicationS>
                     <Publication></Publication>
                     <Publication></Publication>
                     <Publication></Publication>
-                </TopPublicationS>
-                <SeeMoreS>See more publications</SeeMoreS>
-            </RightS>
-        </ContentS>
+                </CSS.TopPublicationS>
+                <CSS.SeeMoreS>See more publications</CSS.SeeMoreS>
+            </CSS.RightS>
+        </CSS.ContentS>
     );
 };
 

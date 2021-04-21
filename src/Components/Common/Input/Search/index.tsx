@@ -1,9 +1,13 @@
 import React, { FC, useState } from "react";
-import Input from "..";
-import BoxIcon from "../../Icon/Boxing";
+//data
 import { IconSize } from "../../Icon/IconSize";
 import { IconType } from "../../Icon/IconType";
-import { FieldS, LabelS } from "./css";
+//components
+import Input from "../";
+import BoxIcon from "../../Icon/Boxing";
+//css
+import * as CSS from "./css";
+//interface
 import ISearch from "./ISearch";
 
 const Search: FC<ISearch> = (props) => {
@@ -42,7 +46,7 @@ const Search: FC<ISearch> = (props) => {
 
 
     return (
-        <FieldS Focus={State.Focus} Border={props.Border}>
+        <CSS.FieldS Focus={State.Focus} Border={props.Border}>
             <Input
                 BorderColor={props.BorderColor}
                 Background={props.Background}
@@ -56,14 +60,14 @@ const Search: FC<ISearch> = (props) => {
                 Focus={InputFocus}
                 Change={InputChange}
             />
-            <LabelS Focus={State.Focus || State.Value.length > 0} FontSize={(props.FontSize || "18")}>
+            <CSS.LabelS Focus={State.Focus || State.Value.length > 0} FontSize={(props.FontSize || "18")}>
                 {props.Label}
-            </LabelS>
+            </CSS.LabelS>
             {
                 props.Button &&
                 <BoxIcon IconSize={IconSize.Small} IconType={IconType.search} Alt="Szukaj"/>
             }
-        </FieldS>
+        </CSS.FieldS>
     );
 };
 

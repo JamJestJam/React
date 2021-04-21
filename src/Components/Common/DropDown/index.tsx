@@ -1,14 +1,13 @@
 import React, { FC, useState, useEffect } from "react";
-import {
-    LinkS,
-    TriangleConentLeft,
-    TriangleConentRight,
-} from "../../../StyledHelpers/Controls";
-import BoxIcon from "../Icon/Boxing";
+//data
 import { IconSize } from "../Icon/IconSize";
 import { IconType } from "../Icon/IconType";
-import { ContentS, ExpanderButtonS, ExpanderS, RoundS } from "./css";
+//components
 import IDropDown from "./IDropDown";
+import BoxIcon from "../Icon/Boxing";
+//css
+import * as ControlsHelp from "../../../StyledHelpers/Controls";
+import { ContentS, ExpanderButtonS, ExpanderS, RoundS } from "./css";
 
 const DropDown: FC<IDropDown> = (props) => {
     const [State, SetState] = useState({
@@ -43,20 +42,20 @@ const DropDown: FC<IDropDown> = (props) => {
 
     return (
         <ExpanderS onClick={StopProp}>
-            <LinkS to="#">
+            <ControlsHelp.LinkS to="#">
                 <ExpanderButtonS
                     onClick={ChangeExpand}
                     Expanded={State.Expanded}
                 >
-                    <TriangleConentLeft>
+                    <ControlsHelp.TriangleConentLeft>
                         <BoxIcon
                             IconType={props.LeftIcon}
                             IconSize={IconSize.Small}
                             Alt="Icon"
                         />
                         {props.Text}
-                    </TriangleConentLeft>
-                    <TriangleConentRight>
+                    </ControlsHelp.TriangleConentLeft>
+                    <ControlsHelp.TriangleConentRight>
                         <RoundS Expanded={State.Expanded}>
                             <BoxIcon
                                 // Expanded={State.Expanded}
@@ -65,9 +64,9 @@ const DropDown: FC<IDropDown> = (props) => {
                                 Alt="Icon"
                             />
                         </RoundS>
-                    </TriangleConentRight>
+                    </ControlsHelp.TriangleConentRight>
                 </ExpanderButtonS>
-            </LinkS>
+            </ControlsHelp.LinkS>
             <ContentS
                 Expanded={State.Expanded}
                 Height={props.Height || "100vh"}

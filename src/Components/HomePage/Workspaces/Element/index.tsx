@@ -1,15 +1,18 @@
 import React, { FC } from "react";
+//data
 import { Colors } from "../../../../StyledHelpers/Colors";
-import Icon from "../../../Common/Icon";
 import { IconSize } from "../../../Common/Icon/IconSize";
 import { IconType } from "../../../Common/Icon/IconType";
+//components
+import Icon from "../../../Common/Icon";
 import BoxImage from "../../../Common/Image/Boxing";
-import { ImageS, ElementS, ContentS, InfoS, IconBox, TransformS, LastS, TopS} from "./css";
+//css
+import * as CSS from "./css";
 
 const WorkspacesEl: FC = () => {
     return (
-        <ElementS>
-            <ImageS>
+        <CSS.ElementS>
+            <CSS.ImageS>
                 <BoxImage
                     ImageName="./Image/Sample3.jpg"
                     Alt=""
@@ -17,37 +20,37 @@ const WorkspacesEl: FC = () => {
                     MaxHeight={100}
                     MaxWidth={250}
                 />
-            </ImageS>
-            <ContentS>
-                <TopS>
-                    <IconBox>
+            </CSS.ImageS>
+            <CSS.ContentS>
+                <CSS.TopS>
+                    <CSS.IconBox>
                         <Icon IconSize={IconSize.Large} IconType={IconType.bell} Alt=""/>
-                    </IconBox>
+                    </CSS.IconBox>
                     Client contract
-                </TopS>
-                <TransformS>
-                    <InfoS>
-                        <InfoS>
+                </CSS.TopS>
+                <CSS.TransformS>
+                    <CSS.InfoS>
+                        <CSS.InfoS>
                             <Icon
                                 IconSize={IconSize.Mini}
                                 IconType={IconType.cog}
                                 Alt=""
                             />
                             Contract
-                        </InfoS>
-                        <InfoS>
+                        </CSS.InfoS>
+                        <CSS.InfoS>
                             <Icon
                                 IconSize={IconSize.Mini}
                                 IconType={IconType.cog}
                                 Alt=""
                             />
                             150 users
-                        </InfoS>
-                    </InfoS>
-                    <LastS>Last update 2 days ago</LastS>
-                </TransformS>
-            </ContentS>
-        </ElementS>
+                        </CSS.InfoS>
+                    </CSS.InfoS>
+                    <CSS.LastS>Last update 2 days ago</CSS.LastS>
+                </CSS.TransformS>
+            </CSS.ContentS>
+        </CSS.ElementS>
     );
 };
 

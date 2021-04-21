@@ -1,5 +1,7 @@
 import React, { FC } from "react";
+//css
 import ImageS from "./css";
+//interface
 import IImage from "./IImage";
 const Image: FC<IImage> = (props) => {
     const Width = props.MaxWidth  || 40;

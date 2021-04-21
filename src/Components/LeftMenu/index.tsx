@@ -1,21 +1,27 @@
 import React, { FC } from "react";
+import { useSelector } from "react-redux";
+//data
 import { Colors } from "../../StyledHelpers/Colors";
 import { LinkS } from "../../StyledHelpers/Controls";
 import { IconType } from "../Common/Icon/IconType";
-import BoxImage from "../Common/Image/Boxing";
+//components
 import Button from "./Button";
-import {
-    BottomConentS,
-    JobSubtitleS,
-    LeftMenuS,
-    UserDataS,
-    UserNameS,
-} from "./css";
+import BoxImage from "../Common/Image/Boxing";
+//css
+import * as CSS from "./css";
+//interface
+import IState from "../../Reduces/IState";
+import IUsersReducer from "../../Reduces/users/IUsers";
 
 const LeftMenu: FC = () => {
+    const { userList } = useSelector<IState, IUsersReducer>((GS) => ({
+        ...GS.user,
+    }));
+
     return (
-        <LeftMenuS>
-            <UserDataS>
+        <CSS.LeftMenuS>
+            {console.log({ userList })}
+            <CSS.UserDataS>
                 <BoxImage
                     ImageName="./Image/Face.jpg"
                     Background={Colors.Bg3}
@@ -24,13 +30,16 @@ const LeftMenu: FC = () => {
                     Rounded={true}
                     MaxHeight={70}
                     MaxWidth={70}
-                    />
+                />
                 <br />
-                <UserNameS>Humberta Swift</UserNameS>
-                <JobSubtitleS>Job title - Company</JobSubtitleS>
+                <CSS.UserNameS></CSS.UserNameS>
+                <CSS.JobSubtitleS>Job title - Company</CSS.JobSubtitleS>
                 <hr />
                 <LinkS to="/Profile">
-                    <Button Icon={IconType.ecosystem} SIcon={IconType.user_plus}>
+                    <Button
+                        Icon={IconType.ecosystem}
+                        SIcon={IconType.user_plus}
+                    >
                         Your network
                     </Button>
                 </LinkS>
@@ -39,13 +48,13 @@ const LeftMenu: FC = () => {
                         Your Publications
                     </Button>
                 </LinkS>
-            </UserDataS>
-            <BottomConentS>
+            </CSS.UserDataS>
+            <CSS.BottomConentS>
                 <Button Icon={IconType.publications}>Publications</Button>
                 <Button Icon={IconType.ecosystem}>Ecosystem</Button>
                 <Button Icon={IconType.entities2}>Entities</Button>
-            </BottomConentS>
-        </LeftMenuS>
+            </CSS.BottomConentS>
+        </CSS.LeftMenuS>
     );
 };
 

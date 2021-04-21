@@ -1,6 +1,9 @@
 import React, { FC } from "react";
+//components
 import Image from "../";
+//css
 import BoxImageS from "./css";
+//inteface
 import IBoxImage from "./IBoxImage";
 
 const BoxImage: FC<IBoxImage> = (props) => {

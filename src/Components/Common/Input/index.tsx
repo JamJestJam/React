@@ -1,5 +1,7 @@
 import React, { FC, useState } from "react";
+//css
 import { InputS } from "./css";
+//inteface
 import IImput from "./IInput";
 
 const Input: FC<IImput> = (props) => {
