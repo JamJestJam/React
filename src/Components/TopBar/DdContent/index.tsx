@@ -9,6 +9,7 @@ import BoxImage from "../../Common/Image/Boxing";
 import Search from "../../Common/Input/Search";
 import BoxIcon from "../../Common/Icon/Boxing";
 //css
+import { LinkS } from "../../../StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
 import IState from "../../../Reduces/IState";
@@ -24,58 +25,135 @@ const DdContent: FC = () => {
             <Search Label="Filter..." Width={150} FontSize={"12"} />
             <CSS.PlatformS>
                 <CSS.EbSpanS>Platform</CSS.EbSpanS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.house} Alt="" />
-                    Home
-                </CSS.EmElementS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.publications} Alt="" />
-                    Publications
-                </CSS.EmElementS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.people} Alt=""/>
-                    People
-                </CSS.EmElementS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.entities2} Alt="" />
-                    Entities
-                </CSS.EmElementS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.administration} Alt="" />
-                    Administration
-                </CSS.EmElementS>
+                <LinkS to="/">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.house}
+                            Alt=""
+                        />
+                        Home
+                    </CSS.EmElementS>
+                </LinkS>
+                <LinkS to="/Publications">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.publications}
+                            Alt=""
+                        />
+                        Publications
+                    </CSS.EmElementS>
+                </LinkS>
+                <LinkS to="/People">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.people}
+                            Alt=""
+                        />
+                        People
+                    </CSS.EmElementS>
+                </LinkS>
+                <LinkS to="/Entities">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.entities2}
+                            Alt=""
+                        />
+                        Entities
+                    </CSS.EmElementS>
+                </LinkS>
+                <LinkS to="/Administration">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.administration}
+                            Alt=""
+                        />
+                        Administration
+                    </CSS.EmElementS>
+                </LinkS>
                 <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.logo} Alt=""/>
-                    Client contract
-                </CSS.EmElementS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.logo} Alt="" />
-                    Supplier contract
-                </CSS.EmElementS>
-                <CSS.EmElementS>
-                    <BoxIcon IconSize={IconSize.Small} IconType={IconType.logo} Alt=""/>
-                    Administration
-                </CSS.EmElementS>
+                <LinkS to="/ClientContract">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.logo}
+                            Alt=""
+                        />
+                        Client contract
+                    </CSS.EmElementS>
+                </LinkS>
+                <LinkS to="/SupplierContract">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.logo}
+                            Alt=""
+                        />
+                        Supplier contract
+                    </CSS.EmElementS>
+                </LinkS>
+                <LinkS to="/Administration">
+                    <CSS.EmElementS>
+                        <BoxIcon
+                            IconSize={IconSize.Small}
+                            IconType={IconType.logo}
+                            Alt=""
+                        />
+                        Administration
+                    </CSS.EmElementS>
+                </LinkS>
             </CSS.PlatformS>
             <CSS.EbSpanS>Account</CSS.EbSpanS>
-            <CSS.EmElementS>
-                <BoxImage ImageName="./Image/Face.jpg" Background={Colors.Bg3} Alt="Zdj. profilowe" BoxShadow={true} Rounded={true} MaxHeight={30} MaxWidth={30} Margin="5px" />
-                {users[0]?.name}
-            </CSS.EmElementS>
-            <CSS.EmElementS>
-                <BoxIcon IconSize={IconSize.Small} IconType={IconType.privacy} Alt="" />
-                Privacy
-            </CSS.EmElementS>
-            <CSS.EmElementS>
-                <BoxIcon IconSize={IconSize.Small} IconType={IconType.settings} Alt="" />
-                Settings
-            </CSS.EmElementS>
+            <LinkS to="/Profile">
+                <CSS.EmElementS>
+                    <BoxImage
+                        ImageName="./Image/Face.jpg"
+                        Background={Colors.Bg3}
+                        Alt="Zdj. profilowe"
+                        BoxShadow={true}
+                        Rounded={true}
+                        MaxHeight={30}
+                        MaxWidth={30}
+                        Margin="5px"
+                    />
+                    {users[0]?.name}
+                </CSS.EmElementS>
+            </LinkS>
+            <LinkS to="/Privacy">
+                <CSS.EmElementS>
+                    <BoxIcon
+                        IconSize={IconSize.Small}
+                        IconType={IconType.privacy}
+                        Alt=""
+                    />
+                    Privacy
+                </CSS.EmElementS>
+            </LinkS>
+            <LinkS to="/Settings">
+                <CSS.EmElementS>
+                    <BoxIcon
+                        IconSize={IconSize.Small}
+                        IconType={IconType.settings}
+                        Alt=""
+                    />
+                    Settings
+                </CSS.EmElementS>
+            </LinkS>
             <hr />
-            <CSS.EmLastElementS>
-                <BoxIcon IconSize={IconSize.Small} IconType={IconType.logout} Alt="" />
-                Logout
-            </CSS.EmLastElementS>
+            <LinkS to="/Logout">
+                <CSS.EmLastElementS>
+                    <BoxIcon
+                        IconSize={IconSize.Small}
+                        IconType={IconType.logout}
+                        Alt=""
+                    />
+                    Logout
+                </CSS.EmLastElementS>
+            </LinkS>
         </>
     );
 };

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 const Profile: FC = () => {
-    return <>123</>;
+    return <>Profile</>;
 };
 
 export default Profile;

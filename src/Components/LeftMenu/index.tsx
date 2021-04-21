@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { useSelector } from "react-redux";
 //data
 import { Colors } from "../../StyledHelpers/Colors";
-import { LinkS } from "../../StyledHelpers/Controls";
 import { IconType } from "../Common/Icon/IconType";
 //components
 import Button from "./Button";
 import BoxImage from "../Common/Image/Boxing";
 //css
+import { LinkS } from "../../StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
 import IState from "../../Reduces/IState";
@@ -20,7 +20,6 @@ const LeftMenu: FC = () => {
 
     return (
         <CSS.LeftMenuS>
-            {console.log({users})}
             <CSS.UserDataS>
                 <BoxImage
                     ImageName="./Image/Face.jpg"
@@ -35,7 +34,7 @@ const LeftMenu: FC = () => {
                 <CSS.UserNameS>{users[0]?.name}</CSS.UserNameS>
                 <CSS.JobSubtitleS>{users[0]?.company.bs}</CSS.JobSubtitleS>
                 <hr />
-                <LinkS to="/Profile">
+                <LinkS to="/Network">
                     <Button
                         Icon={IconType.ecosystem}
                         SIcon={IconType.user_plus}
@@ -43,16 +42,22 @@ const LeftMenu: FC = () => {
                         Your network
                     </Button>
                 </LinkS>
-                <LinkS to="/">
+                <LinkS to="/Publications">
                     <Button Icon={IconType.publications} SIcon={IconType.plus}>
                         Your Publications
                     </Button>
                 </LinkS>
             </CSS.UserDataS>
             <CSS.BottomConentS>
-                <Button Icon={IconType.publications}>Publications</Button>
-                <Button Icon={IconType.ecosystem}>Ecosystem</Button>
-                <Button Icon={IconType.entities2}>Entities</Button>
+                <LinkS to="/Publications">
+                    <Button Icon={IconType.publications}>Publications</Button>
+                </LinkS>
+                <LinkS to="/Ecosystem">
+                    <Button Icon={IconType.ecosystem}>Ecosystem</Button>
+                </LinkS>
+                <LinkS to="/Entities">
+                    <Button Icon={IconType.entities2}>Entities</Button>
+                </LinkS>
             </CSS.BottomConentS>
         </CSS.LeftMenuS>
     );

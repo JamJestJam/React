@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import IEnUser from "../../Entities/user";
 import * as userTypes from "./UserTypes";
 
-const getUsers = (): Promise<any> =>
+const getUsers = (): Promise<IEnUser[]> =>
     ((dispatch: Dispatch) => {
         return fetch("https://jsonplaceholder.typicode.com/users")
             .then((response) => response.json())

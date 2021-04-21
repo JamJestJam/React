@@ -15,7 +15,7 @@ const BaseView: FC = (Props) => {
     useEffect(() => {
         dispatch<GetUsers>(userActions());
     });
- 
+
     return (
         <>
             <TopBar/>
