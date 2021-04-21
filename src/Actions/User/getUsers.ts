@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
-import IEnUser from "../Entities/user";
-import * as userTypes from "./ActionTypes/userTypes";
+import IEnUser from "../../Entities/user";
+import * as userTypes from "./UserTypes";
 
 const getUsers = (): Promise<any> =>
     ((dispatch: Dispatch) => {

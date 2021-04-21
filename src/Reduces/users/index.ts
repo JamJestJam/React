@@ -1,5 +1,6 @@
 import defaultState from "./state";
-import IUserTypes, * as types from "../../Actions/ActionTypes/userTypes";
+import * as types from "../../Actions/User/UserTypes";
+import IUserTypes from "../../Actions/User/IUserTypes";
 
 const userSwitch = (state = defaultState(), action: any) => {
     switch (action.type) {

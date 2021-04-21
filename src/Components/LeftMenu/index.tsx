@@ -20,6 +20,7 @@ const LeftMenu: FC = () => {
 
     return (
         <CSS.LeftMenuS>
+            {console.log({users})}
             <CSS.UserDataS>
                 <BoxImage
                     ImageName="./Image/Face.jpg"

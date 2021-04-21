@@ -12,11 +12,9 @@ import DdContent from "./DdContent";
 //styles
 import * as CSS from "./css";
 import * as Controls from "../../StyledHelpers/Controls";
-//interfaces
-import ITopBar from "./ITopBar";
 
 
-const TopBar: FC<ITopBar> = (props) => {
+const TopBar: FC = ()  => {
     return (
         <CSS.TobBarS>
             <Controls.TriangleConentLeft>
@@ -26,8 +24,8 @@ const TopBar: FC<ITopBar> = (props) => {
                     Alt="Logo"
                 />
                 <DropDown
-                    Text={props.SiteName}
-                    LeftIcon={props.Icon}
+                    Text="tekst"
+                    LeftIcon={IconType.house}
                     Height="466px"
                 >
                     <DdContent />

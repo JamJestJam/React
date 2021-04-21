@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 //store
 import store from "./Tools/store";
 //app 
-import App from "./App";
+import App from "./app";
 
 ReactDOM.render(
     <Provider store={store}>
