@@ -14,7 +14,7 @@ import IState from "../../Reduces/IState";
 import IUsersReducer from "../../Reduces/users/IUsersReducer";
 
 const LeftMenu: FC = () => {
-    const { users } = useSelector<IState, IUsersReducer>((GS) => ({
+    const { users, user } = useSelector<IState, IUsersReducer>((GS) => ({
         ...GS.user,
     }));
 
@@ -31,8 +31,8 @@ const LeftMenu: FC = () => {
                     MaxWidth={70}
                 />
                 <br />
-                <CSS.UserNameS>{users[0]?.name}</CSS.UserNameS>
-                <CSS.JobSubtitleS>{users[0]?.company.bs}</CSS.JobSubtitleS>
+                <CSS.UserNameS>{users[user]?.name}</CSS.UserNameS>
+                <CSS.JobSubtitleS>{users[user]?.company.bs}</CSS.JobSubtitleS>
                 <hr />
                 <LinkS to="/Network">
                     <Button

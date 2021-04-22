@@ -20,7 +20,7 @@ const DdContent: FC = () => {
         Value: "",
     });
 
-    const { users } = useSelector<IState, IUsersReducer>((GS) => ({
+    const { users, user } = useSelector<IState, IUsersReducer>((GS) => ({
         ...GS.user,
     }));
 
@@ -152,7 +152,7 @@ const DdContent: FC = () => {
                         MaxWidth={30}
                         Margin="5px"
                     />
-                    {users[0]?.name}
+                    {users[user]?.name}
                 </CSS.EmElementS>
             </LinkS>
             <LinkS to="/Privacy">

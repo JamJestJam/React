@@ -17,7 +17,7 @@ const userSwitch = (state = defaultState(), action: any) => {
             const paylod: IUserTypes["GET_LOGIN_USER"] = action;
             return {
                 ...state,
-                user: paylod
+                user: paylod.Login
             };
         }
 

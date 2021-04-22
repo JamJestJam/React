@@ -7,7 +7,7 @@ import IDropDown from "./IDropDown";
 import BoxIcon from "../Icon/Boxing";
 //css
 import * as ControlsHelp from "../../../StyledHelpers/Controls";
-import { ContentS, ExpanderButtonS, ExpanderS, RoundS } from "./css";
+import * as CSS from "./css";
 
 const DropDown: FC<IDropDown> = (props) => {
     const [State, SetState] = useState({
@@ -41,9 +41,9 @@ const DropDown: FC<IDropDown> = (props) => {
     });
 
     return (
-        <ExpanderS onClick={StopProp}>
+        <CSS.ExpanderS onClick={StopProp}>
             <ControlsHelp.LinkS to="#">
-                <ExpanderButtonS
+                <CSS.ExpanderButtonS
                     onClick={ChangeExpand}
                     Expanded={State.Expanded}
                 >
@@ -56,24 +56,24 @@ const DropDown: FC<IDropDown> = (props) => {
                         {props.Text}
                     </ControlsHelp.TriangleConentLeft>
                     <ControlsHelp.TriangleConentRight>
-                        <RoundS Expanded={State.Expanded}>
+                        <CSS.RoundS Expanded={State.Expanded}>
                             <BoxIcon
                                 // Expanded={State.Expanded}
                                 IconType={IconType.arrow_down}
                                 IconSize={IconSize.Mini}
                                 Alt="Icon"
                             />
-                        </RoundS>
+                        </CSS.RoundS>
                     </ControlsHelp.TriangleConentRight>
-                </ExpanderButtonS>
+                </CSS.ExpanderButtonS>
             </ControlsHelp.LinkS>
-            <ContentS
+            <CSS.ContentS
                 Expanded={State.Expanded}
                 Height={props.Height || "100vh"}
             >
                 {props.children}
-            </ContentS>
-        </ExpanderS>
+            </CSS.ContentS>
+        </CSS.ExpanderS>
     );
 };
 
