@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 //components
-import BoxImage from "../../../Common/Image/Boxing";
+import BoxImage from "../../Common/Image/Boxing";
 import Publication from "./Publication";
 //css
 import * as CSS from "./css";

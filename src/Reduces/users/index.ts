@@ -13,11 +13,11 @@ const userSwitch = (state = defaultState(), action: any) => {
             };
         }
 
-        case types.GET_LOGIN_USER: {
-            const paylod: IUserTypes["GET_LOGIN_USER"] = action;
+        case types.GET_USER: {
+            const paylod: IUserTypes["GET_USER"] = action;
             return {
                 ...state,
-                user: paylod.Login
+                user: paylod.user
             };
         }
 

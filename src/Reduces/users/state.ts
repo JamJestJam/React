@@ -2,7 +2,7 @@ import IUsersReducer from "./IUsersReducer";
 
 const defaultState = (): IUsersReducer => ({
     users: [],
-    user: 0
+    user: undefined
 });
 
 export default defaultState;

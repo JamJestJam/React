@@ -1,26 +1,27 @@
 import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "../../../StyledHelpers/Colors";
-import { IconSize } from "../../Common/Icon/IconSize";
-import { IconType } from "../../Common/Icon/IconType";
+import { Colors } from "../../../../StyledHelpers/Colors";
+import { IconSize } from "../../../Common/Icon/IconSize";
+import { IconType } from "../../../Common/Icon/IconType";
 //components
-import BoxImage from "../../Common/Image/Boxing";
-import Search from "../../Common/Input/Search";
-import BoxIcon from "../../Common/Icon/Boxing";
+import BoxImage from "../../../Common/Image/Boxing";
+import Search from "../../../Common/Input/Search";
+import BoxIcon from "../../../Common/Icon/Boxing";
 //css
-import { LinkS } from "../../../StyledHelpers/Controls";
+import { LinkS } from "../../../../StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
-import IState from "../../../Reduces/IState";
-import IUsersReducer from "../../../Reduces/users/IUsersReducer";
+import IUsersReducer from "../../../../Reduces/users/IUsersReducer";
+import IState from "../../../../Reduces/IState";
+
 
 const DdContent: FC = () => {
     const [State, SetState] = useState({
         Value: "",
     });
 
-    const { users, user } = useSelector<IState, IUsersReducer>((GS) => ({
+    const { user } = useSelector<IState, IUsersReducer>((GS) => ({
         ...GS.user,
     }));
 
@@ -143,7 +144,7 @@ const DdContent: FC = () => {
             <LinkS to="/Profile">
                 <CSS.EmElementS>
                     <BoxImage
-                        ImageName="./Image/Face.jpg"
+                        ImageName={user?.picture||""}
                         Background={Colors.Bg3}
                         Alt="Zdj. profilowe"
                         BoxShadow={true}
@@ -152,7 +153,8 @@ const DdContent: FC = () => {
                         MaxWidth={30}
                         Margin="5px"
                     />
-                    {users[user]?.name}
+                    {user?.firstName || <span>&zwnj;</span>}{" "}
+                    {user?.lastName || <span>&zwnj;</span>}
                 </CSS.EmElementS>
             </LinkS>
             <LinkS to="/Privacy">

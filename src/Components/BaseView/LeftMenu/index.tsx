@@ -1,20 +1,20 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "../../StyledHelpers/Colors";
-import { IconType } from "../Common/Icon/IconType";
+import { Colors } from "../../../StyledHelpers/Colors";
+import { IconType } from "../../Common/Icon/IconType";
 //components
 import Button from "./Button";
-import BoxImage from "../Common/Image/Boxing";
+import BoxImage from "../../Common/Image/Boxing";
 //css
-import { LinkS } from "../../StyledHelpers/Controls";
+import { LinkS } from "../../../StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
-import IState from "../../Reduces/IState";
-import IUsersReducer from "../../Reduces/users/IUsersReducer";
+import IState from "../../../Reduces/IState";
+import IUsersReducer from "../../../Reduces/users/IUsersReducer";
 
 const LeftMenu: FC = () => {
-    const { users, user } = useSelector<IState, IUsersReducer>((GS) => ({
+    const { user } = useSelector<IState, IUsersReducer>((GS) => ({
         ...GS.user,
     }));
 
@@ -22,7 +22,7 @@ const LeftMenu: FC = () => {
         <CSS.LeftMenuS>
             <CSS.UserDataS>
                 <BoxImage
-                    ImageName="./Image/Face.jpg"
+                    ImageName={user?.picture || ""}
                     Background={Colors.Bg3}
                     Alt="Zdj. profilowe"
                     BoxShadow={true}
@@ -31,8 +31,13 @@ const LeftMenu: FC = () => {
                     MaxWidth={70}
                 />
                 <br />
-                <CSS.UserNameS>{users[user]?.name}</CSS.UserNameS>
-                <CSS.JobSubtitleS>{users[user]?.company.bs}</CSS.JobSubtitleS>
+                <CSS.UserNameS>
+                    {user?.firstName || <span>&zwnj;</span>}{" "}
+                    {user?.lastName || <span>&zwnj;</span>}
+                </CSS.UserNameS>
+                <CSS.JobSubtitleS>
+                    {user?.email || <span>&zwnj;</span>}
+                </CSS.JobSubtitleS>
                 <hr />
                 <LinkS to="/Network">
                     <Button

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IconSize } from "../../Common/Icon/IconSize";
+import { IconSize } from "../../../Common/Icon/IconSize";
 
 
 export const ButtonS = styled.div`

@@ -2,21 +2,21 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { GlobalStyles } from "./StyledHelpers/GlobalStyles";
-import SupplierContract from "./Components/Pages/SupplierContract";
-import Administration from "./Components/Pages/Administration";
-import ClientContract from "./Components/Pages/ClientContract";
-import Publications from "./Components/Pages/Publications";
-import Settings from "./Components/Pages/SettingCom";
-import Workspace from "./Components/Pages/Workspace";
-import Ecosystem from "./Components/Pages/Ecosystem";
-import HomePage from "./Components/Pages/HomePage";
+import SupplierContract from "./Components/SupplierContract";
+import Administration from "./Components/Administration";
+import ClientContract from "./Components/ClientContract";
+import Publications from "./Components/Publications";
+import Settings from "./Components/SettingCom";
+import Workspace from "./Components/Workspace";
+import Ecosystem from "./Components/Ecosystem";
+import HomePage from "./Components/HomePage";
 import BaseView from "./Components/BaseView";
-import Entities from "./Components/Pages/Entities";
-import Profile from "./Components/Pages/Profile";
-import Network from "./Components/Pages/Network";
-import Privacy from "./Components/Pages/Privacy";
-import People from "./Components/Pages/People";
-import Logout from "./Components/Pages/Logout";
+import Entities from "./Components/Entities";
+import Profile from "./Components/Profile";
+import Network from "./Components/Network";
+import Privacy from "./Components/Privacy";
+import People from "./Components/People";
+import Logout from "./Components/Logout";
 
 function App() {
     return (

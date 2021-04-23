@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 //data
-import { Colors } from "../../../../../StyledHelpers/Colors";
-import { IconSize } from "../../../../Common/Icon/IconSize";
-import { IconType } from "../../../../Common/Icon/IconType";
+import { Colors } from "../../../../StyledHelpers/Colors";
+import { IconSize } from "../../../Common/Icon/IconSize";
+import { IconType } from "../../../Common/Icon/IconType";
 //components
-import Icon from "../../../../Common/Icon";
-import BoxImage from "../../../../Common/Image/Boxing";
+import Icon from "../../../Common/Icon";
+import BoxImage from "../../../Common/Image/Boxing";
 //css
 import * as CSS from "./css";
 

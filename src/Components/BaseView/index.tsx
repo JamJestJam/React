@@ -2,21 +2,23 @@ import { useDispatch } from "react-redux";
 import React, { FC, useEffect } from "react";
 //actions
 import userActions from "../../Actions/User/getUsers";
-import getLoginUser from "../../Actions/User/getLoginUser";
+import getUser from "../../Actions/User/getUser";
 //components
-import LeftMenu from "../LeftMenu";
-import TopBar from "../TopBar";
+import LeftMenu from "./LeftMenu";
+import TopBar from "./TopBar";
 //style
 import * as CSS from "./css";
+//interface
 
 type GetUsers = ReturnType<typeof userActions>;
-type GetLoginUser = ReturnType<typeof getLoginUser>;
+type GetUser = ReturnType<typeof getUser>;
 
 const BaseView: FC = (Props) => {
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch<GetUsers>(userActions());
-        dispatch<GetLoginUser>(getLoginUser(1));
+        dispatch<GetUsers>(userActions()).then((prop)=>{
+            dispatch<GetUser>(getUser(prop[1].id));
+        });
     });
 
     return (

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 //components
-import Slider from "../../../Common/HorizontalSlider";
+import Slider from "../../Common/HorizontalSlider";
 import WorkspacesEl from "./Element";
 //css
 import * as CSS from "./css";

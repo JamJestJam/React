@@ -1,5 +1,5 @@
-import { FontSize } from '../../../../../StyledHelpers/Fonts';
-import { Colors } from "../../../../../StyledHelpers/Colors";
+import { FontSize } from '../../../../StyledHelpers/Fonts';
+import { Colors } from "../../../../StyledHelpers/Colors";
 import styled from "styled-components";
 
 export const ElementS = styled.div`

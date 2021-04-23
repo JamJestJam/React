@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Colors } from './../../StyledHelpers/Colors';
-import { FontSize } from './../../StyledHelpers/Fonts';
+import { Colors } from '../../../../StyledHelpers/Colors';
+import { FontSize } from '../../../../StyledHelpers/Fonts';
 
 export const TobBarS = styled.div`
     background-color: ${Colors.Bg1};
@@ -16,7 +16,7 @@ export const EmElementS = styled.div`
 `;
 
 export const PlatformS = styled.div`
-    max-height: 250px;
+    height: 250px;
     overflow-y: scroll;
     border-bottom: 1px solid ${Colors.Shadow};
 `;
@@ -31,7 +31,7 @@ export const IconBoxS = styled.div`
     margin: 0 2px;
 `;
 
-export const EbSpanS = styled.span`
+export const EbSpanS = styled.div`
     font-size: ${FontSize[12]};
     color: ${Colors.GrayFont};
 `;

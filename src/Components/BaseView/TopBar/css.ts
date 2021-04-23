@@ -16,7 +16,7 @@ export const EmElementS = styled.div`
 `;
 
 export const PlatformS = styled.div`
-    height: 250px;
+    max-height: 250px;
     overflow-y: scroll;
     border-bottom: 1px solid ${Colors.Shadow};
 `;
@@ -31,7 +31,7 @@ export const IconBoxS = styled.div`
     margin: 0 2px;
 `;
 
-export const EbSpanS = styled.div`
+export const EbSpanS = styled.span`
     font-size: ${FontSize[12]};
     color: ${Colors.GrayFont};
 `;

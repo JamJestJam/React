@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Colors } from "../../../../StyledHelpers/Colors";
-import { FontSize } from "../../../../StyledHelpers/Fonts";
+import { Colors } from "../../../StyledHelpers/Colors";
+import { FontSize } from "../../../StyledHelpers/Fonts";
 
 export const ElementsS = styled.div`
     display: flex;
