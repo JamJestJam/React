@@ -11,7 +11,8 @@ export const SBoxIcon = styled.div<IBoxIconStyle>`
         props.Height ? props.Height + "px" : "calc(" + props.Size + " + 20px)"};
     min-width: ${(props) =>
         props.Width ? props.Width + "px" : "calc(" + props.Size + " + 20px)"};
-    box-shadow: 0 0 3px ${(props) => (props.Shadow ? Colors.Shadow : "transparent")};
+    box-shadow: 0 0 3px
+        ${(props) => (props.Shadow ? Colors.Shadow : "transparent")};
     border-radius: ${(props) => (props.Rounded ? "100%" : "0")};
     justify-content: center;
     align-items: center;

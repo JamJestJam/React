@@ -10,7 +10,9 @@ const Privacy: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Privacy", "Privacy", IconType.privacy));
+        dispatch<GetPageInfo>(
+            getPageInfo("Privacy", "Privacy", IconType.privacy)
+        );
     });
     return <>Privacy</>;
 };

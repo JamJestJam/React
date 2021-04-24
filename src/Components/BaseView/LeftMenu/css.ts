@@ -24,8 +24,7 @@ export const UserNameS = styled.div`
     font-size: ${FontSize[16]};
     text-align: center;
     font-weight: bold;
-`
-
+`;
 
 export const BottomConentS = styled.div`
     padding: 0 20px;

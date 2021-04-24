@@ -3,7 +3,8 @@ import { Colors } from "../../../StyledHelpers/Colors";
 import IIconStyle from "./IIconStyle";
 
 const IconS = styled.img<IIconStyle>`
-    border: 1px ${(props) => (props.Border ? Colors.Shadow : "transparent")} solid;
+    border: 1px ${(props) => (props.Border ? Colors.Shadow : "transparent")}
+        solid;
     height: ${(props) => props.Size};
     width: ${(props) => props.Size};
     border-radius: 5px;

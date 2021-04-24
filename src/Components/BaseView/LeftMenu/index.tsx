@@ -32,7 +32,8 @@ const LeftMenu: FC = () => {
                 />
                 <br />
                 <CSS.UserNameS>
-                    {user?.firstName || <span>&zwnj;</span>}{" "}
+                    {user?.firstName || <span>&zwnj;</span>}
+                    {""}
                     {user?.lastName || <span>&zwnj;</span>}
                 </CSS.UserNameS>
                 <CSS.JobSubtitleS>

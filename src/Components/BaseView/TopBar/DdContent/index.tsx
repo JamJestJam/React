@@ -15,7 +15,6 @@ import * as CSS from "./css";
 import IUsersReducer from "../../../../Reduces/users/IUsersReducer";
 import IState from "../../../../Reduces/IState";
 
-
 const DdContent: FC = () => {
     const [State, SetState] = useState({
         Value: "",
@@ -144,7 +143,7 @@ const DdContent: FC = () => {
             <LinkS to="/Profile">
                 <CSS.EmElementS>
                     <BoxImage
-                        ImageName={user?.picture||""}
+                        ImageName={user?.picture || ""}
                         Background={Colors.Bg3}
                         Alt="Zdj. profilowe"
                         BoxShadow={true}
@@ -153,7 +152,8 @@ const DdContent: FC = () => {
                         MaxWidth={30}
                         Margin="5px"
                     />
-                    {user?.firstName || <span>&zwnj;</span>}{" "}
+                    {user?.firstName || <span>&zwnj;</span>}
+                    {""}
                     {user?.lastName || <span>&zwnj;</span>}
                 </CSS.EmElementS>
             </LinkS>

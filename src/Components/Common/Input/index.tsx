@@ -25,14 +25,12 @@ const Input: FC<IImput> = (props) => {
         <InputS
             value={State.Value}
             type="text"
-
             BorderColor={props.BorderColor}
             Background={props.Background}
             FontSize={props.FontSize}
             Height={props.Height}
             Width={props.Width}
             Color={props.Color}
-            
             onChange={OnChange}
             onFocus={(focusEvent) => props.Focus && props.Focus(focusEvent)}
             onBlur={(focusEvent) => props.Blur && props.Blur(focusEvent)}

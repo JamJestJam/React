@@ -11,9 +11,11 @@ const Ecosystem: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Ecosystem", "Ecosystem", IconType.ecosystem));
+        dispatch<GetPageInfo>(
+            getPageInfo("Ecosystem", "Ecosystem", IconType.ecosystem)
+        );
     });
-    
+
     return <>Ecosystem</>;
 };
 

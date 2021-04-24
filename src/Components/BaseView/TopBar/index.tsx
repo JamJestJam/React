@@ -17,8 +17,7 @@ import * as Controls from "../../../StyledHelpers/Controls";
 import IPageInfoReducer from "../../../Reduces/pageInfo/IPageInfoReducer";
 import IState from "../../../Reduces/IState";
 
-
-const TopBar: FC = ()  => {
+const TopBar: FC = () => {
     const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({
         ...GS.pageInfo,
     }));

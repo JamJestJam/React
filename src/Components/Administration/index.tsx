@@ -11,7 +11,13 @@ const Administration: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Administration", "Administration", IconType.administration));
+        dispatch<GetPageInfo>(
+            getPageInfo(
+                "Administration",
+                "Administration",
+                IconType.administration
+            )
+        );
     });
     return <>Administration</>;
 };

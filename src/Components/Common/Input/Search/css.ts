@@ -5,7 +5,8 @@ import ILabelS from "./ILabelS";
 import IFieldS from "./IFieldS";
 
 export const FieldS = styled.div<IFieldS>`
-    border: 1px solid ${(props) => (props.Border ? Colors.Shadow : "transparent")};
+    border: 1px solid
+        ${(props) => (props.Border ? Colors.Shadow : "transparent")};
     transition: 0.2s ease all;
     position: relative;
     display: flex;

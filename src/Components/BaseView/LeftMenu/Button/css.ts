@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { IconSize } from "../../../Common/Icon/IconSize";
 
-
 export const ButtonS = styled.div`
     display: flex;
 `;
@@ -11,7 +10,7 @@ export const ButtonLeftS = styled.div`
     align-items: center;
     display: flex;
     flex: 1;
-`
+`;
 
 export const ButtonRightS = styled.div`
     width: ${IconSize.Small};

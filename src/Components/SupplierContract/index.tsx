@@ -10,7 +10,9 @@ const SupplierContract: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("SupplierContract", "SupplierContract", IconType.logo));
+        dispatch<GetPageInfo>(
+            getPageInfo("SupplierContract", "SupplierContract", IconType.logo)
+        );
     });
     return <>Supplier contract</>;
 };

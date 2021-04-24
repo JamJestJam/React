@@ -24,7 +24,11 @@ const WorkspacesEl: FC = () => {
             <CSS.ContentS>
                 <CSS.TopS>
                     <CSS.IconBox>
-                        <Icon IconSize={IconSize.Large} IconType={IconType.bell} Alt=""/>
+                        <Icon
+                            IconSize={IconSize.Large}
+                            IconType={IconType.bell}
+                            Alt=""
+                        />
                     </CSS.IconBox>
                     Client contract
                 </CSS.TopS>

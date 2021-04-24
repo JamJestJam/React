@@ -11,7 +11,9 @@ const Entities: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Entities", "Entities", IconType.entities));
+        dispatch<GetPageInfo>(
+            getPageInfo("Entities", "Entities", IconType.entities)
+        );
     });
     return <>Entities</>;
 };

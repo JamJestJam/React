@@ -1,4 +1,4 @@
-import { FontSize } from '../../../../StyledHelpers/Fonts';
+import { FontSize } from "../../../../StyledHelpers/Fonts";
 import { Colors } from "../../../../StyledHelpers/Colors";
 import styled from "styled-components";
 
@@ -27,7 +27,7 @@ export const InfoS = styled.div`
     align-items: center;
     color: ${Colors.GrayFont};
 
-    img{
+    img {
         margin: 0 5px;
     }
 `;

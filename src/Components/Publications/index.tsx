@@ -11,7 +11,9 @@ const Publications: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Publications", "Publications", IconType.publications));
+        dispatch<GetPageInfo>(
+            getPageInfo("Publications", "Publications", IconType.publications)
+        );
     });
     return <>Publications</>;
 };

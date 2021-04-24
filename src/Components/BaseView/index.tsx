@@ -23,14 +23,14 @@ const BaseView: FC = (Props) => {
         });
     }, [dispatch]);
 
-    useEffect(()=>{
+    useEffect(() => {
         document.title = pageInfo.pageTitle;
     });
 
     const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({
         ...GS.pageInfo,
     }));
-    
+
     return (
         <>
             <TopBar />

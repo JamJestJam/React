@@ -56,7 +56,7 @@ const Slider: FC = (props) => {
             onMouseMove={move}
             onSelect={select}
             onMouseUp={end}
-            style={{ transform: "translateX(" + State.transform + "px)"}}
+            style={{ transform: "translateX(" + State.transform + "px)" }}
         >
             {props.children}
         </SliderS>

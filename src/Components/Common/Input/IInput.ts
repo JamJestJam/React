@@ -1,4 +1,4 @@
-import { FontSizeType } from './../../../StyledHelpers/Fonts';
+import { FontSizeType } from "./../../../StyledHelpers/Fonts";
 import React from "react";
 
 export default interface IImput {

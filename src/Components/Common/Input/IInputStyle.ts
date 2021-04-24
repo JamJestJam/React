@@ -1,4 +1,4 @@
-import { FontSizeType } from './../../../StyledHelpers/Fonts';
+import { FontSizeType } from "./../../../StyledHelpers/Fonts";
 export default interface IImputStyle {
     BorderColor?: string;
     Background?: string;

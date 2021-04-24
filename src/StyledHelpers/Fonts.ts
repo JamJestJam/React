@@ -9,4 +9,12 @@ export const FontSize = {
     24: "1.55rem",
 };
 
-export type FontSizeType = "10" | "12" | "14" | "16" | "18" | "20" | "22" | "24";
+export type FontSizeType =
+    | "10"
+    | "12"
+    | "14"
+    | "16"
+    | "18"
+    | "20"
+    | "22"
+    | "24";

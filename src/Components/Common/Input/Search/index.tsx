@@ -53,18 +53,23 @@ const Search: FC<ISearch> = (props) => {
                 Width={props.Width}
                 Color={props.Color}
                 Value={State.Value}
-
                 Blur={InputBlur}
                 Focus={InputFocus}
                 Change={InputChange}
             />
-            <CSS.LabelS Focus={State.Focus || State.Value.length > 0} FontSize={(props.FontSize || "18")}>
+            <CSS.LabelS
+                Focus={State.Focus || State.Value.length > 0}
+                FontSize={props.FontSize || "18"}
+            >
                 {props.Label}
             </CSS.LabelS>
-            {
-                props.Button &&
-                <BoxIcon IconSize={IconSize.Small} IconType={IconType.search} Alt="Szukaj"/>
-            }
+            {props.Button && (
+                <BoxIcon
+                    IconSize={IconSize.Small}
+                    IconType={IconType.search}
+                    Alt="Szukaj"
+                />
+            )}
         </CSS.FieldS>
     );
 };

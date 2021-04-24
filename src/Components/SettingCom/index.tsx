@@ -11,7 +11,9 @@ const Settings: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Settings", "Settings", IconType.settings));
+        dispatch<GetPageInfo>(
+            getPageInfo("Settings", "Settings", IconType.settings)
+        );
     });
     return <>Settings</>;
 };

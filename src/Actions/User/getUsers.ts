@@ -1,8 +1,9 @@
 import { Dispatch } from "redux";
 import IEnUsers from "../../Entities/users";
+import { dummyapi } from "../app_key";
 import * as userTypes from "./UserTypes";
 
-interface IDownloadData{
+interface IDownloadData {
     data: IEnUsers[];
     limit: number;
     offset: number;
@@ -12,7 +13,9 @@ interface IDownloadData{
 
 const getUsers = (): Promise<IEnUsers[]> =>
     ((dispatch: Dispatch) => {
-        return fetch(`https://dummyapi.io/data/api/user`, { headers: { 'app-id': '608301449c50293b96f33b2e' } })
+        return fetch(`https://dummyapi.io/data/api/user`, {
+            headers: { "app-id": dummyapi },
+        })
             .then((response) => response.json())
             .then((users: IDownloadData) => {
                 dispatch({

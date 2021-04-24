@@ -11,9 +11,11 @@ const ClientContract: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("ClientContract", "ClientContract", IconType.logo));
+        dispatch<GetPageInfo>(
+            getPageInfo("ClientContract", "ClientContract", IconType.logo)
+        );
     });
-    
+
     return <>ClientContract</>;
 };
 

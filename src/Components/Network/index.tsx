@@ -11,7 +11,9 @@ const Network: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Network", "Network", IconType.network));
+        dispatch<GetPageInfo>(
+            getPageInfo("Network", "Network", IconType.network)
+        );
     });
     return <>Network</>;
 };

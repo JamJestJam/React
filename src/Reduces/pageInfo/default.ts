@@ -5,8 +5,8 @@ const defaultState = (): IPageInfoReducer => ({
     pageInfo: {
         pageIcon: IconType.house2,
         pageName: "default",
-        pageTitle: "default"
-    }
+        pageTitle: "default",
+    },
 });
 
 export default defaultState;

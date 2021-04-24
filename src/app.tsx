@@ -24,7 +24,10 @@ function App() {
             <GlobalStyles />
             <BaseView>
                 <Switch>
-                    <Route path="/SupplierContract" component={SupplierContract} />
+                    <Route
+                        path="/SupplierContract"
+                        component={SupplierContract}
+                    />
                     <Route path="/Administration" component={Administration} />
                     <Route path="/ClientContract" component={ClientContract} />
                     <Route path="/Publications" component={Publications} />

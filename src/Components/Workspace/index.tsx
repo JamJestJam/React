@@ -11,7 +11,9 @@ const Workspace: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Workspace", "Workspace", IconType.logo));
+        dispatch<GetPageInfo>(
+            getPageInfo("Workspace", "Workspace", IconType.logo)
+        );
     });
     return <>Workspace</>;
 };
