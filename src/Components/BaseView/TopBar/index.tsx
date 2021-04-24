@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useSelector } from "react-redux";
 //data
 import { Colors } from "../../../StyledHelpers/Colors";
 import { IconSize } from "../../Common/Icon/IconSize";
@@ -12,9 +13,16 @@ import DdContent from "./DdContent";
 //styles
 import * as CSS from "./css";
 import * as Controls from "../../../StyledHelpers/Controls";
+//interface
+import IPageInfoReducer from "../../../Reduces/pageInfo/IPageInfoReducer";
+import IState from "../../../Reduces/IState";
 
 
 const TopBar: FC = ()  => {
+    const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({
+        ...GS.pageInfo,
+    }));
+
     return (
         <CSS.TobBarS>
             <Controls.TriangleConentLeft>
@@ -24,8 +32,8 @@ const TopBar: FC = ()  => {
                     Alt="Logo"
                 />
                 <DropDown
-                    Text="tekst"
-                    LeftIcon={IconType.house}
+                    Text={pageInfo.pageName}
+                    LeftIcon={pageInfo.pageIcon}
                     Height="466px"
                 >
                     <DdContent />

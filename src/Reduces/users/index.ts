@@ -1,4 +1,4 @@
-import defaultState from "./state";
+import defaultState from "./default";
 import * as types from "../../Actions/User/UserTypes";
 import IUserTypes from "../../Actions/User/IUserTypes";
 

@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React, { FC, useEffect } from "react";
 //actions
 import userActions from "../../Actions/User/getUsers";
@@ -9,21 +9,31 @@ import TopBar from "./TopBar";
 //style
 import * as CSS from "./css";
 //interface
-
+import IPageInfoReducer from "../../Reduces/pageInfo/IPageInfoReducer";
+import IState from "../../Reduces/IState";
+//types
 type GetUsers = ReturnType<typeof userActions>;
 type GetUser = ReturnType<typeof getUser>;
 
 const BaseView: FC = (Props) => {
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch<GetUsers>(userActions()).then((prop)=>{
+        dispatch<GetUsers>(userActions()).then((prop) => {
             dispatch<GetUser>(getUser(prop[1]?.id));
         });
+    }, [dispatch]);
+
+    useEffect(()=>{
+        document.title = pageInfo.pageTitle;
     });
 
+    const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({
+        ...GS.pageInfo,
+    }));
+    
     return (
         <>
-            <TopBar/>
+            <TopBar />
             <CSS.PageContentS>
                 <LeftMenu />
                 <CSS.PageFillS>{Props.children}</CSS.PageFillS>
