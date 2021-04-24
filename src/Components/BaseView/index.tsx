@@ -17,7 +17,7 @@ const BaseView: FC = (Props) => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch<GetUsers>(userActions()).then((prop)=>{
-            dispatch<GetUser>(getUser(prop[1].id));
+            dispatch<GetUser>(getUser(prop[1]?.id));
         });
     });
 
