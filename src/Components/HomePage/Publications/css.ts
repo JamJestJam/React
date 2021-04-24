@@ -45,6 +45,8 @@ export const TopPublicationS = styled.div`
 `;
 
 export const PublicationS = styled.div`
+    width: calc(100% - 20px);
+    text-align: justify;
     position: absolute;
     bottom: 0;
     color: ${Colors.WhiteFont};

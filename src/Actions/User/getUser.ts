@@ -1,7 +1,7 @@
 import { Dispatch } from "redux";
 import IEnUser from "../../Entities/user";
 import { dummyapi } from "../app_key";
-import * as userTypes from "./UserTypes";
+import * as types from "./UserTypes";
 
 const getUser = (data: string): Promise<IEnUser[]> =>
     ((dispatch: Dispatch) => {
@@ -11,7 +11,7 @@ const getUser = (data: string): Promise<IEnUser[]> =>
             .then((response) => response.json())
             .then((user: IEnUser) => {
                 dispatch({
-                    type: userTypes.GET_USER,
+                    type: types.GET_USER,
                     user: user,
                 });
                 return user;

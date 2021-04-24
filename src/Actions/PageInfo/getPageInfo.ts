@@ -1,7 +1,7 @@
 import { Dispatch } from "redux";
 import { IconType } from "../../Components/Common/Icon/IconType";
 import IEnPageInfo from "../../Entities/pageInfo";
-import * as pageInfoTypes from "./PageInfoTypes";
+import * as types from "./PageInfoTypes";
 
 const getPageInfo = (
     pageName: string,
@@ -10,7 +10,7 @@ const getPageInfo = (
 ): Promise<IEnPageInfo> =>
     ((dispatch: Dispatch) => {
         return dispatch({
-            type: pageInfoTypes.GET_PAGE_INFO,
+            type: types.GET_PAGE_INFO,
             pageInfo: {
                 pageIcon: pageImage,
                 pageTitle: pageTitle,

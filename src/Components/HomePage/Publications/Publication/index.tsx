@@ -1,35 +1,47 @@
 import React, { FC } from "react";
+//action
+import getMonth from "../getMounth";
 //components
 import BoxImage from "../../../Common/Image/Boxing";
 //css
 import * as CSS from "./css";
+//interface
+import IPublication from "./IPublication";
 
-const Publication: FC = () => {
+const Publication: FC<IPublication> = (props) => {
+    const date = new Date(props.data?.publishDate || "");
+    const dateText = `
+    ${date.getDate() < 10 ? "0" + date.getDate() : date.getDate()} 
+    ${getMonth(date.getMonth())} 
+    ${date.getFullYear()}`;
+
     return (
         <CSS.ContentS>
-            <BoxImage
-                ImageName="./Image/Sample2.jpg"
-                Alt=""
-                MaxHeight={80}
-                MaxWidth={80}
-                Margin="0"
-            />
+            <div>
+                <BoxImage
+                    ImageName={props.data?.image || ""}
+                    Alt=""
+                    MaxHeight={80}
+                    MaxWidth={80}
+                    Margin="0"
+                />
+            </div>
             <CSS.PublicationS>
-                <CSS.PublicationTextS>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
-                    and one more line for the demo
-                </CSS.PublicationTextS>
+                <CSS.PublicationTextS>{props.data?.text}</CSS.PublicationTextS>
                 <CSS.PubDataS>
-                    <div>7 jan. 2020 </div>
+                    <div>{props.data ? dateText : ""}</div>
                     <BoxImage
-                        ImageName="./Image/Face.jpg"
+                        ImageName={props.data?.owner.picture || ""}
                         Alt=""
                         MaxWidth={20}
                         MaxHeight={20}
                         Rounded={true}
                         Margin="5px"
                     />
-                    <CSS.NameS>Humberta Swift</CSS.NameS>
+                    <CSS.NameS>
+                        {props.data?.owner.firstName}{" "}
+                        {props.data?.owner.lastName}
+                    </CSS.NameS>
                 </CSS.PubDataS>
             </CSS.PublicationS>
         </CSS.ContentS>
