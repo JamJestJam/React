@@ -10,7 +10,6 @@ import * as CSS from "./css";
 //interface
 import IState from "../../../Reduces/IState";
 import IPostReducer from "../../../Reduces/post/IPostReducer";
-import ICommentReducer from "../../../Reduces/comment/ICommentReducer";
 
 function RandomNumbers(count: number, max = 20): number[] {
     const numbers: number[] = [];
@@ -29,9 +28,6 @@ function RandomNumbers(count: number, max = 20): number[] {
 const Publications: FC = () => {
     const { posts } = useSelector<IState, IPostReducer>((GS) => ({
         ...GS.posts,
-    }));
-    const { comments } = useSelector<IState, ICommentReducer>((GS) => ({
-        ...GS.comments,
     }));
     const postID = useMemo(() => RandomNumbers(4, posts.length - 1), [
         posts.length,

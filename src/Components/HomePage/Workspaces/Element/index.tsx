@@ -8,13 +8,15 @@ import Icon from "../../../Common/Icon";
 import BoxImage from "../../../Common/Image/Boxing";
 //css
 import * as CSS from "./css";
+//interface
+import IWorkspaceEl from "./IWorkspaceEl";
 
-const WorkspacesEl: FC = () => {
+const WorkspacesEl: FC<IWorkspaceEl> = (props) => {
     return (
         <CSS.ElementS>
             <CSS.ImageS>
                 <BoxImage
-                    ImageName="./Image/Sample3.jpg"
+                    ImageName={props.ImageName}
                     Alt=""
                     Background={Colors.Bg3}
                     MaxHeight={100}
@@ -26,11 +28,11 @@ const WorkspacesEl: FC = () => {
                     <CSS.IconBox>
                         <Icon
                             IconSize={IconSize.Large}
-                            IconType={IconType.bell}
+                            IconType={props.Icon}
                             Alt=""
                         />
                     </CSS.IconBox>
-                    Client contract
+                    {props.Name}
                 </CSS.TopS>
                 <CSS.TransformS>
                     <CSS.InfoS>
@@ -48,10 +50,10 @@ const WorkspacesEl: FC = () => {
                                 IconType={IconType.cog}
                                 Alt=""
                             />
-                            150 users
+                            {props.Users} users
                         </CSS.InfoS>
                     </CSS.InfoS>
-                    <CSS.LastS>Last update 2 days ago</CSS.LastS>
+                    <CSS.LastS>Last update {props.Days} days ago</CSS.LastS>
                 </CSS.TransformS>
             </CSS.ContentS>
         </CSS.ElementS>
