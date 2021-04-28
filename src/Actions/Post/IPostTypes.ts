@@ -1,7 +1,7 @@
-import IEnPost from "../../Entities/posts";
+import IEnPost from '../../Entities/posts';
 
 export default interface IPostTypes {
-    GET_POST: {
-        posts: IEnPost;
-    };
+  GET_POST: {
+    posts: IEnPost;
+  };
 }

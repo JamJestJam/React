@@ -1,6 +1,6 @@
-import { FontSizeType } from "./../../../../StyledHelpers/Fonts";
+import { FontSizeType } from './../../../../StyledHelpers/Fonts';
 
 export default interface ILabelS {
-    Focus: boolean;
-    FontSize: FontSizeType;
+  Focus: boolean;
+  FontSize: FontSizeType;
 }

@@ -1,7 +1,7 @@
-import IEnUser from "../../Entities/user";
-import IEnUsers from "../../Entities/users";
+import IEnUser from '../../Entities/user';
+import IEnUsers from '../../Entities/users';
 
 export default interface IUsersReducer {
-    users: IEnUsers[];
-    user: IEnUser | undefined;
+  users: IEnUsers[];
+  user: IEnUser | undefined;
 }

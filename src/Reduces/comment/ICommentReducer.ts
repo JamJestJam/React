@@ -1,5 +1,5 @@
-import IEnComment from "../../Entities/comment";
+import IEnComment from '../../Entities/comment';
 
 export default interface ICommentReducer {
-    comments: IEnComment[];
+  comments: IEnComment[];
 }

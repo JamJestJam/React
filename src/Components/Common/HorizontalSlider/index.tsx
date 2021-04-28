@@ -1,80 +1,76 @@
-import React, { FC, useEffect, useRef, useState } from "react";
-import * as CSS from "./css";
+import React, { FC, useEffect, useRef, useState } from 'react';
+import * as CSS from './css';
+import * as F from './function';
 
 const padding = 5;
 
 const Slider: FC = (props) => {
-    const ref = useRef(null);
-    const [State, SetState] = useState({
-        move: false,
-        maxWidth: 0,
-        transform: 0,
+  const ref = useRef(null);
+  const [state, setState] = useState({
+    moving: false,
+    maxWidth: 0,
+    transform: 0,
+  });
+
+  const start = (event: React.MouseEvent<HTMLDivElement>) => {
+    F.stopProp(event);
+
+    setState({
+      ...state,
+      moving: true,
     });
+  };
 
-    const start = (event: React.MouseEvent<HTMLDivElement>) => {
-        event.preventDefault();
-        event.stopPropagation();
+  const move = (event: React.MouseEvent) => {
+    F.stopProp(event);
 
-        SetState({
-            ...State,
-            move: true,
-        });
-    };
+    if (state.moving) {
+      const move = state.transform + event.movementX;
+      const maxWidth = state.maxWidth;
+      if (move > padding || move < -maxWidth) return;
+      setState({
+        ...state,
+        transform: move,
+      });
+    }
+  };
 
-    const move = (event: React.MouseEvent) => {
-        event.preventDefault();
-        event.stopPropagation();
+  const stop = (event: React.MouseEvent) => {
+    F.stopProp(event);
 
-        if (State.move) {
-            const move = State.transform + event.movementX;
-            const maxWidth = State.maxWidth;
-            if (move > padding || move < -maxWidth) return;
-            SetState({
-                ...State,
-                transform: move,
-            });
-        }
-    };
+    if (state.moving) setState({ ...state, moving: false });
+  };
 
-    const end = (event: React.MouseEvent) => {
-        event.preventDefault();
-        event.stopPropagation();
+  const select = () => {
+    return false;
+  };
 
-        if (State.move) {
-            SetState({
-                ...State,
-                move: false,
-            });
-        }
-    };
+  useEffect(() => {
+    const element: HTMLDivElement =
+      ref.current || document.createElement('div');
 
-    const select = () => {
-        return false;
-    };
+    setState({
+      ...state,
+      maxWidth: element.scrollWidth - element.offsetWidth + padding,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ref]);
 
-    useEffect(() => {
-        const element: HTMLDivElement =
-            ref.current || document.createElement("div");
-
-        SetState({
-            ...State,
-            maxWidth: element.scrollWidth - element.offsetWidth + padding,
-        });
-    }, [ref]);
-
-    return (
-        <CSS.SliderS
-            onSelectCapture={select}
-            onMouseDown={start}
-            onMouseLeave={end}
-            onMouseMove={move}
-            onSelect={select}
-            onMouseUp={end}
-            style={{ transform: "translateX(" + State.transform + "px)" }}
-        >
-            <CSS.ContentS ref={ref}>{props.children}</CSS.ContentS>
-        </CSS.SliderS>
-    );
+  return (
+    <CSS.SliderS
+      onSelectCapture={select}
+      onMouseDown={start}
+      onMouseLeave={stop}
+      onMouseMove={move}
+      onSelect={select}
+      onMouseUp={stop}
+      style={{
+        transform: 'translateX(' + state.transform + 'px)',
+      }}
+    >
+      <CSS.ContentS ref={ref}>{props.children}</CSS.ContentS>
+    </CSS.SliderS>
+  );
 };
 
 export default Slider;

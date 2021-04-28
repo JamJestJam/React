@@ -1,11 +1,11 @@
-import IEnUser from "../../Entities/user";
-import IEnUsers from "../../Entities/users";
+import IEnUser from '../../Entities/user';
+import IEnUsers from '../../Entities/users';
 
 export default interface IUserTypes {
-    GET_USERS: {
-        users: IEnUsers;
-    };
-    GET_USER: {
-        user: IEnUser;
-    };
+  GET_USERS: {
+    users: IEnUsers;
+  };
+  GET_USER: {
+    user: IEnUser;
+  };
 }
