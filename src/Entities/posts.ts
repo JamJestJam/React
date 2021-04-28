@@ -1,6 +1,7 @@
 import IEnUsers from "./users";
 
 export default interface IEnPost {
+    id: string;
     text: string;
     image: string;
     likes: number;

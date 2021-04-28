@@ -8,7 +8,7 @@ const postSwitch = (state = defaultState(), action: any) => {
             const paylod: IUserTypes["GET_POST"] = action;
             return {
                 ...state,
-                posts: paylod.posts,
+                posts: state.posts.concat(paylod.posts),
             };
         }
 

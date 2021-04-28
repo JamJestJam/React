@@ -20,10 +20,12 @@ type GetUser = ReturnType<typeof getUser>;
 const BaseView: FC = (Props) => {
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch<GetUsers>(userActions()).then((prop) => {
-            dispatch<GetUser>(getUser(prop[1]?.id));
+        dispatch<GetUsers>(userActions(0)).then((prop) => {
+            dispatch<GetUser>(
+                getUser(prop[Math.floor(Math.random() * prop.length)]?.id)
+            );
         });
-        dispatch<GetPost>(getPosts());
+        dispatch<GetPost>(getPosts(0));
     }, [dispatch]);
 
     useEffect(() => {

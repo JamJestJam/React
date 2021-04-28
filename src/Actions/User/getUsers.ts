@@ -11,11 +11,14 @@ interface IDownloadData {
     total: number;
 }
 
-const getUsers = (): Promise<IEnUsers[]> =>
+const getUsers = (page: number): Promise<IEnUsers[]> =>
     ((dispatch: Dispatch) => {
-        return fetch(`https://dummyapi.io/data/api/user`, {
-            headers: { "app-id": dummyapi },
-        })
+        return fetch(
+            `https://dummyapi.io/data/api/user?limit=10&page=${page}`,
+            {
+                headers: { "app-id": dummyapi },
+            }
+        )
             .then((response) => response.json())
             .then((users: IDownloadData) => {
                 dispatch({

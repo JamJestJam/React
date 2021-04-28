@@ -11,18 +11,21 @@ interface IDownloadData {
     total: number;
 }
 
-const getPost = (): Promise<IEnPost[]> =>
+const getPost = (page: Number): Promise<IEnPost[]> =>
     ((dispatch: Dispatch) => {
-        return fetch(`https://dummyapi.io/data/api/post`, {
-            headers: { "app-id": dummyapi },
-        })
+        return fetch(
+            `https://dummyapi.io/data/api/post?limit=50&page=${page}`,
+            {
+                headers: { "app-id": dummyapi },
+            }
+        )
             .then((response) => response.json())
-            .then((users: IDownloadData) => {
+            .then((posts: IDownloadData) => {
                 dispatch({
                     type: types.GET_POST,
-                    posts: users.data,
+                    posts: posts.data,
                 });
-                return users.data;
+                return posts.data;
             });
     }) as any;
 
