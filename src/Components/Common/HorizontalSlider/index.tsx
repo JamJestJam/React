@@ -1,9 +1,10 @@
-import React, { FC, useState } from "react";
-import { SliderS } from "./css";
+import React, { FC, useEffect, useRef, useState } from "react";
+import * as CSS from "./css";
 
 const Slider: FC = (props) => {
     const [State, SetState] = useState({
         move: false,
+        maxWidth: 0,
         transform: 0,
     });
 
@@ -23,7 +24,7 @@ const Slider: FC = (props) => {
 
         if (State.move) {
             const move = State.transform + event.movementX;
-            const maxWidth = 500;
+            const maxWidth = State.maxWidth;
             if (move > 0 || move < -maxWidth) return;
             SetState({
                 ...State,
@@ -48,8 +49,22 @@ const Slider: FC = (props) => {
         return false;
     };
 
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const element: HTMLDivElement =
+            ref.current || document.createElement("div");
+
+        console.dir( element.scrollWidth - element.offsetWidth);
+
+        SetState({
+            ...State,
+            maxWidth: element.scrollWidth - element.offsetWidth + 5,
+        });
+    }, [ref.current]);
+
     return (
-        <SliderS
+        <CSS.SliderS
             onSelectCapture={select}
             onMouseDown={start}
             onMouseLeave={end}
@@ -58,8 +73,8 @@ const Slider: FC = (props) => {
             onMouseUp={end}
             style={{ transform: "translateX(" + State.transform + "px)" }}
         >
-            {props.children}
-        </SliderS>
+            <CSS.ContentS ref={ref}>{props.children}</CSS.ContentS>
+        </CSS.SliderS>
     );
 };
 
