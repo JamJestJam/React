@@ -1,10 +1,10 @@
-import IEnUser from './user';
+import IEnUser from "./user";
 
 export default interface IEnPost {
-  id: number;
-  userId: number;
-  title: string;
-  body: string;
-  image: string;
-  owner?: IEnUser;
+    id: number;
+    userId: number;
+    title: string;
+    body: string;
+    image: string;
+    owner?: IEnUser;
 }

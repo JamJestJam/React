@@ -1,7 +1,7 @@
-import IInput from '../IInput';
+import IInput from "../IInput";
 
 export default interface ISearch extends IInput {
-  Label: string;
-  Button?: boolean;
-  Border?: boolean;
+    Label: string;
+    Button?: boolean;
+    Border?: boolean;
 }

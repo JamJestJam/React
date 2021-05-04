@@ -1,6 +1,6 @@
-import { IconType } from '../../../Common/Icon/IconType';
+import { IconType } from "common/Icon/IconType";
 
 export default interface IButton {
-  SIcon?: IconType;
-  Icon: IconType;
+    SIcon?: IconType;
+    Icon: IconType;
 }

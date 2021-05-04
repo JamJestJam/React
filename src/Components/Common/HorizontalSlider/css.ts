@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SliderS = styled.div`
-  cursor: default;
+    cursor: default;
 `;
 
 export const ContentS = styled.div`
-  display: flex;
+    display: flex;
 `;

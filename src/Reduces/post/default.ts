@@ -1,7 +1,7 @@
-import IPostReducer from './IPostReducer';
+import IPostReducer from "./IPostReducer";
 
 const defaultState = (): IPostReducer => ({
-  posts: [],
+    posts: [],
 });
 
 export default defaultState;

@@ -1,5 +1,5 @@
-import IEnPost from '../../Entities/post';
+import IEnPost from "entity/post";
 
 export default interface IPostReducer {
-  posts: IEnPost[];
+    posts: IEnPost[];
 }

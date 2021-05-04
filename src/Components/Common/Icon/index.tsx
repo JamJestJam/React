@@ -1,20 +1,20 @@
-import { FC } from 'react';
+import { FC } from "react";
 //data
-import { GetIcon } from './IconType';
+import { GetIcon } from "./IconType";
 //components
-import IIcon from './IIcon';
+import IIcon from "./IIcon";
 //css
-import IconS from './css';
+import IconS from "./css";
 
 const Icon: FC<IIcon> = (props) => {
-  return (
-    <IconS
-      Size={props.IconSize}
-      Border={props.Bordered || false}
-      src={GetIcon(props.IconType)}
-      alt={props.Alt}
-    />
-  );
+    return (
+        <IconS
+            Size={props.IconSize}
+            Border={props.Bordered || false}
+            src={GetIcon(props.IconType)}
+            alt={props.Alt}
+        />
+    );
 };
 
 export default Icon;

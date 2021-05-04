@@ -1,4 +1,4 @@
 export default interface IDropDownElement {
-  Expanded: boolean;
-  Height?: string;
+    Expanded: boolean;
+    Height?: string;
 }
