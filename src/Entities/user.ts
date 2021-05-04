@@ -1,25 +1,24 @@
-export enum Gender {
-  male = 'male',
-  female = 'female',
-  other = 'other',
-  empty = '',
-}
-
 export default interface IEnUser {
-  id: string;
-  title: string;
-  firstName: string;
-  lastName: string;
-  gender: Gender;
+  id: number;
+  name: string;
+  username: string;
   email: string;
-  dateOfBirth: string;
-  registerDate: string;
-  phone: string;
-  picture: string;
-  location: {
+  address: {
     street: string;
+    suite: string;
     city: string;
-    country: string;
-    timezone: string;
-  };
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    }
+  }
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  },
+  picture: string;
 }

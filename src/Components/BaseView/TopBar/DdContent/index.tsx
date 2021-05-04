@@ -92,11 +92,9 @@ const DdContent: FC = () => {
             MaxWidth={30}
             Margin="5px"
           />
-          {user?.firstName || <span>&zwnj;</span>}
-          {''}
-          {user?.lastName || <span>&zwnj;</span>}
+          {user?.name || <span>&zwnj;</span>}
         </CSS.EmElementS>
-      </LinkS>
+      </LinkS>firstName
       <LinkS to="/Privacy">
         <CSS.EmElementS>
           <BoxIcon

@@ -1,28 +1,17 @@
 import { Dispatch } from 'redux';
-import IEnUsers from '../../Entities/users';
-import { dummyapi } from '../app_key';
+import IEnUser from '../../Entities/user';
 import * as types from './UserTypes';
 
-interface IDownloadData {
-  data: IEnUsers[];
-  limit: number;
-  offset: number;
-  page: number;
-  total: number;
-}
-
-const getUsers = (page: number): Promise<IEnUsers[]> =>
+const getUsers = (): Promise<IEnUser[]> =>
   ((dispatch: Dispatch) => {
-    return fetch(`https://dummyapi.io/data/api/user?limit=10&page=${page}`, {
-      headers: { 'app-id': dummyapi },
-    })
+    return fetch(`https://jsonplaceholder.typicode.com/users`)
       .then((response) => response.json())
-      .then((users: IDownloadData) => {
+      .then((users: IEnUser[]) => {
         dispatch({
           type: types.GET_USERS,
-          users: users.data,
+          users: users,
         });
-        return users.data;
+        return users;
       });
   }) as any;
 

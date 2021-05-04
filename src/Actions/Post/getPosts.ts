@@ -1,28 +1,17 @@
 import { Dispatch } from 'redux';
-import IEnPost from '../../Entities/posts';
-import { dummyapi } from '../app_key';
+import IEnPost from '../../Entities/post';
 import * as types from './PostTypes';
 
-interface IDownloadData {
-  data: IEnPost[];
-  limit: number;
-  offset: number;
-  page: number;
-  total: number;
-}
-
-const getPost = (page: Number): Promise<IEnPost[]> =>
+const getPost = (): Promise<IEnPost[]> =>
   ((dispatch: Dispatch) => {
-    return fetch(`https://dummyapi.io/data/api/post?limit=50&page=${page}`, {
-      headers: { 'app-id': dummyapi },
-    })
+    return fetch(`https://jsonplaceholder.typicode.com/posts`)
       .then((response) => response.json())
-      .then((posts: IDownloadData) => {
+      .then((posts: IEnPost) => {
         dispatch({
           type: types.GET_POST,
-          posts: posts.data,
+          posts: posts,
         });
-        return posts.data;
+        return posts;
       });
   }) as any;
 

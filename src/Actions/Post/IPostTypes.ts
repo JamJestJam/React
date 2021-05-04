@@ -1,4 +1,4 @@
-import IEnPost from '../../Entities/posts';
+import IEnPost from '../../Entities/post';
 
 export default interface IPostTypes {
   GET_POST: {

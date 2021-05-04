@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { FC, useEffect } from 'react';
 //actions
+import getComments from '../../Actions/comment/getComments';
 import userActions from '../../Actions/User/getUsers';
 import getPosts from '../../Actions/Post/getPosts';
 import getUser from '../../Actions/User/getUser';
@@ -13,6 +14,7 @@ import * as CSS from './css';
 import IPageInfoReducer from '../../Reduces/pageInfo/IPageInfoReducer';
 import IState from '../../Reduces/IState';
 //types
+type GetComments = ReturnType<typeof getComments>;
 type GetUsers = ReturnType<typeof userActions>;
 type GetPost = ReturnType<typeof getPosts>;
 type GetUser = ReturnType<typeof getUser>;
@@ -20,12 +22,13 @@ type GetUser = ReturnType<typeof getUser>;
 const BaseView: FC = (Props) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch<GetUsers>(userActions(0)).then((prop) => {
+    dispatch<GetUsers>(userActions()).then((prop) => {
       dispatch<GetUser>(
-        getUser(prop[Math.floor(Math.random() * prop.length)]?.id)
+        getUser(prop[Math.floor(Math.random() * prop.length)])
       );
     });
-    dispatch<GetPost>(getPosts(0));
+    dispatch<GetPost>(getPosts());
+    dispatch<GetComments>(getComments());
   }, [dispatch]);
 
   useEffect(() => {

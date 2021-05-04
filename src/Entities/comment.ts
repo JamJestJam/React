@@ -1,9 +1,9 @@
-import IEnUsers from './users';
+import IEnUser from './user';
 
 export default interface IEnComment {
-  id: string;
-  postID: string;
-  message: string;
-  publishDate: string;
-  owner: IEnUsers;
+  id: number;
+  postID: number;
+  name: string;
+  body: string;
+  email: string;
 }

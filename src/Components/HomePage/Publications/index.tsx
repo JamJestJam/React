@@ -1,7 +1,5 @@
 import React, { FC, useMemo } from 'react';
 import { useSelector } from 'react-redux';
-//action
-import getMonth from './getMounth';
 //components
 import BoxImage from '../../Common/Image/Boxing';
 import Publication from './Publication';
@@ -33,12 +31,6 @@ const Publications: FC = () => {
     posts.length,
   ]);
 
-  const date = new Date(posts[postID[3]]?.publishDate || '');
-  const dateText = `
-    ${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()} 
-    ${getMonth(date.getMonth())} 
-    ${date.getFullYear()}`;
-
   return (
     <CSS.ContentS>
       <CSS.LeftS>
@@ -49,13 +41,13 @@ const Publications: FC = () => {
           MaxHeight={300}
         />
         <CSS.PublicationS>
-          {posts[postID[3]]?.text}
+          {posts[postID[3]]?.body}
           <CSS.PubDataS>
             <div>
-              <div>{posts[postID[3]] ? dateText : ''}</div>
+              <div>{posts[postID[3]] ? '' : ''}</div>
             </div>
             <BoxImage
-              ImageName={posts[postID[3]]?.owner.picture}
+              ImageName={posts[postID[3]]?.owner?.picture || ''}
               Alt=""
               MaxWidth={30}
               MaxHeight={30}
@@ -63,8 +55,7 @@ const Publications: FC = () => {
               Margin="10px"
             />
             <div>
-              {posts[postID[3]]?.owner.firstName}{' '}
-              {posts[postID[3]]?.owner.lastName}
+              {posts[postID[3]]?.owner?.name}
             </div>
           </CSS.PubDataS>
         </CSS.PublicationS>

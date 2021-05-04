@@ -32,12 +32,10 @@ const LeftMenu: FC = () => {
         />
         <br />
         <CSS.UserNameS>
-          {user?.firstName || <span>&zwnj;</span>}
-          {''}
-          {user?.lastName || <span>&zwnj;</span>}
+          {user?.name || <span>&zwnj;</span>}
         </CSS.UserNameS>
         <CSS.JobSubtitleS>
-          {user?.email || <span>&zwnj;</span>}
+          {user?.company.name || <span>&zwnj;</span>}
         </CSS.JobSubtitleS>
         <hr />
         <LinkS to="/Network">
