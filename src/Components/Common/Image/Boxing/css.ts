@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Colors } from "style/Colors";
+//style
+import { Colors } from "StyledHelpers/Colors";
+//interface
 import IBoxImageStyle from "./IBoxImageStyle";
 
 const BoxImageS = styled.div<IBoxImageStyle>`

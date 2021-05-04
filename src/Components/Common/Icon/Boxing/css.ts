@@ -1,7 +1,8 @@
 import styled from "styled-components";
-
-import { Colors } from "style/Colors";
-import { FontSize } from "style/Fonts";
+//style
+import { Colors } from "StyledHelpers/Colors";
+import { FontSize } from "StyledHelpers/Fonts";
+//interface
 import IBoxIconStyle from "./IBoxIconStyle";
 
 export const SBoxIcon = styled.div<IBoxIconStyle>`

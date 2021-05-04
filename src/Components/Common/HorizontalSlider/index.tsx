@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from "react";
+//style
 import * as CSS from "./css";
+//functions
 import * as F from "./function";
 
 const Slider: FC = (props) => {

@@ -3,7 +3,7 @@ import { FC } from "react";
 import { GetIcon } from "./IconType";
 //components
 import IIcon from "./IIcon";
-//css
+//style
 import IconS from "./css";
 
 const Icon: FC<IIcon> = (props) => {

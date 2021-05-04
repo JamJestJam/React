@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 //components
 import Image from "../";
-//css
+//style
 import BoxImageS from "./css";
 //inteface
 import IBoxImage from "./IBoxImage";

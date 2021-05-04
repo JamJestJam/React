@@ -1,3 +1,4 @@
+//data
 import { IconSize } from "./IconSize";
 import { IconType } from "./IconType";
 

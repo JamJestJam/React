@@ -1,4 +1,5 @@
-import { IconType } from "common/Icon/IconType";
+//data
+import { IconType } from "../Icon/IconType";
 
 export default interface IDropDown {
     LeftIcon: IconType;

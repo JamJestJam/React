@@ -1,5 +1,6 @@
 import React from "react";
-import { FontSizeType } from "style/Fonts";
+//style
+import { FontSizeType } from "StyledHelpers/Fonts";
 
 export default interface IImput {
     BorderColor?: string;

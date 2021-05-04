@@ -1,13 +1,13 @@
 import React, { FC, useMemo } from "react";
 import { useSelector } from "react-redux";
 //components
-import BoxImage from "common/Image/Boxing";
+import BoxImage from "Components/Common/Image/Boxing";
 import Publication from "./Publication";
-//css
+//style
 import * as CSS from "./css";
 //interface
-import IState from "reduces/IState";
-import IPostReducer from "reduces/post/IPostReducer";
+import IState from "Reduces/IState";
+import IPostReducer from "Reduces/post/IPostReducer";
 
 function RandomNumbers(count: number, max = 20): number[] {
     const numbers: number[] = [];

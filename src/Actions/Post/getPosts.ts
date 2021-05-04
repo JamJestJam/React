@@ -1,5 +1,7 @@
 import { Dispatch } from "redux";
-import IEnPost from "entity/post";
+//entity
+import IEnPost from "Entities/post";
+//action types
 import * as types from "./PostTypes";
 
 const getPost = (): Promise<IEnPost[]> =>

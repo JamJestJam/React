@@ -1,4 +1,4 @@
-import { IconType } from "common/Icon/IconType";
+import { IconType } from "Components/Common/Icon/IconType";
 import IPageInfoReducer from "./IPageInfoReducer";
 
 const defaultState = (): IPageInfoReducer => ({

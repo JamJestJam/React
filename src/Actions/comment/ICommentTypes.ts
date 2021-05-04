@@ -1,4 +1,5 @@
-import IEnComment from "entity/comment";
+//entity
+import IEnComment from "Entities/comment";
 
 export default interface ICommentTypes {
     GET_COMMENTS: {

@@ -1,6 +1,9 @@
 import { Dispatch } from "redux";
-import { IconType } from "common/Icon/IconType";
-import IEnPageInfo from "entity/pageInfo";
+//data
+import { IconType } from "Components/Common/Icon/IconType";
+//entity
+import IEnPageInfo from "Entities/pageInfo";
+//action type
 import * as types from "./PageInfoTypes";
 
 const getPageInfo = (

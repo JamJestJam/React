@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 //data
-import { Colors } from "style/Colors";
-import { IconSize } from "common/Icon/IconSize";
-import { IconType } from "common/Icon/IconType";
+import { Colors } from "StyledHelpers/Colors";
+import { IconSize } from "Components/Common/Icon/IconSize";
+import { IconType } from "Components/Common/Icon/IconType";
 //components
-import Icon from "common/Icon";
-import BoxImage from "common/Image/Boxing";
-//css
+import Icon from "Components/Common/Icon";
+import BoxImage from "Components/Common/Image/Boxing";
+//style
 import * as CSS from "./css";
 //interface
 import IWorkspaceEl from "./IWorkspaceEl";

@@ -1,6 +1,8 @@
-import { FontSize } from "style/Fonts";
-import { Colors } from "style/Colors";
 import styled from "styled-components";
+//style
+import { FontSize } from "StyledHelpers/Fonts";
+import { Colors } from "StyledHelpers/Colors";
+//interface
 import ILabelS from "./ILabelS";
 import IFieldS from "./IFieldS";
 

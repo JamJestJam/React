@@ -1,6 +1,6 @@
 import defaultState from "./default";
-import * as types from "actions/PageInfo/PageInfoTypes";
-import IPageInfoTypes from "actions/PageInfo/IPageInfoTypes";
+import * as types from "Actions/PageInfo/PageInfoTypes";
+import IPageInfoTypes from "Actions/PageInfo/IPageInfoTypes";
 
 const pageInfoSwitch = (state = defaultState(), action: any) => {
     switch (action.type) {

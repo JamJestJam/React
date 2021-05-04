@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Colors } from "style/Colors";
-import { FontSize } from "style/Fonts";
+//data
+import { Colors } from "StyledHelpers/Colors";
+import { FontSize } from "StyledHelpers/Fonts";
 
 export const TobBarS = styled.div`
     background-color: ${Colors.Bg1};

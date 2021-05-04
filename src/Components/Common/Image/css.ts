@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Colors } from "style/Colors";
+//style
+import { Colors } from "StyledHelpers/Colors";
+//interface
 import IImageStyle from "./IImageStyle";
 
 const ImageS = styled.img<IImageStyle>`

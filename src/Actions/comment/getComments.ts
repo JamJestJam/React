@@ -1,5 +1,7 @@
 import { Dispatch } from "redux";
-import IEnComment from "entity/comment";
+//entity
+import IEnComment from "Entities/comment";
+//action types
 import * as types from "./CommentTypes";
 
 const getComments = (): Promise<IEnComment[]> =>

@@ -1,3 +1,4 @@
+//data
 import IIcon from "../IIcon";
 
 interface IBoxIcon extends IIcon {

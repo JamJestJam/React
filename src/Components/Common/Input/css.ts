@@ -1,7 +1,9 @@
-import { Colors } from "style/Colors";
 import styled from "styled-components";
+//data
+import { Colors } from "StyledHelpers/Colors";
+import { FontSize } from "StyledHelpers/Fonts";
+//interface
 import IImputStyle from "./IInputStyle";
-import { FontSize } from "style/Fonts";
 
 export const InputS = styled.input<IImputStyle>`
     border: none;

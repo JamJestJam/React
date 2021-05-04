@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 //data
-import { IconSize } from "common/Icon/IconSize";
+import { IconSize } from "Components/Common/Icon/IconSize";
 //components
-import BoxIcon from "common/Icon/Boxing/";
-//css
+import BoxIcon from "Components/Common/Icon/Boxing";
+//style
 import * as CSS from "./css";
 //inteface
 import IButton from "./IButton";

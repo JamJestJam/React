@@ -1,5 +1,7 @@
 import { Dispatch } from "redux";
-import IEnUser from "entity/user";
+//entity
+import IEnUser from "Entities/user";
+//action types
 import * as types from "./UserTypes";
 
 const getUsers = (): Promise<IEnUser[]> =>

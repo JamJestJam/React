@@ -1,21 +1,21 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "style/Colors";
-import { IconSize } from "common/Icon/IconSize";
-import { IconType } from "common/Icon/IconType";
+import { Colors } from "StyledHelpers/Colors";
+import { IconSize } from "Components/Common/Icon/IconSize";
+import { IconType } from "Components/Common/Icon/IconType";
 //components
-import Icon from "common/Icon";
-import Search from "common/Input/Search";
-import BoxIcon from "common/Icon/Boxing";
-import DropDown from "common/DropDown";
+import Icon from "Components/Common/Icon";
+import Search from "Components/Common/Input/Search";
+import BoxIcon from "Components/Common/Icon/Boxing";
+import DropDown from "Components/Common/DropDown";
 import DdContent from "./DdContent";
-//styles
+//style
 import * as CSS from "./css";
-import * as Controls from "style/Controls";
+import * as Controls from "StyledHelpers/Controls";
 //interface
-import IPageInfoReducer from "reduces/pageInfo/IPageInfoReducer";
-import IState from "reduces/IState";
+import IPageInfoReducer from "Reduces/pageInfo/IPageInfoReducer";
+import IState from "Reduces/IState";
 
 const TopBar: FC = () => {
     const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({

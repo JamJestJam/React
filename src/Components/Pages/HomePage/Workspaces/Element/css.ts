@@ -1,6 +1,7 @@
-import { FontSize } from "style/Fonts";
-import { Colors } from "style/Colors";
 import styled from "styled-components";
+//data
+import { FontSize } from "StyledHelpers/Fonts";
+import { Colors } from "StyledHelpers/Colors";
 
 export const ElementS = styled.div`
     height: 200px;

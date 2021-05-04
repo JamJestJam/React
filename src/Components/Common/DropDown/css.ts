@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import { Colors } from "style/Colors";
-import { TriangleConent } from "style/Controls";
+//style
+import { Colors } from "StyledHelpers/Colors";
+import { TriangleConent } from "StyledHelpers/Controls";
+//interface
 import IDropDownElement from "./IEmContent";
 
 export const ExpanderS = styled.div`

@@ -1,12 +1,12 @@
 import React, { FC, useState, useEffect } from "react";
 //data
-import { IconSize } from "common/Icon/IconSize";
-import { IconType } from "common/Icon/IconType";
+import { IconSize } from "../Icon/IconSize";
+import { IconType } from "../Icon/IconType";
 //components
 import IDropDown from "./IDropDown";
-import BoxIcon from "common/Icon/Boxing";
-//css
-import * as ControlsHelp from "style/Controls";
+import BoxIcon from "../Icon/Boxing";
+//style
+import * as ControlsHelp from "StyledHelpers/Controls";
 import * as CSS from "./css";
 
 const DropDown: FC<IDropDown> = (props) => {

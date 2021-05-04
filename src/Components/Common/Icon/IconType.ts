@@ -1,3 +1,4 @@
+//icons
 import administration from "./Icons/administration.svg";
 import publications from "./Icons/publications.svg";
 import arrow_down from "./Icons/arrow-down.svg";

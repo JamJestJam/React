@@ -1,17 +1,18 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "style/Colors";
-import { IconType } from "common/Icon/IconType";
+import { Colors } from "StyledHelpers/Colors";
+import { IconType } from "Components/Common/Icon/IconType";
 //components
 import Button from "./Button";
-import BoxImage from "common/Image/Boxing";
-//css
-import { LinkS } from "style/Controls";
+import BoxImage from "Components/Common/Image/Boxing";
+//style
+import { LinkS } from "StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
-import IState from "reduces/IState";
-import IUsersReducer from "reduces/users/IUsersReducer";
+import IState from "Reduces/IState";
+import IUsersReducer from "Reduces/users/IUsersReducer";
+
 
 const LeftMenu: FC = () => {
     const { user } = useSelector<IState, IUsersReducer>((GS) => ({

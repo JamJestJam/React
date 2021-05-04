@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-//css
+//style
 import { InputS } from "./css";
 //inteface
 import IImput from "./IInput";

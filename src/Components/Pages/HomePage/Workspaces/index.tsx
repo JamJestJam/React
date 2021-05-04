@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 //components
-import Slider from "common/HorizontalSlider";
+import Slider from "Components/Common/HorizontalSlider";
 import WorkspacesEl from "./Element";
-//css
+//style
 import * as CSS from "./css";
 //json3
-import json from "data/Pages.json";
+import json from "Data/Pages.json";
 
 const Workspaces: FC = () => {
     return (

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { IconSize } from "common/Icon/IconSize";
+//data
+import { IconSize } from "Components/Common/Icon/IconSize";
 
 export const ButtonS = styled.div`
     display: flex;

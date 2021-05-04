@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-//css
+//style
 import ImageS from "./css";
 //interface
 import IImage from "./IImage";

@@ -1,6 +1,6 @@
 import defaultState from "./default";
-import * as types from "actions/Post/PostTypes";
-import IUserTypes from "actions/Post/IPostTypes";
+import * as types from "Actions/Post/PostTypes";
+import IUserTypes from "Actions/Post/IPostTypes";
 
 const postSwitch = (state = defaultState(), action: any) => {
     switch (action.type) {

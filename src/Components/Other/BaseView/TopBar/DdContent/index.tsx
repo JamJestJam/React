@@ -1,21 +1,21 @@
 import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "style/Colors";
-import { IconSize } from "common/Icon/IconSize";
-import { IconType } from "common/Icon/IconType";
+import { Colors } from "StyledHelpers/Colors";
+import { IconSize } from "Components/Common/Icon/IconSize";
+import { IconType } from "Components/Common/Icon/IconType";
 //components
-import BoxImage from "common/Image/Boxing";
-import Search from "common/Input/Search";
-import BoxIcon from "common/Icon/Boxing";
-//css
-import { LinkS } from "style/Controls";
+import BoxImage from "Components/Common/Image/Boxing";
+import Search from "Components/Common/Input/Search";
+import BoxIcon from "Components/Common/Icon/Boxing";
+//style
+import { LinkS } from "StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
-import IUsersReducer from "reduces/users/IUsersReducer";
-import IState from "reduces/IState";
+import IUsersReducer from "Reduces/users/IUsersReducer";
+import IState from "Reduces/IState";
 //json
-import json from "data/Pages.json";
+import json from "Data/Pages.json";
 
 const DdContent: FC = () => {
     const [State, SetState] = useState({

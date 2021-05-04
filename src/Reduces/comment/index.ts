@@ -1,6 +1,6 @@
 import defaultState from "./default";
-import * as types from "actions/comment/CommentTypes";
-import ICommentTypes from "actions/comment/ICommentTypes";
+import * as types from "Actions/comment/CommentTypes";
+import ICommentTypes from "Actions/comment/ICommentTypes";
 
 const pageInfoSwitch = (state = defaultState(), action: any) => {
     switch (action.type) {

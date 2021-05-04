@@ -1,7 +1,7 @@
 import { FC } from "react";
 //components
 import Icon from "../";
-//css
+//style
 import { SBoxIcon as BoxIconS, SBoxIconValue } from "./css";
 //interface
 import IBoxIcon from "./IBoxIcon";

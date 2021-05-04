@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { FontSize } from "style/Fonts";
-import { Colors } from "style/Colors";
+//PubDataS
+import { FontSize } from "StyledHelpers/Fonts";
+import { Colors } from "StyledHelpers/Colors";
 
 export const ContentS = styled.div`
     background-color: ${Colors.Bg1};

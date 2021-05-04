@@ -1,11 +1,11 @@
 import React, { FC, useState } from "react";
 //data
-import { IconSize } from "common/Icon/IconSize";
-import { IconType } from "common/Icon/IconType";
+import { IconSize } from "Components/Common/Icon/IconSize";
+import { IconType } from "Components/Common/Icon/IconType";
 //components
+import BoxIcon from "Components/Common/Icon/Boxing";
 import Input from "../";
-import BoxIcon from "common/Icon/Boxing";
-//css
+//style
 import * as CSS from "./css";
 //interface./..
 import ISearch from "./ISearch";

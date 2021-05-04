@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { FC, useEffect } from "react";
 //actions
-import getComments from "actions/comment/getComments";
-import userActions from "actions/User/getUsers";
-import getPosts from "actions/Post/getPosts";
-import getUser from "actions/User/getUser";
+import getComments from "Actions/comment/getComments";
+import userActions from "Actions/User/getUsers";
+import getPosts from "Actions/Post/getPosts";
+import getUser from "Actions/User/getUser";
 //components
 import LeftMenu from "./LeftMenu";
 import TopBar from "./TopBar";
 //style
 import * as CSS from "./css";
 //interface
-import IPageInfoReducer from "reduces/pageInfo/IPageInfoReducer";
-import IState from "reduces/IState";
+import IPageInfoReducer from "Reduces/pageInfo/IPageInfoReducer";
+import IState from "Reduces/IState";
 //types
 type GetComments = ReturnType<typeof getComments>;
 type GetUsers = ReturnType<typeof userActions>;
