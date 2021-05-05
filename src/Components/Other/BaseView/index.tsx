@@ -18,6 +18,7 @@ import * as CSS from "./css";
 //interface
 import IPageInfoReducer from "Reduces/pageInfo/IPageInfoReducer";
 import IState from "Reduces/IState";
+import CombineData from "./CombineData";
 //type
 type GetComments = ReturnType<typeof getComments>;
 type GetPhotos = ReturnType<typeof getPhotos>;
@@ -46,8 +47,7 @@ const BaseView: FC = (Props) => {
             })
             .then(([user, post, comm]) => {
                 dispatch<GetUser>(getUser(user[0]));
-            })
-           
+            });
     }, [dispatch]);
 
     useEffect(() => {

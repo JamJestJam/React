@@ -17,20 +17,25 @@ export const PagginationS = styled.div`
     justify-content: center;
     align-items: center;
 
-    div {
+    button {
+        display: block;
+        border: none;
+        background-color: transparent;
         text-transform: uppercase;
         text-align: center;
         margin: 5px;
+        padding: 0;
     }
 `;
 
-export const PagginationElement = styled.div<IDisabe>`
+export const PagginationElement = styled.button<IDisabe>`
     width: 80px;
-    color: ${(props) => (props.disable ? Colors.GrayFont : "")};
+    color: ${(props) => (props.disable ? Colors.GrayFont : Colors.BlueFont)};
     cursor: ${(props) => (props.disable ?'default':'pointer')};
 `;
 
-export const PagginationEle = styled.div`
+export const PagginationEle = styled.button`
     width: 15px;
+    color: ${Colors.BlueFont};
     cursor: pointer;
 `;

@@ -27,5 +27,4 @@ export default interface IEnUser {
     };
     photo?: IEnPhoto;
     posts?: IEnPost[];
-    comments?: IEnComment[];
 }

@@ -6,22 +6,19 @@ import IEnPost from "Entities/post";
 //action types
 import * as types from "./CommentTypes";
 
-const setCommentsLink = (comments: IEnComment[], posts:IEnPost[], owners:IEnUser[]): Promise<IEnUser[]> =>
+const setCommentsLink = (comments: IEnComment[], posts:IEnPost[], owners:IEnUser[]): Promise<IEnComment[]> =>
     ((dispatch: Dispatch) => {
-        const map:IEnComment[] = comments.map(comment=>{
-            return ({
-                ...comment,
-                post: posts.find(a=>a.id === comment.postId),
-                owner: owners.find(a=>a.email === comment.email)
-            });
-        })
+        for(let i=0;i<comments.length;i++){
+            const comment = comments[i];
+            comment.post = posts.find(a=>a.id === comment.postId);
+        }
 
         dispatch({
             type: types.SET_COMMENTS_LINK,
-            comments: map
+            comments: comments
         });
 
-        return map;
+        return comments;
     }) as any;
 
 export default setCommentsLink;

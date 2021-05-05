@@ -8,5 +8,4 @@ export default interface IEnComment {
     body: string;
     email: string;
     post?: IEnPost;
-    owner?: IEnUser;
 }

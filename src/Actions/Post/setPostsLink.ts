@@ -7,23 +7,21 @@ import IEnComment from "Entities/comment";
 //types
 import * as types from "./PostTypes";
 
-const setPostsLink = (posts: IEnPost[], photos: IEnPhoto[], owners: IEnUser[], comments: IEnComment[]): Promise<IEnPost[]> =>
+const setPostsLink = (posts: IEnPost[], photos: IEnPhoto[], users: IEnUser[], comments: IEnComment[]): Promise<IEnPost[]> =>
     ((dispatch: Dispatch) => {
-        const map: IEnPost[] = posts.map((post) => {
-            return {
-                ...post,
-                photo: photos.find((a) => a.id === post.id),
-                owner: owners.find((a) => a.id === post.id),
-                comment: comments.filter((a) => a.id === post.id),
-            };
-        });
+        for(let i=0;i<posts.length;i++){
+            const post = posts[i];
+            post.owner = users.find(a=>a.id === post.userId);
+            post.comment = comments.filter(a=>a.postId === post.id);
+            post.photo = photos.find(a=>a.id === post.id);
+        }
 
         dispatch({
             type: types.SET_POSTS_LINK,
-            posts: map,
+            posts: posts,
         });
 
-        return map;
+        return posts;
     }) as any;
 
 export default setPostsLink;
