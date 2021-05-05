@@ -29,6 +29,9 @@ const ResumeYourWork: FC = () => {
     });
 
     const setPage = (page: number) => {
+        if(page<0 || page>state.maxPage)
+            return;
+
         setState({
             ...state,
             page: page,
@@ -83,11 +86,11 @@ const ResumeYourWork: FC = () => {
                     })}
             </div>
             <CSS.PagginationS>
-                <CSS.PagginationElement onClick={() => {setPage(state.page - 1);}}>Previous</CSS.PagginationElement>
+                <CSS.PagginationElement disable={state.page===0} onClick={() => {setPage(state.page - 1);}}>Previous</CSS.PagginationElement>
                 <CSS.PagginationEle onClick={() => {setPage(0);}}>1</CSS.PagginationEle>
                 <CSS.PagginationEle>{state.page+1}</CSS.PagginationEle>
                 <CSS.PagginationEle onClick={() => {setPage(state.maxPage);}}>{state.maxPage + 1}</CSS.PagginationEle>
-                <CSS.PagginationElement onClick={() => {setPage(state.page + 1);}}>Next</CSS.PagginationElement>
+                <CSS.PagginationElement disable={state.page === state.maxPage} onClick={() => {setPage(state.page + 1);}}>Next</CSS.PagginationElement>
             </CSS.PagginationS>
         </>
     );
