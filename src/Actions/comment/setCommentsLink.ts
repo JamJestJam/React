@@ -8,9 +8,6 @@ import * as types from "./CommentTypes";
 
 const setCommentsLink = (comments: IEnComment[], posts:IEnPost[], owners:IEnUser[]): Promise<IEnUser[]> =>
     ((dispatch: Dispatch) => {
-        console.log(owners[0].email);
-        console.log(comments[0].email);
-
         const map:IEnComment[] = comments.map(comment=>{
             return ({
                 ...comment,
@@ -21,7 +18,7 @@ const setCommentsLink = (comments: IEnComment[], posts:IEnPost[], owners:IEnUser
 
         dispatch({
             type: types.SET_COMMENTS_LINK,
-            users: map
+            comments: map
         });
 
         return map;

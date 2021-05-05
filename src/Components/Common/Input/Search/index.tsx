@@ -65,7 +65,7 @@ const Search: FC<ISearch> = (props) => {
             </CSS.LabelS>
             {props.Button && (
                 <BoxIcon
-                    IconSize={IconSize.Small}
+                    IconSize={props.IconSize || IconSize.Small}
                     IconType={IconType.search}
                     Alt="Szukaj"
                 />

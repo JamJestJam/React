@@ -6,6 +6,7 @@ const pageInfoSwitch = (state = defaultState(), action: any) => {
     switch (action.type) {
         case types.GET_COMMENTS: {
             const paylod: ICommentTypes["GET_COMMENTS"] = action;
+
             return {
                 ...state,
                 comments: paylod.comments,
