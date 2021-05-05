@@ -11,7 +11,7 @@ import { LinkS } from "StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
 import IState from "Reduces/IState";
-import IUsersReducer from "Reduces/users/IUsersReducer";
+import IUsersReducer from "Reduces/user/IUsersReducer";
 
 
 const LeftMenu: FC = () => {
@@ -23,7 +23,7 @@ const LeftMenu: FC = () => {
         <CSS.LeftMenuS>
             <CSS.UserDataS>
                 <BoxImage
-                    ImageName={user?.picture || ""}
+                    ImageName={user?.photo?.url || ""}
                     Background={Colors.Bg3}
                     Alt="Zdj. profilowe"
                     BoxShadow={true}

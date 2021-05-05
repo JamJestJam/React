@@ -35,7 +35,7 @@ const Publications: FC = () => {
         <CSS.ContentS>
             <CSS.LeftS>
                 <BoxImage
-                    ImageName={posts[postID[3]]?.image || ""}
+                    ImageName={posts[postID[3]]?.photo?.url || ""}
                     Alt=""
                     MaxWidth={300}
                     MaxHeight={300}
@@ -47,7 +47,7 @@ const Publications: FC = () => {
                             <div>{posts[postID[3]] ? "" : ""}</div>
                         </div>
                         <BoxImage
-                            ImageName={posts[postID[3]]?.owner?.picture || ""}
+                            ImageName={posts[postID[3]]?.owner?.photo?.url || ""}
                             Alt=""
                             MaxWidth={30}
                             MaxHeight={30}

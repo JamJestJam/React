@@ -20,6 +20,15 @@ const userSwitch = (state = defaultState(), action: any) => {
             };
         }
 
+        case types.SET_USERS_LINK:{
+            const paylod: IUserTypes["SET_USERS_LINK"] = action;
+
+            return {
+                ...state,
+                users: paylod.users
+            };
+        }
+
         default: {
             return state;
         }

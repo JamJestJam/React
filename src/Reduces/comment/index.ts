@@ -8,7 +8,16 @@ const pageInfoSwitch = (state = defaultState(), action: any) => {
             const paylod: ICommentTypes["GET_COMMENTS"] = action;
             return {
                 ...state,
-                comments: state.comments.concat(paylod.comments),
+                comments: paylod.comments,
+            };
+        }
+
+        case types.SET_COMMENTS_LINK:{
+            const paylod: ICommentTypes["SET_COMMENTS_LINK"] = action;
+
+            return {
+                ...state,
+                comments: paylod.comments
             };
         }
 

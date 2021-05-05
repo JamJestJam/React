@@ -4,7 +4,6 @@ import IEnUser from "Entities/user";
 //action types
 import * as types from "./UserTypes";
 
-
 const getUser = (user: IEnUser): Promise<IEnUser[]> =>
     ((dispatch: Dispatch) => {
         return dispatch({

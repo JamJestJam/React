@@ -11,7 +11,7 @@ const Publication: FC<IPublication> = (props) => {
         <CSS.ContentS>
             <div>
                 <BoxImage
-                    ImageName={props.data?.image || ""}
+                    ImageName={props.data?.photo?.url || ""}
                     Alt=""
                     MaxHeight={80}
                     MaxWidth={80}
@@ -23,7 +23,7 @@ const Publication: FC<IPublication> = (props) => {
                 <CSS.PubDataS>
                     <div>{props.data ? "" : ""}</div>
                     <BoxImage
-                        ImageName={props.data?.owner?.picture || ""}
+                        ImageName={props.data?.owner?.photo?.url || ""}
                         Alt=""
                         MaxWidth={20}
                         MaxHeight={20}

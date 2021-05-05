@@ -1,6 +1,11 @@
+import IEnComment from "./comment";
+import IEnPhoto from "./photo";
+import IEnPost from "./post";
+
 export default interface IEnUser {
     id: number;
     name: string;
+    shortName: string;
     username: string;
     email: string;
     address: {
@@ -20,5 +25,7 @@ export default interface IEnUser {
         catchPhrase: string;
         bs: string;
     };
-    picture: string;
+    photo?: IEnPhoto;
+    posts?: IEnPost[];
+    comments?: IEnComment[];
 }

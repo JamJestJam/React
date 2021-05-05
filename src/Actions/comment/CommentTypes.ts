@@ -1,1 +1,2 @@
 export const GET_COMMENTS = "GET_COMMENTS";
+export const SET_COMMENTS_LINK = "SET_COMMENTS_LINK";

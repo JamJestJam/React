@@ -12,7 +12,7 @@ import BoxIcon from "Components/Common/Icon/Boxing";
 import { LinkS } from "StyledHelpers/Controls";
 import * as CSS from "./css";
 //interface
-import IUsersReducer from "Reduces/users/IUsersReducer";
+import IUsersReducer from "Reduces/user/IUsersReducer";
 import IState from "Reduces/IState";
 //json
 import json from "Data/Pages.json";
@@ -91,7 +91,7 @@ const DdContent: FC = () => {
             <LinkS to="/Profile">
                 <CSS.EmElementS>
                     <BoxImage
-                        ImageName={user?.picture || ""}
+                        ImageName={user?.photo?.url || ""}
                         Background={Colors.Bg3}
                         Alt="Zdj. profilowe"
                         BoxShadow={true}
@@ -100,10 +100,9 @@ const DdContent: FC = () => {
                         MaxWidth={30}
                         Margin="5px"
                     />
-                    {user?.name || <span>&zwnj;</span>}
+                    {user?.shortName || <span>&zwnj;</span>}
                 </CSS.EmElementS>
             </LinkS>
-            firstName
             <LinkS to="/Privacy">
                 <CSS.EmElementS>
                     <BoxIcon
