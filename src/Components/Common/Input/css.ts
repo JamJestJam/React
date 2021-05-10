@@ -8,6 +8,7 @@ import IImputStyle from "./IInputStyle";
 export const InputS = styled.input<IImputStyle>`
     border: none;
 
+    background-color: transparent;
     border-bottom: 2px solid ${(props) => props.BorderColor || Colors.Bg2};
     font-size: ${(props) => FontSize[props.FontSize || 18]};
     height: ${(props) => props.Height + "px" || "auto"};

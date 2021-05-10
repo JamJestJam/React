@@ -30,10 +30,13 @@ const TopBar: FC = () => {
                     IconSize={IconSize.Medium}
                     Alt="Logo"
                 />
+                
                 <DropDown
                     Text={pageInfo.pageName}
                     LeftIcon={pageInfo.pageIcon}
+                    LeftImage={pageInfo.pageImage}
                     Height="466px"
+                    ImageIconSwitch = {pageInfo.imageIconSwitch}
                 >
                     <DdContent />
                 </DropDown>

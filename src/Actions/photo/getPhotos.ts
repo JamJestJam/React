@@ -18,3 +18,4 @@ const getPhotos = (): Promise<IEnPhoto[]> =>
 }) as any;
 
 export default getPhotos;
+export type GetPhotos = ReturnType<typeof getPhotos>;

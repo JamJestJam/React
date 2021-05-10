@@ -4,7 +4,7 @@ import IEnPost from "Entities/post";
 //action types
 import * as types from "./PostTypes";
 
-const getPost = (): Promise<IEnPost[]> =>
+const getPosts = (): Promise<IEnPost[]> =>
     ((dispatch: Dispatch) => {
         return fetch(`https://jsonplaceholder.typicode.com/posts`)
             .then((response) => response.json())
@@ -17,4 +17,5 @@ const getPost = (): Promise<IEnPost[]> =>
             });
     }) as any;
 
-export default getPost;
+export default getPosts;
+export type GetPost = ReturnType<typeof getPosts>;

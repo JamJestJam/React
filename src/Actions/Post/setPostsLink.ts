@@ -25,3 +25,4 @@ const setPostsLink = (posts: IEnPost[], photos: IEnPhoto[], users: IEnUser[], co
     }) as any;
 
 export default setPostsLink;
+export type SetPostsLink = ReturnType<typeof setPostsLink>;

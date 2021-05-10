@@ -13,3 +13,4 @@ const getUser = (user: IEnUser): Promise<IEnUser[]> =>
     }) as any;
 
 export default getUser;
+export type GetUser = ReturnType<typeof getUser>;

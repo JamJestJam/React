@@ -17,6 +17,9 @@ import Network from "Components/Pages/Network";
 import People from "Components/Pages/People";
 import Privacy from "Components/Pages/Privacy";
 import Profile from "Components/Pages/Profile";
+import Corporate from "Components/Pages/Corporate";
+import RealEstateContracts from "Components/RealEstateContracts";
+import GroupNorms from "Components/Pages/GroupNorms";
 
 function App() {
     return (
@@ -24,23 +27,23 @@ function App() {
             <GlobalStyles />
             <BaseView>
                 <Switch>
-                    <Route
-                        path="/SupplierContract"
-                        component={SupplierContract}
-                    />
-                    <Route path="/Administration" component={Administration} />
-                    <Route path="/ClientContract" component={ClientContract} />
-                    <Route path="/Publications" component={Publications} />
-                    <Route path="/Workspace" component={Workspace} />
-                    <Route path="/Ecosystem" component={Ecosystem} />
-                    <Route path="/Entities" component={Entities} />
-                    <Route path="/Settings" component={Settings} />
-                    <Route path="/Privacy" component={Privacy} />
-                    <Route path="/Network" component={Network} />
-                    <Route path="/Profile" component={Profile} />
+                    <Route path="/RealEstateContracts" component={RealEstateContracts} exact/>
+                    <Route path="/SupplierContract"component={SupplierContract} exact/>
+                    <Route path="/Administration" component={Administration} exact/>
+                    <Route path="/ClientContract" component={ClientContract} exact/>
+                    <Route path="/Publications" component={Publications} exact/>
+                    <Route path="/GroupNorms" component={GroupNorms} exact/>
+                    <Route path="/Workspace" component={Workspace} exact/>
+                    <Route path="/Ecosystem" component={Ecosystem} exact/>
+                    <Route path="/Corporate" component={Corporate} exact/>
+                    <Route path="/Entities" component={Entities} exact/>
+                    <Route path="/Settings" component={Settings} exact/>
+                    <Route path="/Privacy" component={Privacy} exact/>
+                    <Route path="/Network" component={Network} exact/>
+                    <Route path="/Profile" component={Profile} exact/>
                     <Route path="/" component={HomePage} exact />
-                    <Route path="/Logout" component={Logout} />
-                    <Route path="/People" component={People} />
+                    <Route path="/Logout" component={Logout} exact/>
+                    <Route path="/People" component={People} exact/>
                 </Switch>
             </BaseView>
         </Router>

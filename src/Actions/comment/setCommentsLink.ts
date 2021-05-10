@@ -22,3 +22,4 @@ const setCommentsLink = (comments: IEnComment[], posts:IEnPost[], owners:IEnUser
     }) as any;
 
 export default setCommentsLink;
+export type SetCommentsLink = ReturnType<typeof setCommentsLink>;

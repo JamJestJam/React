@@ -47,7 +47,9 @@ const Publications: FC = () => {
                             <div>{posts[postID[3]] ? "" : ""}</div>
                         </div>
                         <BoxImage
-                            ImageName={posts[postID[3]]?.owner?.photo?.url || ""}
+                            ImageName={
+                                posts[postID[3]]?.owner?.photo?.url || ""
+                            }
                             Alt=""
                             MaxWidth={30}
                             MaxHeight={30}

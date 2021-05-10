@@ -1,17 +1,15 @@
 import React, { FC, useEffect } from "react";
 import { useDispatch } from "react-redux";
 //actions
-import getPageInfo from "Actions/PageInfo/getPageInfo";
+import getPageInfoIcon, { GetPageInfoIcon } from "Actions/PageInfo/getPageInfoIcon";
 //data
 import { IconType } from "Components/Common/Icon/IconType";
-//types
-type GetPageInfo = ReturnType<typeof getPageInfo>;
 
 const People: FC = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("People", "People", IconType.people));
+        dispatch<GetPageInfoIcon>(getPageInfoIcon("People", "People", IconType.people));
     });
     return <>People</>;
 };

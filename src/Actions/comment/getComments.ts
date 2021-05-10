@@ -18,3 +18,4 @@ const getComments = (): Promise<IEnComment[]> =>
     }) as any;
 
 export default getComments;
+export type GetComments = ReturnType<typeof getComments>;

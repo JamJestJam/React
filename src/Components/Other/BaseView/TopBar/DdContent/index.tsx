@@ -1,13 +1,12 @@
 import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "StyledHelpers/Colors";
 import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
-import BoxImage from "Components/Common/Image/Boxing";
 import Search from "Components/Common/Input/Search";
 import BoxIcon from "Components/Common/Icon/Boxing";
+import DbContentItem from "./DdContentItem/index";
 //style
 import { LinkS } from "StyledHelpers/Controls";
 import * as CSS from "./css";
@@ -16,6 +15,8 @@ import IUsersReducer from "Reduces/user/IUsersReducer";
 import IState from "Reduces/IState";
 //json
 import json from "Data/Pages.json";
+//functions
+import compare from "./compare";
 
 const DdContent: FC = () => {
     const [State, SetState] = useState({
@@ -44,85 +45,54 @@ const DdContent: FC = () => {
             <CSS.PlatformS>
                 <CSS.EbSpanS>Platform</CSS.EbSpanS>
                 {json.Platform.map((item, i) => {
-                    if (
-                        item.Name.toLowerCase().includes(
-                            State.Value.toLowerCase()
-                        )
-                    ) {
+                    if (compare(item.Name, State.Value)) {
                         return (
-                            <LinkS to={item.Link} key={`Link${i}`}>
-                                <CSS.EmElementS key={`Em${i}`}>
-                                    <BoxIcon
-                                        IconSize={IconSize.Small}
-                                        IconType={item.IconID}
-                                        Alt={item.Name}
-                                    />
-                                    {item.Name}
-                                </CSS.EmElementS>
-                            </LinkS>
+                            <DbContentItem
+                                link={item.Link}
+                                itemName={item.Name}
+                                icon={item.IconID}
+                                imageIconSwitch={false}
+                                key={i}
+                            />
                         );
                     }
                     return <></>;
                 })}
                 <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
                 {json.Workspace.map((item, i) => {
-                    if (
-                        item.Name.toLowerCase().includes(
-                            State.Value.toLowerCase()
-                        )
-                    ) {
+                    if (compare(item.Name, State.Value)) {
                         return (
-                            <LinkS to={item.Link} key={`Link${i}`}>
-                                <CSS.EmElementS key={`Em${i}`}>
-                                    <BoxIcon
-                                        IconSize={IconSize.Small}
-                                        IconType={item.IconID}
-                                        Alt={item.Name}
-                                    />
-                                    {item.Name}
-                                </CSS.EmElementS>
-                            </LinkS>
+                            <DbContentItem
+                                link={item.Link}
+                                itemName={item.Name}
+                                icon={item.IconID}
+                                imageIconSwitch={false}
+                                key={i}
+                            />
                         );
                     }
                     return <></>;
                 })}
             </CSS.PlatformS>
             <CSS.EbSpanS>Account</CSS.EbSpanS>
-            <LinkS to="/Profile">
-                <CSS.EmElementS>
-                    <BoxImage
-                        ImageName={user?.photo?.url || ""}
-                        Background={Colors.Bg3}
-                        Alt="Zdj. profilowe"
-                        BoxShadow={true}
-                        Rounded={true}
-                        MaxHeight={30}
-                        MaxWidth={30}
-                        Margin="5px"
-                    />
-                    {user?.shortName || <span>&zwnj;</span>}
-                </CSS.EmElementS>
-            </LinkS>
-            <LinkS to="/Privacy">
-                <CSS.EmElementS>
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={IconType.privacy}
-                        Alt=""
-                    />
-                    Privacy
-                </CSS.EmElementS>
-            </LinkS>
-            <LinkS to="/Settings">
-                <CSS.EmElementS>
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={IconType.settings}
-                        Alt=""
-                    />
-                    Settings
-                </CSS.EmElementS>
-            </LinkS>
+            <DbContentItem
+                link="/Profile"
+                itemName={user?.shortName || "&zwnj"}
+                image={user?.photo?.url}
+                imageIconSwitch={true}
+            />
+            <DbContentItem
+                link="/Privacy"
+                itemName={"Privacy"}
+                icon={IconType.privacy}
+                imageIconSwitch={false}
+            />
+            <DbContentItem
+                link="/Settings"
+                itemName={"Settings"}
+                icon={IconType.settings}
+                imageIconSwitch={false}
+            />
             <hr />
             <LinkS to="/Logout">
                 <CSS.EmLastElementS>

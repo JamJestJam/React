@@ -1,9 +1,10 @@
-import { IconType } from "Components/Common/Icon/IconType";
 import IPageInfoReducer from "./IPageInfoReducer";
 
 const defaultState = (): IPageInfoReducer => ({
     pageInfo: {
-        pageIcon: IconType.house2,
+        pageIcon: undefined,
+        pageImage: undefined,
+        imageIconSwitch: true,
         pageName: "default",
         pageTitle: "default",
     },

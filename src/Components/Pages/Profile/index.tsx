@@ -1,17 +1,19 @@
 import React, { FC, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 //actions
-import getPageInfo from "Actions/PageInfo/getPageInfo";
-//data
-import { IconType } from "Components/Common/Icon/IconType";
-//types
-type GetPageInfo = ReturnType<typeof getPageInfo>;
+import getPageInfoImage, {GetPageInfoImage} from "Actions/PageInfo/getPageInfoImage";
+//interfaces
+import IState from "Reduces/IState";
+import IUsersReducer from "Reduces/user/IUsersReducer";
 
 const Profile: FC = () => {
     const dispatch = useDispatch();
+    const { user } = useSelector<IState, IUsersReducer>((GS) => ({
+        ...GS.user,
+    }));
 
     useEffect(() => {
-        dispatch<GetPageInfo>(getPageInfo("Profile", "Profile", IconType.logo));
+        dispatch<GetPageInfoImage>(getPageInfoImage("Profile", "Profile", user?.photo?.url || ""));
     });
     return <>Profile</>;
 };

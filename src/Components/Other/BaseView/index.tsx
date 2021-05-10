@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { FC, useEffect } from "react";
 //actions
-import setCommentsLink from "Actions/comment/setCommentsLink";
-import setUsersLink from "Actions/User/setUsersLink";
-import setPostsLink from "Actions/Post/setPostsLink";
-import getComments from "Actions/comment/getComments";
-import getPhotos from "Actions/photo/getPhotos";
-import getUsers from "Actions/User/getUsers";
-import getPosts from "Actions/Post/getPosts";
-import getUser from "Actions/User/getUser";
+import setCommentsLink, { SetCommentsLink } from "Actions/comment/setCommentsLink";
+import setUsersLink, { SetUsersLink } from "Actions/User/setUsersLink";
+import setPostsLink, { SetPostsLink } from "Actions/Post/setPostsLink";
+import getComments, { GetComments } from "Actions/comment/getComments";
+import getPhotos, { GetPhotos } from "Actions/photo/getPhotos";
+import getUsers, { GetUsers } from "Actions/User/getUsers";
+import getPosts, { GetPost } from "Actions/Post/getPosts";
+import getUser, { GetUser } from "Actions/User/getUser";
 
 //components
 import LeftMenu from "./LeftMenu";
@@ -18,16 +18,6 @@ import * as CSS from "./css";
 //interface
 import IPageInfoReducer from "Reduces/pageInfo/IPageInfoReducer";
 import IState from "Reduces/IState";
-import CombineData from "./CombineData";
-//type
-type GetComments = ReturnType<typeof getComments>;
-type GetPhotos = ReturnType<typeof getPhotos>;
-type GetUsers = ReturnType<typeof getUsers>;
-type GetPost = ReturnType<typeof getPosts>;
-type GetUser = ReturnType<typeof getUser>;
-type SetPostsLink = ReturnType<typeof setPostsLink>;
-type SetCommentsLink = ReturnType<typeof setCommentsLink>;
-type SetUsersLink = ReturnType<typeof setUsersLink>;
 
 const BaseView: FC = (Props) => {
     const dispatch = useDispatch();

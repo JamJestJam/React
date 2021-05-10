@@ -11,11 +11,6 @@ export const TobBarS = styled.div`
     justify-content: center;
 `;
 
-export const EmElementS = styled.div`
-    display: flex;
-    align-items: center;
-`;
-
 export const PlatformS = styled.div`
     height: 250px;
     overflow-y: scroll;

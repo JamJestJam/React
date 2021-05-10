@@ -29,3 +29,4 @@ const getUsers = (): Promise<IEnUser[]> =>
     }) as any;
 
 export default getUsers;
+export type GetUsers = ReturnType<typeof getUsers>;

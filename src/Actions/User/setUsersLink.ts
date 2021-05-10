@@ -24,3 +24,4 @@ const setUsersLink = (users: IEnUser[], photos:IEnPhoto[], posts:IEnPost[], comm
     }) as any;
 
 export default setUsersLink;
+export type SetUsersLink = ReturnType<typeof setUsersLink>;

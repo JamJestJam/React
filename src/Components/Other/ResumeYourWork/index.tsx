@@ -65,6 +65,7 @@ const ResumeYourWork: FC = () => {
                     ></Search>
                     <DropDown
                         LeftIcon={IconType.bell}
+                        ImageIconSwitch={false}
                         Text="Followed"
                     ></DropDown>
                 </Controls.TriangleConentRight>
