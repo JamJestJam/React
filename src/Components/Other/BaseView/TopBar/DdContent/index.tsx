@@ -16,7 +16,7 @@ import IState from "Reduces/IState";
 //json
 import json from "Data/Pages.json";
 //functions
-import compare from "./compare";
+import compare from "Functions/compare";
 
 const DdContent: FC = () => {
     const [State, SetState] = useState({
@@ -56,7 +56,7 @@ const DdContent: FC = () => {
                             />
                         );
                     }
-                    return <></>;
+                    return <div key={i}></div>;
                 })}
                 <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
                 {json.Workspace.map((item, i) => {
@@ -71,7 +71,7 @@ const DdContent: FC = () => {
                             />
                         );
                     }
-                    return <></>;
+                    return <div key={i}></div>;
                 })}
             </CSS.PlatformS>
             <CSS.EbSpanS>Account</CSS.EbSpanS>

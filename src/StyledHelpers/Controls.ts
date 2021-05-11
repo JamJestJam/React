@@ -12,6 +12,7 @@ export const TriangleConentLeft = styled(TriangleConentChild)`
 `;
 export const TriangleConentCenter = styled(TriangleConentChild)`
     justify-content: center;
+    vertical-align: top;
 `;
 export const TriangleConentRight = styled(TriangleConentChild)`
     justify-content: flex-end;

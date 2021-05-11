@@ -16,7 +16,7 @@ const BoxImageS = styled.div<IBoxImageStyle>`
     align-items: center;
     position: relative;
     overflow: hidden;
-    margin: 0 ${(props) => (props.Margin ? props.Margin : "auto")};
+    margin: ${(props) => (props.Margin ? props.Margin : "auto")};
     display: flex;
 `;
 

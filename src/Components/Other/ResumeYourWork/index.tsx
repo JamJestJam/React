@@ -13,92 +13,132 @@ import { IconSize } from "Components/Common/Icon/IconSize";
 //interface
 import IState from "Reduces/IState";
 import ICommentReducer from "Reduces/comment/ICommentReducer";
+import compare from "Functions/compare";
+import IUsersReducer from "Reduces/user/IUsersReducer";
+import Paggination from "./Pagination";
+import BoxIcon from "Components/Common/Icon/Boxing";
 
 const commentPerPage = 8;
 
 const ResumeYourWork: FC = () => {
-    const { comments } = useSelector<IState, ICommentReducer>((GS) => ({
-        ...GS.comments,
-    }));
+  const { comments, user } = useSelector<
+    IState,
+    ICommentReducer & IUsersReducer
+  >((GS) => ({
+    ...GS.comments,
+    ...GS.user,
+  }));
 
-    const [state, setState] = useState({
-        page: 0,
-        maxPage: 0,
-        data: [...comments],
-        filtered: false,
+  const [state, setState] = useState({
+    page: 0,
+    maxPage: 0,
+    data: [...comments],
+    filtered: false,
+    filetString: "",
+    text: "Followed"
+  });
+
+  const setPage = (page: number) => {
+    if (page < 0 || page > state.maxPage) return;
+
+    setState({
+      ...state,
+      page: page,
     });
+  };
 
-    const setPage = (page: number) => {
-        if(page<0 || page>state.maxPage)
-            return;
+  useEffect(() => {
+    const data = comments
+      .filter((a) => compare(a.name, state.filetString))
+      .filter((a) => a.post?.owner?.id === user?.id || !state.filtered);
+    const max =
+      data.length === 0 ? 0 : Math.floor(data.length / commentPerPage);
+    const page = state.page > max ? 0 : state.page;
 
-        setState({
-            ...state,
-            page: page,
-        });
-    };
+    setState({
+      ...state,
+      maxPage: max,
+      data: data,
+      page: page,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.filetString, state.filtered, comments, user]);
 
-    useEffect(() => {
-        const max = Math.floor(state.data.length / commentPerPage);
-        setState({
-            ...state,
-            maxPage: max,
-            data: comments,
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [comments]);
+  const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState({
+      ...state,
+      filetString: event.target.value,
+    });
+  };
 
-    return (
-        <>
-            <Controls.TriangleConent>
-                <Controls.TriangleConentLeft>
-                    <CSS.TitleS>Resume your work</CSS.TitleS>
-                </Controls.TriangleConentLeft>
-                <Controls.TriangleConentRight>
-                    <Search
-                        Label="Filter by title"
-                        Button={true}
-                        Border={true}
-                        Width={100}
-                        FontSize="12"
-                        IconSize={IconSize.Mini}
-                    ></Search>
-                    <DropDown
-                        LeftIcon={IconType.bell}
-                        ImageIconSwitch={false}
-                        Text="Followed"
-                    ></DropDown>
-                </Controls.TriangleConentRight>
-            </Controls.TriangleConent>
-            <div>
-                {state.data
-                    .slice(
-                        state.page * commentPerPage,
-                        state.page * commentPerPage + commentPerPage
-                    )
-                    .map((element, i) => {
-                        return (
-                            <SingleComment
-                                Title={element.name}
-                                Body={element.body}
-                                key={i}
-                            />
-                        );
-                    })}
-            </div>
-            <CSS.PagginationS>
-                <CSS.PagginationElement disable={state.page===0} onClick={() => {setPage(state.page - 1);}}>Previous</CSS.PagginationElement>
-
-                <CSS.PagginationEle onClick={() => {setPage(0);}}>1</CSS.PagginationEle>
-
-                <CSS.PagginationEle>{state.page+1}</CSS.PagginationEle>
-
-                <CSS.PagginationEle onClick={() => {setPage(state.maxPage);}}>{state.maxPage + 1}</CSS.PagginationEle>
-
-                <CSS.PagginationElement disable={state.page === state.maxPage} onClick={() => {setPage(state.page + 1);}}>Next</CSS.PagginationElement>
-            </CSS.PagginationS>
-        </>
-    );
+  return (
+    <>
+      <Controls.TriangleConent>
+        <Controls.TriangleConentLeft>
+          <CSS.TitleS>Resume your work</CSS.TitleS>
+        </Controls.TriangleConentLeft>
+        <Controls.TriangleConentRight>
+          <Search
+            Label="Filter by title"
+            Button={true}
+            Border={true}
+            Width={100}
+            FontSize="12"
+            IconSize={IconSize.Mini}
+            Change={InputChange}
+          />
+          <DropDown
+            LeftIcon={IconType.bell}
+            ImageIconSwitch={false}
+            Text={state.text}
+            Height="120px"
+          >
+            <CSS.EmElementS onClick={() => {setState({...state,filtered: false,text: "All"});}}>
+              <BoxIcon
+                IconSize={IconSize.Small}
+                IconType={IconType.bell}
+                Alt={""}
+              />
+              All
+            </CSS.EmElementS>
+            <CSS.EmElementS onClick={() => {setState({...state,filtered: true,text: "My"});}}>
+              <BoxIcon
+                IconSize={IconSize.Small}
+                IconType={IconType.bell}
+                Alt={""}
+              />
+              My
+            </CSS.EmElementS>
+            <CSS.EmElementS onClick={() => {setState({...state,filtered: false,text: "Followed"});}}>
+              <BoxIcon
+                IconSize={IconSize.Small}
+                IconType={IconType.bell}
+                Alt={""}
+              />
+              Followed
+            </CSS.EmElementS>
+          </DropDown>
+        </Controls.TriangleConentRight>
+      </Controls.TriangleConent>
+      <div>
+        {state.data
+          .slice(
+            state.page * commentPerPage,
+            state.page * commentPerPage + commentPerPage
+          )
+          .map((element, i) => {
+            return (
+              <SingleComment Comment={element} key={i} />
+            );
+          })}
+      </div>
+      <Paggination
+        min={0}
+        max={state.maxPage}
+        current={state.page}
+        change={setPage}
+      />
+    </>
+  );
 };
-
 export default ResumeYourWork;

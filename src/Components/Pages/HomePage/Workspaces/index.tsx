@@ -15,6 +15,7 @@ const Workspaces: FC = () => {
                 {json.Workspace.map((item, i) => (
                     <WorkspacesEl
                         ImageName={item.BgImage}
+                        Link={item.Link}
                         Days={item.Days}
                         Users={item.Users}
                         Icon={item.IconID}

@@ -8,6 +8,7 @@ const Slider: FC = (props) => {
     const ref = useRef(null);
     const [state, setState] = useState({
         moving: false,
+        move: false,
         maxWidth: 0,
         padding: 5,
         transform: 0,
@@ -24,6 +25,7 @@ const Slider: FC = (props) => {
             setState({
                 ...state,
                 transform: calcmove,
+                move: true
             });
         }
     };
@@ -31,7 +33,7 @@ const Slider: FC = (props) => {
     const stop = (event: React.MouseEvent) => {
         F.stopProp(event);
 
-        if (state.moving) setState({ ...state, moving: false });
+        if (state.moving) setState({ ...state, moving: false, move: false });
     };
 
     const select = () => {
@@ -61,7 +63,7 @@ const Slider: FC = (props) => {
                 transform: "translateX(" + state.transform + "px)",
             }}
         >
-            <CSS.ContentS ref={ref}>{props.children}</CSS.ContentS>
+            <CSS.ContentS moving={state.move} ref={ref}>{props.children}</CSS.ContentS>
         </CSS.SliderS>
     );
 };

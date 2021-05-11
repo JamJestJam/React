@@ -1,6 +1,5 @@
-
+import IEnComment  from 'Entities/comment';
 
 export default interface IComment{
-    Title: string;
-    Body: string;
+    Comment: IEnComment
 }
