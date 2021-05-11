@@ -10,7 +10,8 @@ const Logout: FC = () => {
 
     useEffect(() => {
         dispatch<GetPageInfoIcon>(getPageInfoIcon("Logout", "Logout", IconType.logout));
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Logout</>;
 };
 

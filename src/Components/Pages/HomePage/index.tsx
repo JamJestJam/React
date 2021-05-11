@@ -14,7 +14,8 @@ const HomePage: FC = () => {
 
     useEffect(() => {
         dispatch<GetPageInfoIcon>(getPageInfoIcon("home", "home", IconType.house));
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
     return (
         <>

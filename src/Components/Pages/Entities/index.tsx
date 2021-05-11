@@ -12,7 +12,8 @@ const Entities: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Entities", "Entities", IconType.entities)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Entities</>;
 };
 

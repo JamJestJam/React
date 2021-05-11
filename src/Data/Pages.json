@@ -4,7 +4,7 @@
             "Name": "Client contract",
             "BgImage": "./Image/Sample3.jpg",
             "Link": "/ClientContract",
-            "IconID": 0,
+            "IconID": 20,
             "Users": 150,
             "Days": 2
         },
@@ -12,7 +12,7 @@
             "Name": "Supplier contract",
             "BgImage": "./Image/Sample3.jpg",
             "Link": "/SupplierContract",
-            "IconID": 0,
+            "IconID": 20,
             "Users": 25,
             "Days": 5
         },
@@ -20,7 +20,7 @@
             "Name": "Corporate",
             "BgImage": "./Image/Sample3.jpg",
             "Link": "/Corporate",
-            "IconID": 0,
+            "IconID": 4,
             "Users": 50,
             "Days": 3
         },
@@ -28,7 +28,7 @@
             "Name": "Group norms",
             "BgImage": "./Image/Sample3.jpg",
             "Link": "/GroupNorms",
-            "IconID": 0,
+            "IconID": 22,
             "Users": 250,
             "Days": 30
         },
@@ -36,7 +36,7 @@
             "Name": "Real estate contracts",
             "BgImage": "./Image/Sample3.jpg",
             "Link": "/RealEstateContracts",
-            "IconID": 0,
+            "IconID": 20,
             "Users": 50,
             "Days": 1
         }

@@ -12,7 +12,8 @@ const Settings: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Settings", "Settings", IconType.settings)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Settings</>;
 };
 

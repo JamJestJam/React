@@ -12,7 +12,8 @@ const Publications: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Publications", "Publications", IconType.publications)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Publications</>;
 };
 

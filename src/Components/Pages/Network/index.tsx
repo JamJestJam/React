@@ -12,7 +12,8 @@ const Network: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Network", "Network", IconType.network)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Network</>;
 };
 

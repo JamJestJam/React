@@ -12,7 +12,8 @@ const Corporate: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Corporate", "Corporate", IconType.administration)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Corporate</>;
 };
 

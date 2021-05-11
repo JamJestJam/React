@@ -10,7 +10,8 @@ const People: FC = () => {
 
     useEffect(() => {
         dispatch<GetPageInfoIcon>(getPageInfoIcon("People", "People", IconType.people));
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>People</>;
 };
 

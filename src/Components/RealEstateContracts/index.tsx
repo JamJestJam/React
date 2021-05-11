@@ -12,7 +12,8 @@ const RealEstateContracts: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("RealEstateContracts", "RealEstateContracts", IconType.administration)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>RealEstateContracts</>;
 };
 

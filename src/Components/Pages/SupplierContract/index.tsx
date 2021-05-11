@@ -12,7 +12,8 @@ const SupplierContract: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("SupplierContract", "SupplierContract", IconType.administration)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Supplier contract</>;
 };
 

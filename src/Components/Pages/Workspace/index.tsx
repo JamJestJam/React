@@ -12,7 +12,8 @@ const Workspace: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Workspace", "Workspace", IconType.logo)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Workspace</>;
 };
 

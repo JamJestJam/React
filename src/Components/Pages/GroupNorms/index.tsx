@@ -12,7 +12,8 @@ const GroupNorms: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("GroupNorms", "GroupNorms", IconType.administration)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>GroupNorms</>;
 };
 

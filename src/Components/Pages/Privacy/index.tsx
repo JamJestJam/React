@@ -12,7 +12,8 @@ const Privacy: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Privacy", "Privacy", IconType.privacy)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
     return <>Privacy</>;
 };
 

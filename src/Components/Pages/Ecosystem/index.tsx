@@ -12,7 +12,8 @@ const Ecosystem: FC = () => {
         dispatch<GetPageInfoIcon>(
             getPageInfoIcon("Ecosystem", "Ecosystem", IconType.ecosystem)
         );
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
     return <>Ecosystem</>;
 };

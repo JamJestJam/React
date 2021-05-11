@@ -88,7 +88,7 @@ const ResumeYourWork: FC = () => {
             Change={InputChange}
           />
           <DropDown
-            LeftIcon={IconType.bell}
+            LeftIcon={IconType.broadcast}
             ImageIconSwitch={false}
             Text={state.text}
             Height="120px"
@@ -96,7 +96,7 @@ const ResumeYourWork: FC = () => {
             <CSS.EmElementS onClick={() => {setState({...state,filtered: false,text: "All"});}}>
               <BoxIcon
                 IconSize={IconSize.Small}
-                IconType={IconType.bell}
+                IconType={IconType.broadcast}
                 Alt={""}
               />
               All
@@ -104,7 +104,7 @@ const ResumeYourWork: FC = () => {
             <CSS.EmElementS onClick={() => {setState({...state,filtered: true,text: "My"});}}>
               <BoxIcon
                 IconSize={IconSize.Small}
-                IconType={IconType.bell}
+                IconType={IconType.broadcast}
                 Alt={""}
               />
               My
@@ -112,7 +112,7 @@ const ResumeYourWork: FC = () => {
             <CSS.EmElementS onClick={() => {setState({...state,filtered: false,text: "Followed"});}}>
               <BoxIcon
                 IconSize={IconSize.Small}
-                IconType={IconType.bell}
+                IconType={IconType.broadcast}
                 Alt={""}
               />
               Followed
