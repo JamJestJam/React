@@ -6,7 +6,7 @@ import * as CSS from "./css";
 
 const ButtonPagination: FC<IButtonPagination> = (p) => {
   const click = () => {
-      p.change(p.set);
+    p.change(p.set);
   };
 
   return (

@@ -1,3 +1,3 @@
-export default interface IMoving{
-    moving: boolean;
+export default interface IMoving {
+  moving: boolean;
 }

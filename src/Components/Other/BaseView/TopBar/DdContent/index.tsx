@@ -19,93 +19,93 @@ import json from "Data/Pages.json";
 import compare from "Functions/compare";
 
 const DdContent: FC = () => {
-    const [State, SetState] = useState({
-        Value: "",
+  const [State, SetState] = useState({
+    Value: "",
+  });
+
+  const { user } = useSelector<IState, IUsersReducer>((GS) => ({
+    ...GS.user,
+  }));
+
+  const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    SetState({
+      ...State,
+      Value: event.target.value,
     });
+  };
 
-    const { user } = useSelector<IState, IUsersReducer>((GS) => ({
-        ...GS.user,
-    }));
-
-    const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        SetState({
-            ...State,
-            Value: event.target.value,
-        });
-    };
-
-    return (
-        <>
-            <Search
-                Label="Filter..."
-                Width={150}
-                FontSize={"12"}
-                Change={InputChange}
-            />
-            <CSS.PlatformS>
-                <CSS.EbSpanS>Platform</CSS.EbSpanS>
-                {json.Platform.map((item, i) => {
-                    if (compare(item.Name, State.Value)) {
-                        return (
-                            <DbContentItem
-                                link={item.Link}
-                                itemName={item.Name}
-                                icon={item.IconID}
-                                imageIconSwitch={false}
-                                key={i}
-                            />
-                        );
-                    }
-                    return <div key={i}></div>;
-                })}
-                <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
-                {json.Workspace.map((item, i) => {
-                    if (compare(item.Name, State.Value)) {
-                        return (
-                            <DbContentItem
-                                link={item.Link}
-                                itemName={item.Name}
-                                icon={item.IconID}
-                                imageIconSwitch={false}
-                                key={i}
-                            />
-                        );
-                    }
-                    return <div key={i}></div>;
-                })}
-            </CSS.PlatformS>
-            <CSS.EbSpanS>Account</CSS.EbSpanS>
-            <DbContentItem
-                link="/Profile"
-                itemName={user?.shortName || "&zwnj"}
-                image={user?.photo?.url}
-                imageIconSwitch={true}
-            />
-            <DbContentItem
-                link="/Privacy"
-                itemName={"Privacy"}
-                icon={IconType.privacy}
+  return (
+    <>
+      <Search
+        Label="Filter..."
+        Width={150}
+        FontSize={"12"}
+        Change={InputChange}
+      />
+      <CSS.PlatformS>
+        <CSS.EbSpanS>Platform</CSS.EbSpanS>
+        {json.Platform.map((item, i) => {
+          if (compare(item.Name, State.Value)) {
+            return (
+              <DbContentItem
+                link={item.Link}
+                itemName={item.Name}
+                icon={item.IconID}
                 imageIconSwitch={false}
-            />
-            <DbContentItem
-                link="/Settings"
-                itemName={"Settings"}
-                icon={IconType.settings}
+                key={i}
+              />
+            );
+          }
+          return <div key={i}></div>;
+        })}
+        <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
+        {json.Workspace.map((item, i) => {
+          if (compare(item.Name, State.Value)) {
+            return (
+              <DbContentItem
+                link={item.Link}
+                itemName={item.Name}
+                icon={item.IconID}
                 imageIconSwitch={false}
-            />
-            <hr />
-            <LinkS to="/Logout">
-                <CSS.EmLastElementS>
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={IconType.logout}
-                        Alt=""
-                    />
-                    Logout
-                </CSS.EmLastElementS>
-            </LinkS>
-        </>
-    );
+                key={i}
+              />
+            );
+          }
+          return <div key={i}></div>;
+        })}
+      </CSS.PlatformS>
+      <CSS.EbSpanS>Account</CSS.EbSpanS>
+      <DbContentItem
+        link="/Profile"
+        itemName={user?.shortName || "&zwnj"}
+        image={user?.photo?.url}
+        imageIconSwitch={true}
+      />
+      <DbContentItem
+        link="/Privacy"
+        itemName={"Privacy"}
+        icon={IconType.privacy}
+        imageIconSwitch={false}
+      />
+      <DbContentItem
+        link="/Settings"
+        itemName={"Settings"}
+        icon={IconType.settings}
+        imageIconSwitch={false}
+      />
+      <hr />
+      <LinkS to="/Logout">
+        <CSS.EmLastElementS>
+          <BoxIcon
+            IconSize={IconSize.Small}
+            IconType={IconType.logout}
+            Alt=""
+          />
+          Logout
+        </CSS.EmLastElementS>
+      </LinkS>
+    </>
+  );
 };
 
 export default DdContent;

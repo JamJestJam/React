@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { FC, useEffect } from "react";
 //actions
-import setCommentsLink, { SetCommentsLink } from "Actions/comment/setCommentsLink";
+import setCommentsLink, {
+  SetCommentsLink,
+} from "Actions/comment/setCommentsLink";
 import setUsersLink, { SetUsersLink } from "Actions/User/setUsersLink";
 import setPostsLink, { SetPostsLink } from "Actions/Post/setPostsLink";
 import getComments, { GetComments } from "Actions/comment/getComments";
@@ -20,43 +22,43 @@ import IPageInfoReducer from "Reduces/pageInfo/IPageInfoReducer";
 import IState from "Reduces/IState";
 
 const BaseView: FC = (Props) => {
-    const dispatch = useDispatch();
-    useEffect(() => {
-        const user = dispatch<GetUsers>(getUsers());
-        const post = dispatch<GetPost>(getPosts());
-        const comm = dispatch<GetComments>(getComments());
-        const phot = dispatch<GetPhotos>(getPhotos());
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const user = dispatch<GetUsers>(getUsers());
+    const post = dispatch<GetPost>(getPosts());
+    const comm = dispatch<GetComments>(getComments());
+    const phot = dispatch<GetPhotos>(getPhotos());
 
-        Promise.all([user, post, comm, phot])
-            .then(([user, post, comm, phot]) => {
-                return Promise.all([
-                    dispatch<SetUsersLink>(setUsersLink(user, phot, post, comm)),
-                    dispatch<SetPostsLink>(setPostsLink(post, phot, user, comm)),
-                    dispatch<SetCommentsLink>(setCommentsLink(comm, post, user)),
-                ]);
-            })
-            .then(([user, post, comm]) => {
-                dispatch<GetUser>(getUser(user[0]));
-            });
-    }, [dispatch]);
+    Promise.all([user, post, comm, phot])
+      .then(([user, post, comm, phot]) => {
+        return Promise.all([
+          dispatch<SetUsersLink>(setUsersLink(user, phot, post, comm)),
+          dispatch<SetPostsLink>(setPostsLink(post, phot, user, comm)),
+          dispatch<SetCommentsLink>(setCommentsLink(comm, post, user)),
+        ]);
+      })
+      .then(([user, post, comm]) => {
+        dispatch<GetUser>(getUser(user[0]));
+      });
+  }, [dispatch]);
 
-    useEffect(() => {
-        document.title = pageInfo.pageTitle;
-    });
+  useEffect(() => {
+    document.title = pageInfo.pageTitle;
+  });
 
-    const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({
-        ...GS.pageInfo,
-    }));
+  const { pageInfo } = useSelector<IState, IPageInfoReducer>((GS) => ({
+    ...GS.pageInfo,
+  }));
 
-    return (
-        <>
-            <TopBar />
-            <CSS.PageContentS>
-                <LeftMenu />
-                <CSS.PageFillS>{Props.children}</CSS.PageFillS>
-            </CSS.PageContentS>
-        </>
-    );
+  return (
+    <>
+      <TopBar />
+      <CSS.PageContentS>
+        <LeftMenu />
+        <CSS.PageFillS>{Props.children}</CSS.PageFillS>
+      </CSS.PageContentS>
+    </>
+  );
 };
 
 export default BaseView;

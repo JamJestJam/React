@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 const DataBox: FC = () => {
-    return <></>;
-}
+  return <></>;
+};
 
 export default DataBox;

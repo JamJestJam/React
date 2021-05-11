@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 const AmountFees: FC = () => {
-    return <></>;
-}
+  return <></>;
+};
 
 export default AmountFees;

@@ -21,6 +21,8 @@ import logo from "./Icons/logo.svg";
 import bell from "./Icons/bell.svg";
 import plus from "./Icons/plus.svg";
 import book from "./Icons/book.svg";
+import edit from "./Icons/edit.svg";
+import exit from "./Icons/exit.svg";
 import cog from "./Icons/cog.svg";
 
 export enum IconType {
@@ -46,6 +48,8 @@ export enum IconType {
   bell = 17,
   logo = 18,
   book = 22,
+  edit = 23,
+  exit = 24,
   cog = 19,
 }
 
@@ -64,9 +68,9 @@ export const GetIcon = (type: IconType): string => {
     case IconType.entities2:
       return entities2;
     case IconType.user_plus:
-        return user_plus;
+      return user_plus;
     case IconType.broadcast:
-        return broadcast;
+      return broadcast;
     case IconType.comments:
       return comments;
     case IconType.entities:
@@ -95,9 +99,11 @@ export const GetIcon = (type: IconType): string => {
       return logo;
     case IconType.book:
       return book;
+    case IconType.edit:
+      return edit;
+    case IconType.exit:
+      return exit;
     case IconType.cog:
       return cog;
-
-    
   }
 };

@@ -3,27 +3,19 @@ import styled from "styled-components";
 import { Colors } from "StyledHelpers/Colors";
 
 export const ContentS = styled.div`
-    background-color: ${Colors.Bg1};
-    border-bottom: 1px solid ${Colors.Shadow};
+  background-color: ${Colors.Bg1};
+  border-bottom: 1px solid ${Colors.Shadow};
 `;
 
 export const TopBellS = styled.div`
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
 `;
 
-export const TopIconsS = styled.div`
+export const TopIconsS = styled.div``;
 
-`;
+export const DataContentS = styled.div``;
 
-export const DataContentS = styled.div`
+export const ProfileS = styled.div``;
 
-`;
-
-export const ProfileS = styled.div`
-
-`;
-
-export const DataS = styled.div`
-
-`;
+export const DataS = styled.div``;

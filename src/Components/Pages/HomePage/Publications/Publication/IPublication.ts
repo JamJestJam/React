@@ -2,5 +2,5 @@
 import IEnPost from "Entities/post";
 
 export default interface IPublication {
-    data?: IEnPost;
+  data?: IEnPost;
 }

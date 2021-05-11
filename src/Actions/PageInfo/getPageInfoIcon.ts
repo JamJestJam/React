@@ -7,22 +7,21 @@ import IEnPageInfo from "Entities/pageInfo";
 import * as types from "./PageInfoTypes";
 
 const getPageInfoIcon = (
-    pageName: string,
-    pageTitle: string,
-    pageIcon: IconType
+  pageName: string,
+  pageTitle: string,
+  pageIcon: IconType
 ): Promise<IEnPageInfo> =>
-    ((dispatch: Dispatch) => {
-        return dispatch({
-            type: types.GET_PAGE_INFO,
-            pageInfo: {
-                pageIcon: pageIcon,
-                pageTitle: pageTitle,
-                pageName: pageName,
-                imageIconSwitch: false
-            },
-        });
-    }) as any;
+  ((dispatch: Dispatch) => {
+    return dispatch({
+      type: types.GET_PAGE_INFO,
+      pageInfo: {
+        pageIcon: pageIcon,
+        pageTitle: pageTitle,
+        pageName: pageName,
+        imageIconSwitch: false,
+      },
+    });
+  }) as any;
 
 export default getPageInfoIcon;
 export type GetPageInfoIcon = ReturnType<typeof getPageInfoIcon>;
-

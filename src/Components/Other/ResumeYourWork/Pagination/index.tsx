@@ -37,11 +37,7 @@ const Paggination: FC<IPagination> = (p) => {
         <></>
       )}
 
-      {
-        s3-1 > p.min?
-        <div>...</div>:
-        <></>
-      }
+      {s3 - 1 > p.min ? <div>...</div> : <></>}
 
       {s3 > p.min ? (
         <ButtonPagination
@@ -98,7 +94,7 @@ const Paggination: FC<IPagination> = (p) => {
       ) : (
         <></>
       )}
-      
+
       {b2 < p.max ? (
         <ButtonPagination
           cur={p.current}
@@ -123,11 +119,7 @@ const Paggination: FC<IPagination> = (p) => {
         <></>
       )}
 
-      {
-        b3+1 < p.max?
-        <div>...</div>:
-        <></>
-      }
+      {b3 + 1 < p.max ? <div>...</div> : <></>}
 
       {p.current !== p.max ? (
         <ButtonPagination
@@ -140,7 +132,7 @@ const Paggination: FC<IPagination> = (p) => {
       ) : (
         <></>
       )}
-      
+
       <ButtonPagination
         cur={p.current}
         set={p.current + 1}

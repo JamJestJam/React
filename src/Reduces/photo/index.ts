@@ -3,19 +3,19 @@ import * as types from "Actions/photo/PhotoTypes";
 import IPhotoTypes from "Actions/photo/IPhotoTypes";
 
 const postSwitch = (state = defaultState(), action: any) => {
-    switch (action.type) {
-        case types.GET_PHOTOS: {
-            const paylod: IPhotoTypes["GET_PHOTOS"] = action;
-            return {
-                ...state,
-                posts: paylod.photos,
-            };
-        }
-
-        default: {
-            return state;
-        }
+  switch (action.type) {
+    case types.GET_PHOTOS: {
+      const paylod: IPhotoTypes["GET_PHOTOS"] = action;
+      return {
+        ...state,
+        posts: paylod.photos,
+      };
     }
+
+    default: {
+      return state;
+    }
+  }
 };
 
 export default postSwitch;

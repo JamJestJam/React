@@ -17,7 +17,14 @@ const SingleComment: FC<IComment> = (props) => {
       <CSS.TitleS>{props.Comment.name}</CSS.TitleS>
       <CSS.BodyS>{props.Comment.body}</CSS.BodyS>
       <CSS.BottomS>
-        <BoxImage ImageName={user?.photo?.url || ""} Alt="" MaxWidth={20} MaxHeight={20} Rounded={true} Margin="0 5px 0 0"/>
+        <BoxImage
+          ImageName={user?.photo?.url || ""}
+          Alt=""
+          MaxWidth={20}
+          MaxHeight={20}
+          Rounded={true}
+          Margin="0 5px 0 0"
+        />
         <div>{user?.name || ""}</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
         <Icon IconType={IconType.bell} IconSize={IconSize.Mini} Alt="" />

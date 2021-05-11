@@ -10,10 +10,10 @@ const UserData: FC = () => {
   return (
     <CSS.ContentS>
       <CSS.TopBellS>
-          <TopIcon icon={IconType.bell} text=""/>
-          <TopIcon icon={IconType.bell} text="add to claster"/>
-          <TopIcon icon={IconType.bell} text="create a request"/>
-          <TopIcon icon={IconType.bell} text="message"/>
+        <TopIcon icon={IconType.comments} text="message" />
+        <TopIcon icon={IconType.image_editing} text="create a request" />
+        <TopIcon icon={IconType.book} text="add to claster" />
+        <TopIcon icon={IconType.exit} text="" />
       </CSS.TopBellS>
       <CSS.DataContentS>
         <CSS.ProfileS></CSS.ProfileS>

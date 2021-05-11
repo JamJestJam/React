@@ -8,24 +8,24 @@ import * as CSS from "./css";
 import json from "Data/Pages.json";
 
 const Workspaces: FC = () => {
-    return (
-        <>
-            <CSS.TitleS>Workspaces</CSS.TitleS>
-            <Slider>
-                {json.Workspace.map((item, i) => (
-                    <WorkspacesEl
-                        ImageName={item.BgImage}
-                        Link={item.Link}
-                        Days={item.Days}
-                        Users={item.Users}
-                        Icon={item.IconID}
-                        Name={item.Name}
-                        key={i}
-                    />
-                ))}
-            </Slider>
-        </>
-    );
+  return (
+    <>
+      <CSS.TitleS>Workspaces</CSS.TitleS>
+      <Slider>
+        {json.Workspace.map((item, i) => (
+          <WorkspacesEl
+            ImageName={item.BgImage}
+            Link={item.Link}
+            Days={item.Days}
+            Users={item.Users}
+            Icon={item.IconID}
+            Name={item.Name}
+            key={i}
+          />
+        ))}
+      </Slider>
+    </>
+  );
 };
 
 export default Workspaces;

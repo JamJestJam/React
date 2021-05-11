@@ -1,13 +1,13 @@
 import IPageInfoReducer from "./IPageInfoReducer";
 
 const defaultState = (): IPageInfoReducer => ({
-    pageInfo: {
-        pageIcon: undefined,
-        pageImage: undefined,
-        imageIconSwitch: true,
-        pageName: "default",
-        pageTitle: "default",
-    },
+  pageInfo: {
+    pageIcon: undefined,
+    pageImage: undefined,
+    imageIconSwitch: true,
+    pageName: "default",
+    pageTitle: "default",
+  },
 });
 
 export default defaultState;

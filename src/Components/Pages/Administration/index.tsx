@@ -18,7 +18,7 @@ const Administration: FC = () => {
         IconType.administration
       )
     );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return <>Administration</>;
 };

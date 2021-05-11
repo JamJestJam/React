@@ -1,4 +1,4 @@
 export default interface IFieldS {
-    Focus: boolean;
-    Border?: boolean;
+  Focus: boolean;
+  Border?: boolean;
 }

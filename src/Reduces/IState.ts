@@ -4,8 +4,8 @@ import IPostReducer from "./post/IPostReducer";
 import IUsersReducer from "./user/IUsersReducer";
 
 export default interface IState {
-    user: IUsersReducer;
-    pageInfo: IPageInfoReducer;
-    posts: IPostReducer;
-    comments: ICommentReducer;
+  user: IUsersReducer;
+  pageInfo: IPageInfoReducer;
+  posts: IPostReducer;
+  comments: ICommentReducer;
 }

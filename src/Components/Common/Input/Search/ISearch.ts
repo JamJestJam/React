@@ -4,8 +4,8 @@ import { IconSize } from "Components/Common/Icon/IconSize";
 import IInput from "../IInput";
 
 export default interface ISearch extends IInput {
-    Label: string;
-    Button?: boolean;
-    Border?: boolean;
-    IconSize?: IconSize;
+  Label: string;
+  Button?: boolean;
+  Border?: boolean;
+  IconSize?: IconSize;
 }

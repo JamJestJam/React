@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 const Proposals: FC = () => {
-    return <></>;
-}
+  return <></>;
+};
 
 export default Proposals;

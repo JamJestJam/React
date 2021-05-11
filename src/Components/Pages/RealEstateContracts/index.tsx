@@ -7,16 +7,20 @@ import getPageInfoIcon, {
 //data
 import { IconType } from "Components/Common/Icon/IconType";
 
-const GroupNorms: FC = () => {
+const RealEstateContracts: FC = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch<GetPageInfoIcon>(
-      getPageInfoIcon("GroupNorms", "GroupNorms", IconType.administration)
+      getPageInfoIcon(
+        "RealEstateContracts",
+        "RealEstateContracts",
+        IconType.administration
+      )
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return <>GroupNorms</>;
+  return <>RealEstateContracts</>;
 };
 
-export default GroupNorms;
+export default RealEstateContracts;

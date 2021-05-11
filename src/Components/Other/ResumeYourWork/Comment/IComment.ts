@@ -1,5 +1,5 @@
-import IEnComment  from 'Entities/comment';
+import IEnComment from "Entities/comment";
 
-export default interface IComment{
-    Comment: IEnComment
+export default interface IComment {
+  Comment: IEnComment;
 }

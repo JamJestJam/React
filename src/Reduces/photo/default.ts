@@ -1,7 +1,7 @@
 import IPhotoReducer from "./IPhotoReducer";
 
 const defaultState = (): IPhotoReducer => ({
-    photos: [],
+  photos: [],
 });
 
 export default defaultState;

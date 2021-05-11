@@ -5,6 +5,6 @@ import { Colors } from "StyledHelpers/Colors";
 import IDisabe from "./IDisable";
 
 export const PagginationEle = styled.button<IDisabe>`
-    color: ${(props) => (props.disable ? Colors.GrayFont : Colors.BlueFont)};
-    cursor: ${(props) => (props.disable ?'default':'pointer')};
+  color: ${(props) => (props.disable ? Colors.GrayFont : Colors.BlueFont)};
+  cursor: ${(props) => (props.disable ? "default" : "pointer")};
 `;

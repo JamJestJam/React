@@ -1,5 +1,3 @@
-
-
-export default interface IDisabe{
-    disable: boolean;
+export default interface IDisabe {
+  disable: boolean;
 }

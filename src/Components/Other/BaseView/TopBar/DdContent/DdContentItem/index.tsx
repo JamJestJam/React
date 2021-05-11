@@ -12,31 +12,31 @@ import * as CSS from "./css";
 import IDdContentItem from "./IDdContentItem";
 
 const DdContentItem: FC<IDdContentItem> = (props) => {
-    return (
-        <LinkS to={props.link}>
-            <CSS.EmElementS>
-                {props.imageIconSwitch ? (
-                    <BoxImage
-                        ImageName={props.image || ""}
-                        Background={Colors.Bg3}
-                        Alt="Zdj. profilowe"
-                        BoxShadow={true}
-                        Rounded={true}
-                        MaxHeight={30}
-                        MaxWidth={30}
-                        Margin="5px"
-                    />
-                ) : (
-                    <BoxIcon
-                        IconSize={IconSize.Small}
-                        IconType={props.icon || 0}
-                        Alt={props.itemName}
-                    />
-                )}
-                {props.itemName}
-            </CSS.EmElementS>
-        </LinkS>
-    );
+  return (
+    <LinkS to={props.link}>
+      <CSS.EmElementS>
+        {props.imageIconSwitch ? (
+          <BoxImage
+            ImageName={props.image || ""}
+            Background={Colors.Bg3}
+            Alt="Zdj. profilowe"
+            BoxShadow={true}
+            Rounded={true}
+            MaxHeight={30}
+            MaxWidth={30}
+            Margin="5px"
+          />
+        ) : (
+          <BoxIcon
+            IconSize={IconSize.Small}
+            IconType={props.icon || 0}
+            Alt={props.itemName}
+          />
+        )}
+        {props.itemName}
+      </CSS.EmElementS>
+    </LinkS>
+  );
 };
 
 export default DdContentItem;

@@ -35,7 +35,7 @@ const ResumeYourWork: FC = () => {
     data: [...comments],
     filtered: false,
     filetString: "",
-    text: "Followed"
+    text: "Followed",
   });
 
   const setPage = (page: number) => {
@@ -93,7 +93,11 @@ const ResumeYourWork: FC = () => {
             Text={state.text}
             Height="120px"
           >
-            <CSS.EmElementS onClick={() => {setState({...state,filtered: false,text: "All"});}}>
+            <CSS.EmElementS
+              onClick={() => {
+                setState({ ...state, filtered: false, text: "All" });
+              }}
+            >
               <BoxIcon
                 IconSize={IconSize.Small}
                 IconType={IconType.broadcast}
@@ -101,7 +105,11 @@ const ResumeYourWork: FC = () => {
               />
               All
             </CSS.EmElementS>
-            <CSS.EmElementS onClick={() => {setState({...state,filtered: true,text: "My"});}}>
+            <CSS.EmElementS
+              onClick={() => {
+                setState({ ...state, filtered: true, text: "My" });
+              }}
+            >
               <BoxIcon
                 IconSize={IconSize.Small}
                 IconType={IconType.broadcast}
@@ -109,7 +117,11 @@ const ResumeYourWork: FC = () => {
               />
               My
             </CSS.EmElementS>
-            <CSS.EmElementS onClick={() => {setState({...state,filtered: false,text: "Followed"});}}>
+            <CSS.EmElementS
+              onClick={() => {
+                setState({ ...state, filtered: false, text: "Followed" });
+              }}
+            >
               <BoxIcon
                 IconSize={IconSize.Small}
                 IconType={IconType.broadcast}
@@ -127,9 +139,7 @@ const ResumeYourWork: FC = () => {
             state.page * commentPerPage + commentPerPage
           )
           .map((element, i) => {
-            return (
-              <SingleComment Comment={element} key={i} />
-            );
+            return <SingleComment Comment={element} key={i} />;
           })}
       </div>
       <Paggination

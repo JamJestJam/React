@@ -5,8 +5,8 @@ import posts from "./post";
 import comments from "./comment";
 
 export default combineReducers({
-    user,
-    pageInfo,
-    posts,
-    comments,
+  user,
+  pageInfo,
+  posts,
+  comments,
 });

@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 const PanelInformations: FC = () => {
-    return <></>;
-}
+  return <></>;
+};
 
 export default PanelInformations;

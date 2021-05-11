@@ -25,8 +25,8 @@ const Profile: FC = () => {
     dispatch<GetPageInfoImage>(
       getPageInfoImage("Profile", "Profile", user?.photo?.url || "")
     );
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
 
   return (
     <>

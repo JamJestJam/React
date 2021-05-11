@@ -5,17 +5,17 @@ import IEnPhoto from "Entities/photo";
 import * as types from "./PhotoTypes";
 
 const getPhotos = (): Promise<IEnPhoto[]> =>
-((dispatch: Dispatch) => {
+  ((dispatch: Dispatch) => {
     return fetch("https://jsonplaceholder.typicode.com/photos")
-        .then((response) => response.json())
-        .then((photos: IEnPhoto[]) => {
-            dispatch({
-                type: types.GET_PHOTOS,
-                photos: photos,
-            });
-            return photos;
+      .then((response) => response.json())
+      .then((photos: IEnPhoto[]) => {
+        dispatch({
+          type: types.GET_PHOTOS,
+          photos: photos,
         });
-}) as any;
+        return photos;
+      });
+  }) as any;
 
 export default getPhotos;
 export type GetPhotos = ReturnType<typeof getPhotos>;

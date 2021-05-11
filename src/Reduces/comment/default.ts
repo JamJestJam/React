@@ -1,7 +1,7 @@
 import IUsersReducer from "./ICommentReducer";
 
 const defaultState = (): IUsersReducer => ({
-    comments: [],
+  comments: [],
 });
 
 export default defaultState;
