@@ -27,9 +27,10 @@ const Publications: FC = () => {
   const { posts } = useSelector<IState, IPostReducer>((GS) => ({
     ...GS.posts,
   }));
-  const postID = useMemo(() => RandomNumbers(4, posts.length - 1), [
-    posts.length,
-  ]);
+  const postID = useMemo(
+    () => RandomNumbers(4, posts.length - 1),
+    [posts.length]
+  );
 
   return (
     <CSS.ContentS>

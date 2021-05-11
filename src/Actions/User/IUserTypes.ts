@@ -11,4 +11,11 @@ export default interface IUserTypes {
   SET_USERS_LINK: {
     users: IEnUser[];
   };
+  SET_USER: {
+    name: string;
+    street: string;
+    city: string;
+    email: string;
+    phone: string;
+  };
 }

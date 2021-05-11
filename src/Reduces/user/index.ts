@@ -29,6 +29,24 @@ const userSwitch = (state = defaultState(), action: any) => {
       };
     }
 
+    case types.SET_USER: {
+      const paylod: IUserTypes["SET_USER"] = action;
+
+      const user = state.user;
+      if (user) {
+        user.name = paylod.name;
+        user.address.street = paylod.street;
+        user.address.city = paylod.city;
+        user.phone = paylod.phone;
+        user.email = paylod.email;
+      }
+      console.log(user);
+      return {
+        ...state,
+        user: user,
+      };
+    }
+
     default: {
       return state;
     }

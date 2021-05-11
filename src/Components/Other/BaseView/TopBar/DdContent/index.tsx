@@ -1,10 +1,10 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 //data
 import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
-import Search from "Components/Common/Input/Search";
+import InputLabel from "Components/Common/Input/LabelInput";
 import BoxIcon from "Components/Common/Icon/Boxing";
 import DbContentItem from "./DdContentItem/index";
 //style
@@ -34,9 +34,11 @@ const DdContent: FC = () => {
     });
   };
 
+  useEffect(() => {}, [user]);
+
   return (
     <>
-      <Search
+      <InputLabel
         Label="Filter..."
         Width={150}
         FontSize={"12"}

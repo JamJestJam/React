@@ -1,10 +1,13 @@
 import styled from "styled-components";
 //data
 import { Colors } from "StyledHelpers/Colors";
+//css
+import * as CSS from "StyledHelpers/Controls";
 
 export const ContentS = styled.div`
-  background-color: ${Colors.Bg1};
-  border-bottom: 1px solid ${Colors.Shadow};
+  width: fit-content;
+  margin-left: auto;
+  padding: 10px;
 `;
 
 export const TopBellS = styled.div`
@@ -12,10 +15,17 @@ export const TopBellS = styled.div`
   justify-content: flex-end;
 `;
 
-export const TopIconsS = styled.div``;
+export const DataContentS = styled(CSS.TriangleConent)``;
 
-export const DataContentS = styled.div``;
+export const ProfileS = styled(CSS.TriangleConentLeft)`
+  flex: 1;
+`;
 
-export const ProfileS = styled.div``;
+export const DataS = styled(CSS.TriangleConentRight)`
+  flex: 30;
+  justify-content: flex-start;
+`;
 
-export const DataS = styled.div``;
+export const ElementS = styled.div`
+  border-bottom: 1px solid ${Colors.Shadow};
+`;

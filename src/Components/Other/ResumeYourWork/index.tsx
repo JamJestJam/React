@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 //Components
 import DropDown from "Components/Common/DropDown";
-import Search from "Components/Common/Input/Search";
+import InputLabel from "Components/Common/Input/LabelInput";
 import SingleComment from "./Comment";
 //Data
 import { IconType } from "Components/Common/Icon/IconType";
@@ -78,7 +78,7 @@ const ResumeYourWork: FC = () => {
           <CSS.TitleS>Resume your work</CSS.TitleS>
         </Controls.TriangleConentLeft>
         <Controls.TriangleConentRight>
-          <Search
+          <InputLabel
             Label="Filter by title"
             Button={true}
             Border={true}

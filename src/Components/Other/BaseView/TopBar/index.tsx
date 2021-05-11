@@ -6,7 +6,7 @@ import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
 import Icon from "Components/Common/Icon";
-import Search from "Components/Common/Input/Search";
+import InputLabel from "Components/Common/Input/LabelInput";
 import BoxIcon from "Components/Common/Icon/Boxing";
 import DropDown from "Components/Common/DropDown";
 import DdContent from "./DdContent";
@@ -38,7 +38,7 @@ const TopBar: FC = () => {
         </DropDown>
       </Controls.TriangleConentLeft>
       <Controls.TriangleConentCenter>
-        <Search
+        <InputLabel
           Label="Search Legalcluster"
           Width={500}
           Button={true}

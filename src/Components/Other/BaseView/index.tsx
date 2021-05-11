@@ -38,7 +38,7 @@ const BaseView: FC = (Props) => {
         ]);
       })
       .then(([user, post, comm]) => {
-        dispatch<GetUser>(getUser(user[0]));
+        dispatch<GetUser>(getUser(user[1]));
       });
   }, [dispatch]);
 

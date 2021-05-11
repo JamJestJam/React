@@ -4,13 +4,13 @@ import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
 import BoxIcon from "Components/Common/Icon/Boxing";
-import Input from "../";
+import Input from "..";
 //style
 import * as CSS from "./css";
 //interface./..
-import ISearch from "./ISearch";
+import ISearch from "./ILabelInput";
 
-const Search: FC<ISearch> = (props) => {
+const InputLabel: FC<ISearch> = (props) => {
   const [State, SetState] = useState({
     Focus: false,
     Value: props.Value || "",
@@ -66,7 +66,7 @@ const Search: FC<ISearch> = (props) => {
       {props.Button && (
         <BoxIcon
           IconSize={props.IconSize || IconSize.Small}
-          IconType={IconType.search}
+          IconType={props.ButtonType || IconType.search}
           Alt="Szukaj"
         />
       )}
@@ -74,4 +74,4 @@ const Search: FC<ISearch> = (props) => {
   );
 };
 
-export default Search;
+export default InputLabel;

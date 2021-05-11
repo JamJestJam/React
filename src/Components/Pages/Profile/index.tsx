@@ -11,6 +11,8 @@ import Proposals from "./Proposals";
 import InternalRewiews from "./InternalRewiews";
 import AmountFees from "./AmountFees";
 import DataBox from "./DataBox";
+//Style
+import * as CSS from "./css";
 //interfaces
 import IState from "Reduces/IState";
 import IUsersReducer from "Reduces/user/IUsersReducer";
@@ -29,14 +31,14 @@ const Profile: FC = () => {
   }, [user]);
 
   return (
-    <>
+    <CSS.ContentS>
       <UserData />
       <DataBox />
       <PanelInformations />
       <Proposals />
       <InternalRewiews />
       <AmountFees />
-    </>
+    </CSS.ContentS>
   );
 };
 

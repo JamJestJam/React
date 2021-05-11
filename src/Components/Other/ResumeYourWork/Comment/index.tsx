@@ -27,10 +27,10 @@ const SingleComment: FC<IComment> = (props) => {
         />
         <div>{user?.name || ""}</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
-        <Icon IconType={IconType.bell} IconSize={IconSize.Mini} Alt="" />
-        <div>Real estate contracts</div>
+        <Icon IconType={IconType.book} IconSize={IconSize.Mini} Alt="" />
+        <div>Group norms</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
-        <div>Last update 13 days ago by Ervin Howell</div>
+        <div>Last update 13 days ago</div>
       </CSS.BottomS>
     </CSS.ContetS>
   );
