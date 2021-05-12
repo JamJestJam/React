@@ -5,7 +5,6 @@ import IEnPost from "./post";
 export default interface IEnUser {
   id: number;
   name: string;
-  shortName: string;
   username: string;
   email: string;
   address: {

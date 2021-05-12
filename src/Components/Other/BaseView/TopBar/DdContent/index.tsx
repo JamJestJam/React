@@ -79,7 +79,13 @@ const DdContent: FC = () => {
       <CSS.EbSpanS>Account</CSS.EbSpanS>
       <DbContentItem
         link="/Profile"
-        itemName={user?.shortName || "&zwnj"}
+        itemName={
+          !user
+            ? "&zwnj"
+            : user?.name.length > 18
+            ? user?.name.substring(0, 15) + "..."
+            : user?.name
+        }
         image={user?.photo?.url}
         imageIconSwitch={true}
       />

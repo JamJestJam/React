@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 //data
 import { IconSize } from "Components/Common/Icon/IconSize";
+import { Colors } from "StyledHelpers/Colors";
 //components
 import BoxIcon from "Components/Common/Icon/Boxing";
 //style
@@ -10,7 +11,7 @@ import IButton from "./IButton";
 
 const Button: FC<IButton> = (props) => {
   return (
-    <CSS.ButtonS>
+    <CSS.ButtonS color={props.Color ? Colors.Bg1 : Colors.Bg2}>
       <CSS.ButtonLeftS>
         <BoxIcon
           IconType={props.Icon}

@@ -1,9 +1,14 @@
 import styled from "styled-components";
-//data
-import { IconSize } from "Components/Common/Icon/IconSize";
+
 
 export const ButtonS = styled.div`
   display: flex;
+  background-color: ${props=>props.color};
+  border-radius: 5px;
+
+  &:hover {
+    filter: brightness(85%);
+  }
 `;
 
 export const ButtonLeftS = styled.div`
@@ -14,8 +19,8 @@ export const ButtonLeftS = styled.div`
 `;
 
 export const ButtonRightS = styled.div`
-  width: ${IconSize.Small};
   justify-content: right;
   align-items: center;
   display: flex;
+  margin-right: 5px;
 `;

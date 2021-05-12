@@ -20,7 +20,7 @@ const LeftMenu: FC = () => {
 
   return (
     <CSS.LeftMenuS>
-      <CSS.UserDataS>
+      <CSS.UserDataS to="/Profile">
         <BoxImage
           ImageName={user?.photo?.url || ""}
           Background={Colors.Bg3}
@@ -37,12 +37,12 @@ const LeftMenu: FC = () => {
         </CSS.JobSubtitleS>
         <hr />
         <LinkS to="/Network">
-          <Button Icon={IconType.ecosystem} SIcon={IconType.user_plus}>
+          <Button Icon={IconType.ecosystem} SIcon={IconType.user_plus} Color={true}>
             Your network
           </Button>
         </LinkS>
         <LinkS to="/Publications">
-          <Button Icon={IconType.publications} SIcon={IconType.plus}>
+          <Button Icon={IconType.publications} SIcon={IconType.plus} Color={true}>
             Your Publications
           </Button>
         </LinkS>
