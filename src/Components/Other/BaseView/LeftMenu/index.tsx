@@ -20,29 +20,39 @@ const LeftMenu: FC = () => {
 
   return (
     <CSS.LeftMenuS>
-      <CSS.UserDataS to="/Profile">
-        <BoxImage
-          ImageName={user?.photo?.url || ""}
-          Background={Colors.Bg3}
-          Alt="Zdj. profilowe"
-          BoxShadow={true}
-          Rounded={true}
-          MaxHeight={70}
-          MaxWidth={70}
-        />
-        <br />
-        <CSS.UserNameS>{user?.name || <span>&zwnj;</span>}</CSS.UserNameS>
-        <CSS.JobSubtitleS>
-          {user?.company.name || <span>&zwnj;</span>}
-        </CSS.JobSubtitleS>
+      <CSS.UserDataS>
+        <LinkS to="/Profile">
+          <BoxImage
+            ImageName={user?.photo?.url || ""}
+            Background={Colors.Bg3}
+            Alt="Zdj. profilowe"
+            BoxShadow={true}
+            Rounded={true}
+            MaxHeight={70}
+            MaxWidth={70}
+          />
+          <br />
+          <CSS.UserNameS>{user?.name || <span>&zwnj;</span>}</CSS.UserNameS>
+          <CSS.JobSubtitleS>
+            {user?.company.name || <span>&zwnj;</span>}
+          </CSS.JobSubtitleS>
+        </LinkS>
         <hr />
         <LinkS to="/Network">
-          <Button Icon={IconType.ecosystem} SIcon={IconType.user_plus} Color={true}>
+          <Button
+            Icon={IconType.ecosystem}
+            SIcon={IconType.user_plus}
+            Color={true}
+          >
             Your network
           </Button>
         </LinkS>
         <LinkS to="/Publications">
-          <Button Icon={IconType.publications} SIcon={IconType.plus} Color={true}>
+          <Button
+            Icon={IconType.publications}
+            SIcon={IconType.plus}
+            Color={true}
+          >
             Your Publications
           </Button>
         </LinkS>

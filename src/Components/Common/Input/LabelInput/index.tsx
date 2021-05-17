@@ -53,6 +53,8 @@ const InputLabel: FC<ISearch> = (props) => {
         Width={props.Width}
         Color={props.Color}
         Value={State.Value}
+        name={props.name}
+        id={props.id}
         Blur={InputBlur}
         Focus={InputFocus}
         Change={InputChange}

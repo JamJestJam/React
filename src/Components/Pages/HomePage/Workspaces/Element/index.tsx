@@ -27,9 +27,9 @@ const WorkspacesEl: FC<IWorkspaceEl> = (props) => {
         </CSS.ImageS>
         <CSS.ContentS>
           <CSS.TopS>
-            <CSS.IconBox>
+            <CSS.IconBoxS>
               <Icon IconSize={IconSize.Large} IconType={props.Icon} Alt="" />
-            </CSS.IconBox>
+            </CSS.IconBoxS>
             {props.Name}
           </CSS.TopS>
           <CSS.TransformS>

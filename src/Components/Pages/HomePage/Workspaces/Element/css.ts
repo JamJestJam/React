@@ -39,7 +39,7 @@ export const TopS = styled.div`
   font-size: ${FontSize[20]};
 `;
 
-export const IconBox = styled.div`
+export const IconBoxS = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 5px;

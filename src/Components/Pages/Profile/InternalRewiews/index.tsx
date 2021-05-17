@@ -1,7 +1,8 @@
 import { FC } from "react";
 
 const InternalRewiews: FC = () => {
-  return <></>;
+  return <>
+  </>;
 };
 
 export default InternalRewiews;

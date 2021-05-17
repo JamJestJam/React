@@ -2,16 +2,13 @@ import styled from "styled-components";
 //data
 import { Colors } from "StyledHelpers/Colors";
 import { FontSize } from "StyledHelpers/Fonts";
-//style
-import { LinkS } from "StyledHelpers/Controls";
-
 
 export const LeftMenuS = styled.div`
   margin-right: 50px;
   width: 250px;
 `;
 
-export const UserDataS = styled(LinkS)`
+export const UserDataS = styled.div`
   display: block;
   background-color: ${Colors.Bg1};
   border-radius: 15px;

@@ -10,6 +10,8 @@ export default interface IImput {
   Width?: number;
   Color?: string;
 
+  id?: string;
+  name?: string;
   Value?: string;
 
   Change?: (a: React.ChangeEvent<HTMLInputElement>) => void;

@@ -24,7 +24,10 @@ const Input: FC<IImput> = (props) => {
   return (
     <InputS
       value={State.Value}
+      name={props.name}
+      id={props.id}
       type="text"
+
       BorderColor={props.BorderColor}
       Background={props.Background}
       FontSize={props.FontSize}
