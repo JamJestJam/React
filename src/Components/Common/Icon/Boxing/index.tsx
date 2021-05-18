@@ -15,6 +15,8 @@ const BoxIcon: FC<IBoxIcon> = (props) => {
       Shadow={props.BoxShadow}
       Width={props.BoxWidth}
       Height={props.BoxHeight}
+
+      onClick={(event)=>props.onClick&&props.onClick(event)}
     >
       <Icon
         IconSize={props.IconSize}

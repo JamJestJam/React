@@ -8,6 +8,7 @@ interface IBoxIcon extends IIcon {
   BoxWidth?: number;
   Rounded?: boolean;
   Value?: number;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>)=>void;
 }
 
 export default IBoxIcon;

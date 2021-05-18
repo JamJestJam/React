@@ -3,6 +3,7 @@ export const Colors = {
   Bg2: "#F5F7F9",
   Bg3: "#E8E8E8",
   Bg4: "#0381BE",
+  Bg5: "#00ccff",
 
   LightBlueFont: "#0381BE",
   SelectFont: "#303952",

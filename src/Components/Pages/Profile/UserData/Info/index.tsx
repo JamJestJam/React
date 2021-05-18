@@ -1,21 +1,19 @@
 import React, { FC, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 //components
-import InfoOpen from "./open";
-import InfoClose from "./close";
-import BoxIcon from "Components/Common/Icon/Boxing";
-//data
-import { IconType } from "Components/Common/Icon/IconType";
-import { IconSize } from "Components/Common/Icon/IconSize";
+import InfoOpen from "./Open";
+import InfoClose from "./Close";
 //style
 import * as CSS from "./css";
+//actions
+import setUser, { SetUser } from "Actions/User/setUser";
 //inteface
 import IState from "Reduces/IState";
 import IUsersReducer from "Reduces/user/IUsersReducer";
 import { userInfo } from "./IInfo";
 
 const Info: FC = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { user } = useSelector<IState, IUsersReducer>((GS) => ({
     ...GS.user,
   }));
@@ -41,13 +39,17 @@ const Info: FC = () => {
         city: user?.address.city || "",
         phone: user?.phone || "",
         email: user?.email || "",
-        partner: "partner",
+        partner: "Partner",
       },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const save = (data: userInfo) => {
+    dispatch<SetUser>(
+      setUser(data.name, data.street, data.city, data.email, data.phone)
+    );
+
     setState({
       ...state,
       userInfo: data,
@@ -79,3 +81,4 @@ const Info: FC = () => {
 };
 
 export default Info;
+

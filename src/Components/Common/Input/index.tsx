@@ -1,29 +1,13 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 //style
 import { InputS } from "./css";
 //inteface
 import IImput from "./IInput";
 
 const Input: FC<IImput> = (props) => {
-  const [State, SetState] = useState({
-    Value: props.Value || "",
-    Error: "",
-  });
-
-  const OnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    props.Change && props.Change(event);
-
-    SetState((prev) => {
-      return {
-        ...prev,
-        Value: event.target.value,
-      };
-    });
-  };
-
   return (
     <InputS
-      value={State.Value}
+      value={props.Value}
       name={props.name}
       id={props.id}
       type="text"
@@ -34,7 +18,7 @@ const Input: FC<IImput> = (props) => {
       Height={props.Height}
       Width={props.Width}
       Color={props.Color}
-      onChange={OnChange}
+      onChange={props.Change}
       onFocus={(focusEvent) => props.Focus && props.Focus(focusEvent)}
       onBlur={(focusEvent) => props.Blur && props.Blur(focusEvent)}
     />
