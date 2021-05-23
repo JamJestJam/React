@@ -2,9 +2,9 @@
 import { IconType } from "../Icon/IconType";
 
 export default interface IDropDown {
-  LeftIcon?: IconType;
-  LeftImage?: string;
-  ImageIconSwitch: boolean;
-  Height?: string;
+  leftIcon?: IconType;
+  leftImage?: string;
+  imageIconSwitch: boolean;
+  height?: string;
   Text: string;
 }

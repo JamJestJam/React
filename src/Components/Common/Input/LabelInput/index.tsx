@@ -67,7 +67,7 @@ const InputLabel: FC<ISearch> = (props) => {
       </CSS.LabelS>
       {props.Button && (
         <BoxIcon
-          IconSize={props.IconSize || IconSize.Small}
+          IconSize={props.IconSize || IconSize.small}
           IconType={props.ButtonType || IconType.search}
           Alt="Szukaj"
         />

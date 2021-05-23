@@ -84,14 +84,14 @@ const ResumeYourWork: FC = () => {
             Border={true}
             Width={100}
             FontSize="12"
-            IconSize={IconSize.Mini}
+            IconSize={IconSize.mini}
             Change={InputChange}
           />
           <DropDown
-            LeftIcon={IconType.broadcast}
-            ImageIconSwitch={false}
+            leftIcon={IconType.broadcast}
+            imageIconSwitch={false}
             Text={state.text}
-            Height="120px"
+            height="120px"
           >
             <CSS.EmElementS
               onClick={() => {
@@ -99,7 +99,7 @@ const ResumeYourWork: FC = () => {
               }}
             >
               <BoxIcon
-                IconSize={IconSize.Small}
+                IconSize={IconSize.small}
                 IconType={IconType.broadcast}
                 Alt={""}
               />
@@ -111,7 +111,7 @@ const ResumeYourWork: FC = () => {
               }}
             >
               <BoxIcon
-                IconSize={IconSize.Small}
+                IconSize={IconSize.small}
                 IconType={IconType.broadcast}
                 Alt={""}
               />
@@ -123,7 +123,7 @@ const ResumeYourWork: FC = () => {
               }}
             >
               <BoxIcon
-                IconSize={IconSize.Small}
+                IconSize={IconSize.small}
                 IconType={IconType.broadcast}
                 Alt={""}
               />

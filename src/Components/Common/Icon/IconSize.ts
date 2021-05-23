@@ -1,7 +1,7 @@
 export enum IconSize {
-  Mini = "10px",
-  Small = "20px",
-  Medium = "40px",
-  Large = "60px",
-  ULarge = "80px",
+  mini = "10px",
+  small = "20px",
+  medium = "40px",
+  large = "60px",
+  uLarge = "80px",
 }

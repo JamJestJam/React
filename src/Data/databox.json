@@ -1,0 +1,39 @@
+{
+    "Expertise": [
+        "Client expertise",
+        "Corporate training",
+        "Financial analysis",
+        "Management skills",
+        "Project management"
+    ],
+    "Specialties": [
+        "Design patterns, modelling tools",
+        "Testing frameworks expertise",
+        "Excellent skills using PHP",
+        "BS/BA in Design",
+        "Moblile and web QA"
+    ],
+    "Adminssion": [
+        "Sydnay bar association",
+        "Brusseles bar association",
+        "Tiribti bar association",
+        "Rome bar association",
+        "Warsaw bar association",
+        "San Francisco bar association"
+    ],
+    "Counties": [
+        "Australia",
+        "Belgium",
+        "Canada",
+        "China",
+        "Denmark",
+        "France",
+        "India",
+        "Italy",
+        "Norway",
+        "Poland",
+        "Spain",
+        "Sweden",
+        "United States"
+    ]
+}

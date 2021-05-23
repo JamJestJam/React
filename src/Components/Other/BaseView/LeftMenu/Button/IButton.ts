@@ -1,4 +1,4 @@
-import { BoldS } from './../../../../Pages/Profile/UserData/Info/css';
+import { BoldS } from "./../../../../Pages/Profile/UserData/Info/css";
 //data
 import { IconType } from "Components/Common/Icon/IconType";
 

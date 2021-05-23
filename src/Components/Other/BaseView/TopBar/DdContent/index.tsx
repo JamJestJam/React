@@ -34,7 +34,7 @@ const DdContent: FC = () => {
     });
   };
 
-  useEffect(() => {}, [user]);
+  useEffect(() => { }, [user]);
 
   return (
     <>
@@ -83,8 +83,8 @@ const DdContent: FC = () => {
           !user
             ? "&zwnj"
             : user?.name.length > 18
-            ? user?.name.substring(0, 15) + "..."
-            : user?.name
+              ? user?.name.substring(0, 15) + "..."
+              : user?.name
         }
         image={user?.photo?.url}
         imageIconSwitch={true}
@@ -105,7 +105,7 @@ const DdContent: FC = () => {
       <LinkS to="/Logout">
         <CSS.EmLastElementS>
           <BoxIcon
-            IconSize={IconSize.Small}
+            IconSize={IconSize.small}
             IconType={IconType.logout}
             Alt=""
           />

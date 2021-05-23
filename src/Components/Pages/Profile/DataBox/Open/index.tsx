@@ -5,45 +5,62 @@ import BoxIcon from "Components/Common/Icon/Boxing";
 //data
 import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
+import JSON from "Data/databox.json";
 //style
 import * as CSS from "../css";
 //interface
 import IOpen from "./IOpen";
+import OptionBox from "Components/Pages/Profile/DataBox/Open/OptionBox";
+import { uniqueArray } from "Functions/uniqueArray";
+//function
+
 
 const DataBoxOpen: FC<IOpen> = (props) => {
   const data = props.data;
   return (
     <Formik
       initialValues={{
-        expertise: ["Mergers and acquisition"],
-        specialties: ["Cross border operation", "Transaction over 500M€/$"],
-        adminssion: ["paris bar association", "Tunisian bar association"],
-        counties: ["Tunisia"],
+        expertise: data.expertise,
+        specialties: data.specialties,
+        adminssion: data.adminssion,
+        counties: data.counties,
       }}
       onSubmit={(data) => {
+        data.expertise = uniqueArray(data.expertise);
+        data.specialties = uniqueArray(data.specialties);
+        data.adminssion = uniqueArray(data.adminssion);
+        data.counties = uniqueArray(data.counties);
         props.save(data);
       }}
     >
-      {({ values, handleChange, handleSubmit }) => {
+      {({ values, handleChange, handleSubmit, setValues }) => {
         return (
           <>
             <div>
               <CSS.NameS>
                 <div>Expertise</div>
                 <BoxIcon
+                  onClick={() => {
+                    values.expertise.push("0");
+                    setValues({ ...values });
+                  }}
                   IconType={IconType.plus}
-                  IconSize={IconSize.Mini}
+                  IconSize={IconSize.mini}
                   Alt=""
-                  BoxHeight={10}
-                  BoxWidth={20}
+                  boxHeight={10}
+                  boxWidth={20}
                 />
               </CSS.NameS>
               <div>
-                {data.expertise.map((e, i) => {
+                {values.expertise.map((val, i) => {
                   return (
-                    <CSS.SelectS key={i}>
-                      <CSS.OptionS>{e}</CSS.OptionS>
-                    </CSS.SelectS>
+                    <OptionBox
+                      id={`expertise[${i}]`}
+                      Change={handleChange}
+                      value={val}
+                      posibleOptions={JSON.Expertise}
+                      key={i}
+                    />
                   );
                 })}
               </div>
@@ -52,20 +69,28 @@ const DataBoxOpen: FC<IOpen> = (props) => {
               <CSS.NameS>
                 <div>Specialties </div>
                 <BoxIcon
+                  onClick={() => {
+                    values.specialties.push("0");
+                    setValues({ ...values });
+                  }}
                   IconType={IconType.plus}
-                  IconSize={IconSize.Mini}
+                  IconSize={IconSize.mini}
                   Alt=""
-                  BoxHeight={10}
-                  BoxWidth={20}
+                  boxHeight={10}
+                  boxWidth={20}
                 />
               </CSS.NameS>
 
               <div>
-                {data.specialties.map((e, i) => {
+                {values.specialties.map((val, i) => {
                   return (
-                    <CSS.SelectS key={i}>
-                      <CSS.OptionS>{e}</CSS.OptionS>
-                    </CSS.SelectS>
+                    <OptionBox
+                      id={`expertise[${i}]`}
+                      Change={handleChange}
+                      value={val}
+                      posibleOptions={JSON.Expertise}
+                      key={i}
+                    />
                   );
                 })}
               </div>
@@ -74,19 +99,27 @@ const DataBoxOpen: FC<IOpen> = (props) => {
               <CSS.NameS>
                 <div>Adminssion to practice law </div>
                 <BoxIcon
+                  onClick={() => {
+                    values.adminssion.push("0");
+                    setValues({ ...values });
+                  }}
                   IconType={IconType.plus}
-                  IconSize={IconSize.Mini}
+                  IconSize={IconSize.mini}
                   Alt=""
-                  BoxHeight={10}
-                  BoxWidth={20}
+                  boxHeight={10}
+                  boxWidth={20}
                 />
               </CSS.NameS>
               <div>
-                {data.adminssion.map((e, i) => {
+                {values.adminssion.map((val, i) => {
                   return (
-                    <CSS.SelectS key={i}>
-                      <CSS.OptionS>{e}</CSS.OptionS>
-                    </CSS.SelectS>
+                    <OptionBox
+                      id={`expertise[${i}]`}
+                      Change={handleChange}
+                      value={val}
+                      posibleOptions={JSON.Expertise}
+                      key={i}
+                    />
                   );
                 })}
               </div>
@@ -95,38 +128,46 @@ const DataBoxOpen: FC<IOpen> = (props) => {
               <CSS.NameS>
                 <div>Counties</div>
                 <BoxIcon
+                  onClick={() => {
+                    values.counties.push("0");
+                    setValues({ ...values });
+                  }}
                   IconType={IconType.plus}
-                  IconSize={IconSize.Mini}
+                  IconSize={IconSize.mini}
                   Alt=""
-                  BoxHeight={10}
-                  BoxWidth={20}
+                  boxHeight={10}
+                  boxWidth={20}
                 />
               </CSS.NameS>
               <div>
-                {data.counties.map((e, i) => {
+                {values.counties.map((val, i) => {
                   return (
-                    <CSS.SelectS key={i}>
-                      <CSS.OptionS>{e}</CSS.OptionS>
-                    </CSS.SelectS>
+                    <OptionBox
+                      id={`expertise[${i}]`}
+                      Change={handleChange}
+                      value={val}
+                      posibleOptions={JSON.Expertise}
+                      key={i}
+                    />
                   );
                 })}
               </div>
             </div>
             <CSS.ButtonsS>
-              <div onClick={props.close}>
-                <BoxIcon
-                  IconType={IconType.book}
-                  IconSize={IconSize.Small}
-                  Alt=""
-                />
-              </div>
-              <div onClick={props.close}>
-                <BoxIcon
-                  IconType={IconType.exit}
-                  IconSize={IconSize.Small}
-                  Alt=""
-                />
-              </div>
+              <BoxIcon
+                onClick={() => {
+                  handleSubmit();
+                }}
+                IconType={IconType.book}
+                IconSize={IconSize.small}
+                Alt=""
+              />
+              <BoxIcon
+                onClick={props.close}
+                IconType={IconType.exit}
+                IconSize={IconSize.small}
+                Alt=""
+              />
             </CSS.ButtonsS>
           </>
         );

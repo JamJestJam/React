@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import {  useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 //components
 import InfoOpen from "./Open";
 import InfoClose from "./Close";
@@ -53,26 +53,26 @@ const Info: FC = () => {
     setState({
       ...state,
       userInfo: data,
-      open: false
-    })
+      open: false,
+    });
   };
-  const open = ()=>{
+  const open = () => {
     setState({
       ...state,
-      open: true
-    })
+      open: true,
+    });
   };
-  const close = ()=>{
+  const close = () => {
     setState({
       ...state,
-      open: false
-    })
+      open: false,
+    });
   };
 
   return (
     <CSS.ContentS>
       {state.open ? (
-        <InfoOpen userInfo={state.userInfo} close={close} save={save}/>
+        <InfoOpen userInfo={state.userInfo} close={close} save={save} />
       ) : (
         <InfoClose userInfo={state.userInfo} open={open} />
       )}
@@ -81,4 +81,3 @@ const Info: FC = () => {
 };
 
 export default Info;
-

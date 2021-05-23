@@ -1,4 +1,3 @@
-
-export default interface IButtonBG{
-    color: string;
+export default interface IButtonBG {
+  color: string;
 }

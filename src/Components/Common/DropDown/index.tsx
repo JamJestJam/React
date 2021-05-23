@@ -45,11 +45,11 @@ const DropDown: FC<IDropDown> = (props) => {
   return (
     <CSS.ExpanderS onClick={StopProp}>
       <ControlsHelp.LinkS to="#">
-        <CSS.ExpanderButtonS onClick={ChangeExpand} Expanded={State.Expanded}>
+        <CSS.ExpanderButtonS onClick={ChangeExpand} expanded={State.Expanded}>
           <ControlsHelp.TriangleConentLeft>
-            {props.ImageIconSwitch ? (
+            {props.imageIconSwitch ? (
               <BoxImage
-                ImageName={props.LeftImage || ""}
+                ImageName={props.leftImage || ""}
                 Background={Colors.Bg3}
                 Alt=""
                 BoxShadow={true}
@@ -60,8 +60,8 @@ const DropDown: FC<IDropDown> = (props) => {
               />
             ) : (
               <BoxIcon
-                IconType={props.LeftIcon || 0}
-                IconSize={IconSize.Small}
+                IconType={props.leftIcon || 0}
+                IconSize={IconSize.small}
                 Alt="Icon"
               />
             )}
@@ -69,18 +69,18 @@ const DropDown: FC<IDropDown> = (props) => {
             {props.Text}
           </ControlsHelp.TriangleConentLeft>
           <ControlsHelp.TriangleConentRight>
-            <CSS.RoundS Expanded={State.Expanded}>
+            <CSS.RoundS expanded={State.Expanded}>
               <BoxIcon
                 // Expanded={State.Expanded}
                 IconType={IconType.arrow_down}
-                IconSize={IconSize.Mini}
+                IconSize={IconSize.mini}
                 Alt="Icon"
               />
             </CSS.RoundS>
           </ControlsHelp.TriangleConentRight>
         </CSS.ExpanderButtonS>
       </ControlsHelp.LinkS>
-      <CSS.ContentS Expanded={State.Expanded} Height={props.Height || "100vh"}>
+      <CSS.ContentS expanded={State.Expanded} height={props.height || "100vh"}>
         {props.children}
       </CSS.ContentS>
     </CSS.ExpanderS>

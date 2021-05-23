@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-
 export const ButtonS = styled.div`
   display: flex;
-  background-color: ${props=>props.color};
+  background-color: ${(props) => props.color};
   border-radius: 5px;
 
   &:hover {

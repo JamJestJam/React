@@ -34,7 +34,7 @@ export const EditS = styled.div`
   right: 0;
   top: 0;
 
-  >div{
+  > div {
     cursor: pointer;
   }
 `;

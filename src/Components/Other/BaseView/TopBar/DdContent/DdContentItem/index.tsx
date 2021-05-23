@@ -28,7 +28,7 @@ const DdContentItem: FC<IDdContentItem> = (props) => {
           />
         ) : (
           <BoxIcon
-            IconSize={IconSize.Small}
+            IconSize={IconSize.small}
             IconType={props.icon || 0}
             Alt={props.itemName}
           />

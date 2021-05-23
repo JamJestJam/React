@@ -11,10 +11,10 @@ const DataBox: FC = () => {
   const [state, setState] = useState({
     open: false,
     data: {
-      expertise: ["Mergers and acquisition"],
-      specialties: ["Cross border operation", "Transaction over 500M€/$"],
-      adminssion: ["paris bar association", "Tunisian bar association"],
-      counties: ["Tunisia"],
+      expertise: ["0", "1", "2"],
+      specialties: ["0"],
+      adminssion: ["0"],
+      counties: ["0"],
     },
   });
 

@@ -83,13 +83,13 @@ const InfoOpen: FC<IOpen> = (props) => {
                   handleSubmit();
                 }}
                 IconType={IconType.book}
-                IconSize={IconSize.Small}
+                IconSize={IconSize.small}
                 Alt=""
               />
               <BoxIcon
                 onClick={props.close}
                 IconType={IconType.exit}
-                IconSize={IconSize.Small}
+                IconSize={IconSize.small}
                 Alt=""
               />
             </CSS.EditS>

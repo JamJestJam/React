@@ -11,7 +11,6 @@ const Input: FC<IImput> = (props) => {
       name={props.name}
       id={props.id}
       type="text"
-
       BorderColor={props.BorderColor}
       Background={props.Background}
       FontSize={props.FontSize}

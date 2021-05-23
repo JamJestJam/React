@@ -28,18 +28,18 @@ const WorkspacesEl: FC<IWorkspaceEl> = (props) => {
         <CSS.ContentS>
           <CSS.TopS>
             <CSS.IconBoxS>
-              <Icon IconSize={IconSize.Large} IconType={props.Icon} Alt="" />
+              <Icon IconSize={IconSize.large} IconType={props.Icon} Alt="" />
             </CSS.IconBoxS>
             {props.Name}
           </CSS.TopS>
           <CSS.TransformS>
             <CSS.InfoS>
               <CSS.InfoS>
-                <Icon IconSize={IconSize.Mini} IconType={IconType.cog} Alt="" />
+                <Icon IconSize={IconSize.mini} IconType={IconType.cog} Alt="" />
                 Contract
               </CSS.InfoS>
               <CSS.InfoS>
-                <Icon IconSize={IconSize.Mini} IconType={IconType.cog} Alt="" />
+                <Icon IconSize={IconSize.mini} IconType={IconType.cog} Alt="" />
                 {props.Users} users
               </CSS.InfoS>
             </CSS.InfoS>

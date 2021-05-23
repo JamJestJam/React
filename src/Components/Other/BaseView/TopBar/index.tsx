@@ -25,14 +25,14 @@ const TopBar: FC = () => {
   return (
     <CSS.TobBarS>
       <Controls.TriangleConentLeft>
-        <Icon IconType={IconType.logo} IconSize={IconSize.Medium} Alt="Logo" />
+        <Icon IconType={IconType.logo} IconSize={IconSize.medium} Alt="Logo" />
 
         <DropDown
           Text={pageInfo.pageName}
-          LeftIcon={pageInfo.pageIcon}
-          LeftImage={pageInfo.pageImage}
-          Height="466px"
-          ImageIconSwitch={pageInfo.imageIconSwitch}
+          leftIcon={pageInfo.pageIcon}
+          leftImage={pageInfo.pageImage}
+          height="466px"
+          imageIconSwitch={pageInfo.imageIconSwitch}
         >
           <DdContent />
         </DropDown>
@@ -48,29 +48,29 @@ const TopBar: FC = () => {
       <Controls.TriangleConentRight>
         <CSS.IconBoxS>
           <BoxIcon
-            IconSize={IconSize.Small}
+            IconSize={IconSize.small}
             IconType={IconType.house}
             Alt="Domek"
           />
         </CSS.IconBoxS>
         <CSS.IconBoxS>
           <BoxIcon
-            IconSize={IconSize.Small}
+            IconSize={IconSize.small}
             IconType={IconType.comments}
-            Background={Colors.Bg3}
+            background={Colors.Bg3}
             Alt="Czat"
-            Rounded={true}
-            Value={3}
+            rounded={true}
+            value={3}
           />
         </CSS.IconBoxS>
         <CSS.IconBoxS>
           <BoxIcon
-            IconSize={IconSize.Small}
+            IconSize={IconSize.small}
             IconType={IconType.bell}
-            Background={Colors.Bg3}
+            background={Colors.Bg3}
             Alt="Dzwoneczek"
-            Rounded={true}
-            Value={3}
+            rounded={true}
+            value={3}
           />
         </CSS.IconBoxS>
       </Controls.TriangleConentRight>

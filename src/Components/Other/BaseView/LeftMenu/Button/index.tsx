@@ -15,7 +15,7 @@ const Button: FC<IButton> = (props) => {
       <CSS.ButtonLeftS>
         <BoxIcon
           IconType={props.Icon}
-          IconSize={IconSize.Small}
+          IconSize={IconSize.small}
           Alt="Przycisk"
         />
         {props.children}
@@ -24,11 +24,11 @@ const Button: FC<IButton> = (props) => {
         <CSS.ButtonRightS>
           <BoxIcon
             IconType={props.SIcon}
-            IconSize={IconSize.Small}
+            IconSize={IconSize.small}
             Alt="Przycisk"
-            BoxShadow={true}
-            BoxWidth={30}
-            BoxHeight={20}
+            boxShadow={true}
+            boxWidth={30}
+            boxHeight={20}
           />
         </CSS.ButtonRightS>
       )}

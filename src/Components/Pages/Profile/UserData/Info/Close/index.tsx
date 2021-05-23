@@ -27,7 +27,7 @@ const InfoClose: FC<IClose> = (props) => {
         <BoxIcon
           onClick={props.open}
           IconType={IconType.edit}
-          IconSize={IconSize.Small}
+          IconSize={IconSize.small}
           Alt=""
         />
       </CSS.EditS>

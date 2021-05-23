@@ -27,7 +27,7 @@ const SingleComment: FC<IComment> = (props) => {
         />
         <div>{user?.name || ""}</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
-        <Icon IconType={IconType.book} IconSize={IconSize.Mini} Alt="" />
+        <Icon IconType={IconType.book} IconSize={IconSize.mini} Alt="" />
         <div>Group norms</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
         <div>Last update 13 days ago</div>

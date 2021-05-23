@@ -11,9 +11,9 @@ export const ExpanderS = styled.div`
   margin: 0 10px;
 `;
 
-export const ExpanderButtonS = styled(TriangleConent)<IDropDownElement>`
+export const ExpanderButtonS = styled(TriangleConent) <IDropDownElement>`
   box-shadow: 0px 0px 2px
-    ${(props) => (props.Expanded ? Colors.Shadow : "transparent")};
+    ${(props) => (props.expanded ? Colors.Shadow : "transparent")};
   transition: 1s all;
 `;
 
@@ -23,7 +23,7 @@ export const ContentS = styled.div<IDropDownElement>`
   z-index: 200;
   width: 220px;
   padding: 0 5px;
-  max-height: ${(props) => (props.Expanded ? props.Height : "0vh")};
+  max-height: ${(props) => (props.expanded ? props.height : "0vh")};
   overflow-y: hidden;
   transition: 0.4s all ease-in;
   box-shadow: 0px 0px 2px ${Colors.Shadow};
@@ -31,5 +31,5 @@ export const ContentS = styled.div<IDropDownElement>`
 
 export const RoundS = styled.div<IDropDownElement>`
   transition: 0.3s all ease-in;
-  transform: rotate(${(props) => (props.Expanded ? "180deg" : "0deg")});
+  transform: rotate(${(props) => (props.expanded ? "180deg" : "0deg")});
 `;
