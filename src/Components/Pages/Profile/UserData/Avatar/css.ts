@@ -1,6 +1,6 @@
 import styled from "styled-components";
 //data
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 
 export const ContentS = styled.div`
   margin: 15px;
@@ -11,7 +11,7 @@ export const ContentS = styled.div`
   text-align: center;
 
   > a {
-    color: ${Colors.BlueFont};
+    color: ${colors.BlueFont};
     &:hover {
       text-decoration: underline;
     }

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
 import Button from "./Button";
@@ -23,13 +23,13 @@ const LeftMenu: FC = () => {
       <CSS.UserDataS>
         <LinkS to="/Profile">
           <BoxImage
-            ImageName={user?.photo?.url || ""}
-            Background={Colors.Bg3}
-            Alt="Zdj. profilowe"
-            BoxShadow={true}
-            Rounded={true}
-            MaxHeight={70}
-            MaxWidth={70}
+            imageName={user?.photo?.url || ""}
+            background={colors.Bg3}
+            alt="Zdj. profilowe"
+            boxShadow={true}
+            rounded={true}
+            maxHeight={70}
+            maxWidth={70}
           />
           <br />
           <CSS.UserNameS>{user?.name || <span>&zwnj;</span>}</CSS.UserNameS>
@@ -40,18 +40,18 @@ const LeftMenu: FC = () => {
         <hr />
         <LinkS to="/Network">
           <Button
-            Icon={IconType.ecosystem}
-            SIcon={IconType.user_plus}
-            Color={true}
+            icon={IconType.ecosystem}
+            iconRight={IconType.user_plus}
+            color={true}
           >
             Your network
           </Button>
         </LinkS>
         <LinkS to="/Publications">
           <Button
-            Icon={IconType.publications}
-            SIcon={IconType.plus}
-            Color={true}
+            icon={IconType.publications}
+            iconRight={IconType.plus}
+            color={true}
           >
             Your Publications
           </Button>
@@ -59,13 +59,13 @@ const LeftMenu: FC = () => {
       </CSS.UserDataS>
       <CSS.BottomConentS>
         <LinkS to="/Publications">
-          <Button Icon={IconType.publications}>Publications</Button>
+          <Button icon={IconType.publications}>Publications</Button>
         </LinkS>
         <LinkS to="/Ecosystem">
-          <Button Icon={IconType.ecosystem}>Ecosystem</Button>
+          <Button icon={IconType.ecosystem}>Ecosystem</Button>
         </LinkS>
         <LinkS to="/Entities">
-          <Button Icon={IconType.entities2}>Entities</Button>
+          <Button icon={IconType.entities2}>Entities</Button>
         </LinkS>
       </CSS.BottomConentS>
     </CSS.LeftMenuS>

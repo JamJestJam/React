@@ -1,7 +1,7 @@
 import styled from "styled-components";
 //data
-import { FontSize } from "StyledHelpers/Fonts";
-import { Colors } from "StyledHelpers/Colors";
+import { fontSize } from "StyledHelpers/Fonts";
+import { colors } from "StyledHelpers/Colors";
 
 export const ContentS = styled.div`
   display: flex;
@@ -22,8 +22,8 @@ export const PublicationTextS = styled.div`
 `;
 
 export const PubDataS = styled.div`
-  color: ${Colors.GrayFont};
-  font-size: ${FontSize[12]};
+  color: ${colors.GrayFont};
+  font-size: ${fontSize[12]};
   margin-top: auto;
   align-items: flex-end;
   display: flex;
@@ -32,6 +32,6 @@ export const PubDataS = styled.div`
 `;
 
 export const NameS = styled.div`
-  color: ${Colors.MainFont};
+  color: ${colors.MainFont};
   font-weight: bold;
 `;

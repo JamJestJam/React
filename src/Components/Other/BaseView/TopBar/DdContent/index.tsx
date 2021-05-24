@@ -19,18 +19,18 @@ import json from "Data/Pages.json";
 import compare from "Functions/compare";
 
 const DdContent: FC = () => {
-  const [State, SetState] = useState({
-    Value: "",
+  const [state, setState] = useState({
+    value: "",
   });
 
   const { user } = useSelector<IState, IUsersReducer>((GS) => ({
     ...GS.user,
   }));
 
-  const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    SetState({
-      ...State,
-      Value: event.target.value,
+  const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState({
+      ...state,
+      value: event.target.value,
     });
   };
 
@@ -39,15 +39,15 @@ const DdContent: FC = () => {
   return (
     <>
       <InputLabel
-        Label="Filter..."
-        Width={150}
-        FontSize={"12"}
-        Change={InputChange}
+        label="Filter..."
+        width={150}
+        fontSize={"12"}
+        change={inputChange}
       />
       <CSS.PlatformS>
         <CSS.EbSpanS>Platform</CSS.EbSpanS>
         {json.Platform.map((item, i) => {
-          if (compare(item.Name, State.Value)) {
+          if (compare(item.Name, state.value)) {
             return (
               <DbContentItem
                 link={item.Link}
@@ -62,7 +62,7 @@ const DdContent: FC = () => {
         })}
         <CSS.EbSpanS>Workspaces</CSS.EbSpanS>
         {json.Workspace.map((item, i) => {
-          if (compare(item.Name, State.Value)) {
+          if (compare(item.Name, state.value)) {
             return (
               <DbContentItem
                 link={item.Link}
@@ -105,9 +105,9 @@ const DdContent: FC = () => {
       <LinkS to="/Logout">
         <CSS.EmLastElementS>
           <BoxIcon
-            IconSize={IconSize.small}
-            IconType={IconType.logout}
-            Alt=""
+            iconSize={IconSize.small}
+            iconType={IconType.logout}
+            alt=""
           />
           Logout
         </CSS.EmLastElementS>

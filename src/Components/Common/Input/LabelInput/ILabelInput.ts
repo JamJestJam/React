@@ -5,9 +5,9 @@ import { IconSize } from "Components/Common/Icon/IconSize";
 import IInput from "../IInput";
 
 export default interface ILabelInput extends IInput {
-  Label: string;
-  Button?: boolean;
-  ButtonType?: IconType;
-  Border?: boolean;
-  IconSize?: IconSize;
+  label: string;
+  button?: boolean;
+  buttonType?: IconType;
+  border?: boolean;
+  iconSize?: IconSize;
 }

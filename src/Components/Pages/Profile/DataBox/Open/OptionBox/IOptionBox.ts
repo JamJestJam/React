@@ -6,7 +6,7 @@ export default interface IOptionBox {
     id?: string;
     name?: string;
 
-    Change?: (a: React.ChangeEvent<HTMLSelectElement>) => void;
-    Focus?: (a: React.FocusEvent<HTMLSelectElement>) => void;
-    Blur?: (a: React.FocusEvent<HTMLSelectElement>) => void;
+    onChange?: (a: React.ChangeEvent<HTMLSelectElement>) => void;
+    onFocus?: (a: React.FocusEvent<HTMLSelectElement>) => void;
+    onBlur?: (a: React.FocusEvent<HTMLSelectElement>) => void;
 }

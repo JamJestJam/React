@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from "react";
 //data
 import { IconSize } from "../Icon/IconSize";
 import { IconType } from "../Icon/IconType";
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 //components
 import IDropDown from "./IDropDown";
 import BoxIcon from "../Icon/Boxing";
@@ -12,75 +12,75 @@ import * as CSS from "./css";
 import BoxImage from "../Image/Boxing";
 
 const DropDown: FC<IDropDown> = (props) => {
-  const [State, SetState] = useState({
-    Expanded: false,
+  const [state, setState] = useState({
+    expanded: false,
   });
 
-  const ChangeExpand = () => {
-    SetState({
-      ...State,
-      Expanded: !State.Expanded,
+  const changeExpand = () => {
+    setState({
+      ...state,
+      expanded: !state.expanded,
     });
   };
 
-  const Close = () => {
-    SetState({
-      ...State,
-      Expanded: false,
+  const close = () => {
+    setState({
+      ...state,
+      expanded: false,
     });
   };
 
-  const StopProp = (event: React.MouseEvent) => {
+  const stopProp = (event: React.MouseEvent) => {
     event.stopPropagation();
   };
 
   useEffect(() => {
-    document.addEventListener("click", Close);
+    document.addEventListener("click", close);
 
     return () => {
-      document.removeEventListener("click", Close);
+      document.removeEventListener("click", close);
     };
   });
 
   return (
-    <CSS.ExpanderS onClick={StopProp}>
+    <CSS.ExpanderS onClick={stopProp}>
       <ControlsHelp.LinkS to="#">
-        <CSS.ExpanderButtonS onClick={ChangeExpand} expanded={State.Expanded}>
+        <CSS.ExpanderButtonS onClick={changeExpand} expanded={state.expanded}>
           <ControlsHelp.TriangleConentLeft>
             {props.imageIconSwitch ? (
               <BoxImage
-                ImageName={props.leftImage || ""}
-                Background={Colors.Bg3}
-                Alt=""
-                BoxShadow={true}
-                Rounded={true}
-                MaxHeight={30}
-                MaxWidth={30}
-                Margin="5px"
+                imageName={props.leftImage || ""}
+                background={colors.Bg3}
+                alt=""
+                boxShadow={true}
+                rounded={true}
+                maxHeight={30}
+                maxWidth={30}
+                margin="5px"
               />
             ) : (
               <BoxIcon
-                IconType={props.leftIcon || 0}
-                IconSize={IconSize.small}
-                Alt="Icon"
+                iconType={props.leftIcon || 0}
+                iconSize={IconSize.small}
+                alt="Icon"
               />
             )}
 
             {props.Text}
           </ControlsHelp.TriangleConentLeft>
           <ControlsHelp.TriangleConentRight>
-            <CSS.RoundS expanded={State.Expanded}>
+            <CSS.RoundS expanded={state.expanded}>
               <BoxIcon
                 // Expanded={State.Expanded}
-                IconType={IconType.arrow_down}
-                IconSize={IconSize.mini}
-                Alt="Icon"
+                iconType={IconType.arrow_down}
+                iconSize={IconSize.mini}
+                alt="Icon"
               />
             </CSS.RoundS>
           </ControlsHelp.TriangleConentRight>
         </CSS.ExpanderButtonS>
       </ControlsHelp.LinkS>
-      <CSS.ContentS expanded={State.Expanded} height={props.height || "100vh"}>
+      <CSS.ContentS expanded={state.expanded} height={props.height || "100vh"}>
         {props.children}
       </CSS.ContentS>
     </CSS.ExpanderS>

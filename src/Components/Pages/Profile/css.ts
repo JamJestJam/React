@@ -1,7 +1,7 @@
 import styled from "styled-components";
 //data
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 
 export const ContentS = styled.div`
-  background-color: ${Colors.Bg1};
+  background-color: ${colors.Bg1};
 `;

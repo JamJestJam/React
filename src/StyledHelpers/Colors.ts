@@ -1,4 +1,4 @@
-export const Colors = {
+export const colors = {
   Bg1: "#ffffff",
   Bg2: "#F5F7F9",
   Bg3: "#E8E8E8",
@@ -11,7 +11,7 @@ export const Colors = {
   MainFont: "#3E465E",
   BlueFont: "#2A3F9D",
   GrayFont: "#878B91",
-  BlackFont: "62687B",
+  BlackFont: "#000",
 
   IconBorder: "#000",
   Shadow: "rgba(0, 0, 0, 0.3)",

@@ -2,14 +2,14 @@ import React, { FC } from "react";
 //components
 import Icon from "../";
 //style
-import { BoxIconS , BoxIconValueS } from "./css";
+import { BoxIconS, BoxIconValueS } from "./css";
 //interface
 import IBoxIcon from "./IBoxIcon";
 
 const BoxIcon: FC<IBoxIcon> = (props) => {
   return (
     <BoxIconS
-      size={props.IconSize}
+      size={props.iconSize}
       rounded={props.rounded}
       background={props.background}
       shadow={props.boxShadow}
@@ -19,10 +19,10 @@ const BoxIcon: FC<IBoxIcon> = (props) => {
       onClick={(event) => props.onClick && props.onClick(event)}
     >
       <Icon
-        IconSize={props.IconSize}
-        Alt={props.Alt}
-        IconType={props.IconType}
-        Bordered={props.Bordered}
+        iconSize={props.iconSize}
+        alt={props.alt}
+        iconType={props.iconType}
+        bordered={props.bordered}
       />
       {props.value && <BoxIconValueS>{props.value}</BoxIconValueS>}
     </BoxIconS>

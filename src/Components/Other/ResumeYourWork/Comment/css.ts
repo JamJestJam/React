@@ -1,12 +1,12 @@
 import styled from "styled-components";
 //data
-import { Colors } from "StyledHelpers/Colors";
-import { FontSize } from "StyledHelpers/Fonts";
+import { colors } from "StyledHelpers/Colors";
+import { fontSize } from "StyledHelpers/Fonts";
 //styles
 import * as CSS from "StyledHelpers/Controls";
 
 export const ContetS = styled(CSS.TriangleConent)`
-  background-color: ${Colors.Bg1};
+  background-color: ${colors.Bg1};
   padding: 10px 10px 0 10px;
   box-shadow: 2px 2px 1px 1px rgb(0 0 0 / 30%);
   margin: 5px 5px 5px 0;
@@ -16,8 +16,8 @@ export const ContetS = styled(CSS.TriangleConent)`
 `;
 
 export const TitleS = styled(CSS.TriangleConentLeft)`
-  color: ${Colors.BlueFont};
-  font-size: ${FontSize[20]};
+  color: ${colors.BlueFont};
+  font-size: ${fontSize[20]};
 `;
 
 export const BodyS = styled(CSS.TriangleConentCenter)`
@@ -32,5 +32,5 @@ export const BottomS = styled(CSS.TriangleConentRight)`
 
 export const MarginBoxS = styled.div`
   margin: 5px;
-  font-size: ${FontSize[24]};
+  font-size: ${fontSize[24]};
 `;

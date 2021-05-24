@@ -1,8 +1,8 @@
 //interface
 import IImage from "../IImage";
 export default interface IBoxImage extends IImage {
-  Background?: string;
-  BoxShadow?: boolean;
-  Rounded?: boolean;
-  Margin?: string;
+  background?: string;
+  boxShadow?: boolean;
+  rounded?: boolean;
+  margin?: string;
 }

@@ -1,22 +1,22 @@
 import styled from "styled-components";
 //style
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 //interface
 import IBoxImageStyle from "./IBoxImageStyle";
 
 const BoxImageS = styled.div<IBoxImageStyle>`
   background-color: ${(props) =>
-    props.Background ? props.Background : "Transparent"};
+    props.background ? props.background : "Transparent"};
   box-shadow: 0 0 3px
-    ${(props) => (props.Shadow ? Colors.Shadow : "transparent")};
-  border-radius: ${(props) => (props.Rounded ? "100%" : "0")};
-  height: ${(props) => props.Height + "px"};
-  width: ${(props) => props.Width + "px"};
+    ${(props) => (props.shadow ? colors.Shadow : "transparent")};
+  border-radius: ${(props) => (props.rounded ? "100%" : "0")};
+  height: ${(props) => props.height + "px"};
+  width: ${(props) => props.width + "px"};
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  margin: ${(props) => (props.Margin ? props.Margin : "auto")};
+  margin: ${(props) => (props.margin ? props.margin : "auto")};
   display: flex;
 `;
 

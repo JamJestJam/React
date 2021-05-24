@@ -1,4 +1,4 @@
-export const FontSize = {
+export const fontSize = {
   10: "0.6rem",
   12: "0.74rem",
   14: "0.85rem",
@@ -9,7 +9,7 @@ export const FontSize = {
   24: "1.55rem",
 };
 
-export type FontSizeType =
+export type fontSizeType =
   | "10"
   | "12"
   | "14"

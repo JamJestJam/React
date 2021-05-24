@@ -7,24 +7,24 @@ import BoxImageS from "./css";
 import IBoxImage from "./IBoxImage";
 
 const BoxImage: FC<IBoxImage> = (props) => {
-  const Height = props.MaxHeight || 40;
-  const Width = props.MaxWidth || 40;
+  const height = props.maxHeight || 40;
+  const width = props.maxWidth || 40;
 
   return (
     <BoxImageS
-      Margin={props.Margin}
-      Background={props.Background}
-      Shadow={props.BoxShadow}
-      Rounded={props.Rounded}
-      Height={Height}
-      Width={Width}
+      margin={props.margin}
+      background={props.background}
+      shadow={props.boxShadow}
+      rounded={props.rounded}
+      height={height}
+      width={width}
     >
       <Image
-        ImageName={props.ImageName}
-        MaxHeight={props.MaxHeight}
-        MaxWidth={props.MaxWidth}
-        Bordered={props.Bordered}
-        Alt={props.Alt}
+        imageName={props.imageName}
+        maxHeight={props.maxHeight}
+        maxWidth={props.maxWidth}
+        bordered={props.bordered}
+        alt={props.alt}
       />
     </BoxImageS>
   );

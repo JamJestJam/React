@@ -16,12 +16,12 @@ const Avatar: FC = () => {
   return (
     <CSS.ContentS>
       <BoxImage
-        ImageName={user?.photo?.url || ""}
-        Alt=""
-        Margin="10px"
-        MaxHeight={100}
-        MaxWidth={100}
-        Rounded={true}
+        imageName={user?.photo?.url || ""}
+        alt=""
+        margin="10px"
+        maxHeight={100}
+        maxWidth={100}
+        rounded={true}
       />
       <LinkS to="./Profile">See Profile</LinkS>
     </CSS.ContentS>

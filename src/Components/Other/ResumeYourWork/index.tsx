@@ -64,7 +64,7 @@ const ResumeYourWork: FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.filetString, state.filtered, comments, user]);
 
-  const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setState({
       ...state,
       filetString: event.target.value,
@@ -79,13 +79,13 @@ const ResumeYourWork: FC = () => {
         </Controls.TriangleConentLeft>
         <Controls.TriangleConentRight>
           <InputLabel
-            Label="Filter by title"
-            Button={true}
-            Border={true}
-            Width={100}
-            FontSize="12"
-            IconSize={IconSize.mini}
-            Change={InputChange}
+            label="Filter by title"
+            button={true}
+            border={true}
+            width={100}
+            fontSize="12"
+            iconSize={IconSize.mini}
+            change={inputChange}
           />
           <DropDown
             leftIcon={IconType.broadcast}
@@ -99,9 +99,9 @@ const ResumeYourWork: FC = () => {
               }}
             >
               <BoxIcon
-                IconSize={IconSize.small}
-                IconType={IconType.broadcast}
-                Alt={""}
+                iconSize={IconSize.small}
+                iconType={IconType.broadcast}
+                alt={""}
               />
               All
             </CSS.EmElementS>
@@ -111,9 +111,9 @@ const ResumeYourWork: FC = () => {
               }}
             >
               <BoxIcon
-                IconSize={IconSize.small}
-                IconType={IconType.broadcast}
-                Alt={""}
+                iconSize={IconSize.small}
+                iconType={IconType.broadcast}
+                alt={""}
               />
               My
             </CSS.EmElementS>
@@ -123,9 +123,9 @@ const ResumeYourWork: FC = () => {
               }}
             >
               <BoxIcon
-                IconSize={IconSize.small}
-                IconType={IconType.broadcast}
-                Alt={""}
+                iconSize={IconSize.small}
+                iconType={IconType.broadcast}
+                alt={""}
               />
               Followed
             </CSS.EmElementS>
@@ -139,7 +139,7 @@ const ResumeYourWork: FC = () => {
             state.page * commentPerPage + commentPerPage
           )
           .map((element, i) => {
-            return <SingleComment Comment={element} key={i} />;
+            return <SingleComment comment={element} key={i} />;
           })}
       </div>
       <Paggination

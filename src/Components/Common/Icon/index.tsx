@@ -9,10 +9,10 @@ import IconS from "./css";
 const Icon: FC<IIcon> = (props) => {
   return (
     <IconS
-      Size={props.IconSize}
-      Border={props.Bordered || false}
-      src={GetIcon(props.IconType)}
-      alt={props.Alt}
+      size={props.iconSize}
+      border={props.bordered || false}
+      src={GetIcon(props.iconType)}
+      alt={props.alt}
     />
   );
 };

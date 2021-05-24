@@ -1,6 +1,6 @@
 import styled from "styled-components";
 //data
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 //css
 import * as CSS from "StyledHelpers/Controls";
 
@@ -27,5 +27,5 @@ export const DataS = styled(CSS.TriangleConentRight)`
 `;
 
 export const ElementS = styled.div`
-  border-bottom: 1px solid ${Colors.Shadow};
+  border-bottom: 1px solid ${colors.Shadow};
 `;

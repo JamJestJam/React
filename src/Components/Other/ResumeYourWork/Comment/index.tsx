@@ -11,23 +11,23 @@ import { IconSize } from "Components/Common/Icon/IconSize";
 import IComment from "./IComment";
 
 const SingleComment: FC<IComment> = (props) => {
-  const user = props.Comment?.post?.owner;
+  const user = props.comment?.post?.owner;
   return (
     <CSS.ContetS>
-      <CSS.TitleS>{props.Comment.name}</CSS.TitleS>
-      <CSS.BodyS>{props.Comment.body}</CSS.BodyS>
+      <CSS.TitleS>{props.comment.name}</CSS.TitleS>
+      <CSS.BodyS>{props.comment.body}</CSS.BodyS>
       <CSS.BottomS>
         <BoxImage
-          ImageName={user?.photo?.url || ""}
-          Alt=""
-          MaxWidth={20}
-          MaxHeight={20}
-          Rounded={true}
-          Margin="0 5px 0 0"
+          imageName={user?.photo?.url || ""}
+          alt=""
+          maxWidth={20}
+          maxHeight={20}
+          rounded={true}
+          margin="0 5px 0 0"
         />
         <div>{user?.name || ""}</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
-        <Icon IconType={IconType.book} IconSize={IconSize.mini} Alt="" />
+        <Icon iconType={IconType.book} iconSize={IconSize.mini} alt="" />
         <div>Group norms</div>
         <CSS.MarginBoxS>•</CSS.MarginBoxS>
         <div>Last update 13 days ago</div>

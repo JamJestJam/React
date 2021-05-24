@@ -1,4 +1,4 @@
 export default interface IIconStyle {
-  Border: boolean;
-  Size: string;
+  border: boolean;
+  size: string;
 }

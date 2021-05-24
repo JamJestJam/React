@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 //data
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
@@ -25,7 +25,7 @@ const TopBar: FC = () => {
   return (
     <CSS.TobBarS>
       <Controls.TriangleConentLeft>
-        <Icon IconType={IconType.logo} IconSize={IconSize.medium} Alt="Logo" />
+        <Icon iconType={IconType.logo} iconSize={IconSize.medium} alt="Logo" />
 
         <DropDown
           Text={pageInfo.pageName}
@@ -39,36 +39,36 @@ const TopBar: FC = () => {
       </Controls.TriangleConentLeft>
       <Controls.TriangleConentCenter>
         <InputLabel
-          Label="Search Legalcluster"
-          Width={500}
-          Button={true}
-          Border={true}
+          label="Search Legalcluster"
+          width={500}
+          button={true}
+          border={true}
         />
       </Controls.TriangleConentCenter>
       <Controls.TriangleConentRight>
         <CSS.IconBoxS>
           <BoxIcon
-            IconSize={IconSize.small}
-            IconType={IconType.house}
-            Alt="Domek"
+            iconSize={IconSize.small}
+            iconType={IconType.house}
+            alt="Domek"
           />
         </CSS.IconBoxS>
         <CSS.IconBoxS>
           <BoxIcon
-            IconSize={IconSize.small}
-            IconType={IconType.comments}
-            background={Colors.Bg3}
-            Alt="Czat"
+            iconSize={IconSize.small}
+            iconType={IconType.comments}
+            background={colors.Bg3}
+            alt="Czat"
             rounded={true}
             value={3}
           />
         </CSS.IconBoxS>
         <CSS.IconBoxS>
           <BoxIcon
-            IconSize={IconSize.small}
-            IconType={IconType.bell}
-            background={Colors.Bg3}
-            Alt="Dzwoneczek"
+            iconSize={IconSize.small}
+            iconType={IconType.bell}
+            background={colors.Bg3}
+            alt="Dzwoneczek"
             rounded={true}
             value={3}
           />

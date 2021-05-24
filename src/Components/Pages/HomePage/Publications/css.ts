@@ -1,11 +1,11 @@
 import styled from "styled-components";
 //PubDataS
-import { FontSize } from "StyledHelpers/Fonts";
-import { Colors } from "StyledHelpers/Colors";
+import { fontSize } from "StyledHelpers/Fonts";
+import { colors } from "StyledHelpers/Colors";
 
 export const ContentS = styled.div`
-  background-color: ${Colors.Bg1};
-  box-shadow: 1px 1px 3px ${Colors.Shadow};
+  background-color: ${colors.Bg1};
+  box-shadow: 1px 1px 3px ${colors.Shadow};
   border-radius: 5px;
   display: flex;
   overflow: hidden;
@@ -14,8 +14,8 @@ export const ContentS = styled.div`
 export const LeftS = styled.div`
   position: relative;
   width: 300px;
-  box-shadow: 0 0 1px ${Colors.Shadow};
-  background-color: ${Colors.Bg1};
+  box-shadow: 0 0 1px ${colors.Shadow};
+  background-color: ${colors.Bg1};
 `;
 
 export const RightS = styled.div`
@@ -29,15 +29,15 @@ export const RightS = styled.div`
 export const TitleS = styled.div`
   flex: 1;
   height: fit-content;
-  color: ${Colors.BlueFont};
-  font-size: ${FontSize[24]};
+  color: ${colors.BlueFont};
+  font-size: ${fontSize[24]};
   font-weight: bolder;
 `;
 
 export const SeeMoreS = styled.div`
   flex: 1;
-  color: ${Colors.BlueFont};
-  font-size: ${FontSize[12]};
+  color: ${colors.BlueFont};
+  font-size: ${fontSize[12]};
   height: 100%;
 `;
 
@@ -50,8 +50,8 @@ export const PublicationS = styled.div`
   text-align: justify;
   position: absolute;
   bottom: 0;
-  color: ${Colors.WhiteFont};
-  background-color: ${Colors.Shadow};
+  color: ${colors.WhiteFont};
+  background-color: ${colors.Shadow};
   padding: 10px;
   text-align: justify;
   text-shadow: black 1px 1px 1px, black 1px -1px 1px, black -1px 1px 1px,

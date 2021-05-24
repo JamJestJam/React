@@ -10,9 +10,9 @@ const OptionBox: FC<IOptionBox> = (props) => {
       id={props.id}
       name={props.name}
       defaultValue={props.value}
-      onChange={props.Change}
-      onFocus={props.Focus}
-      onBlur={props.Blur}
+      onChange={props.onChange}
+      onFocus={props.onFocus}
+      onBlur={props.onBlur}
     >
       {props.posibleOptions.map((val, i) => {
         return (

@@ -34,47 +34,47 @@ const InfoOpen: FC<IOpen> = (props) => {
             <CSS.LeftS>
               <InputLabel
                 id="name"
-                Label="Name"
-                FontSize={"12"}
-                Value={values.name}
-                Change={handleChange}
+                label="Name"
+                fontSize={"12"}
+                value={values.name}
+                change={handleChange}
               />
               <InputLabel
                 id="street"
-                Label="Street"
-                FontSize={"12"}
-                Value={values.street}
-                Change={handleChange}
+                label="Street"
+                fontSize={"12"}
+                value={values.street}
+                change={handleChange}
               />
               <InputLabel
                 id="city"
-                Label="City"
-                FontSize={"12"}
-                Value={values.city}
-                Change={handleChange}
+                label="City"
+                fontSize={"12"}
+                value={values.city}
+                change={handleChange}
               />
               <InputLabel
                 id="partner"
-                Label="Partner"
-                FontSize={"12"}
-                Value={values.partner}
-                Change={handleChange}
+                label="Partner"
+                fontSize={"12"}
+                value={values.partner}
+                change={handleChange}
               />
             </CSS.LeftS>
             <CSS.RightS>
               <InputLabel
                 id="email"
-                Label="Email"
-                FontSize={"12"}
-                Value={values.email}
-                Change={handleChange}
+                label="Email"
+                fontSize={"12"}
+                value={values.email}
+                change={handleChange}
               />
               <InputLabel
                 id="phone"
-                Label="Phone"
-                FontSize={"12"}
-                Value={values.phone}
-                Change={handleChange}
+                label="Phone"
+                fontSize={"12"}
+                value={values.phone}
+                change={handleChange}
               />
             </CSS.RightS>
             <CSS.EditS>
@@ -82,15 +82,15 @@ const InfoOpen: FC<IOpen> = (props) => {
                 onClick={() => {
                   handleSubmit();
                 }}
-                IconType={IconType.book}
-                IconSize={IconSize.small}
-                Alt=""
+                iconType={IconType.book}
+                iconSize={IconSize.small}
+                alt=""
               />
               <BoxIcon
                 onClick={props.close}
-                IconType={IconType.exit}
-                IconSize={IconSize.small}
-                Alt=""
+                iconType={IconType.exit}
+                iconSize={IconSize.small}
+                alt=""
               />
             </CSS.EditS>
           </>

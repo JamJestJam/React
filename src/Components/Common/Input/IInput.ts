@@ -1,20 +1,21 @@
 import React from "react";
 //style
-import { FontSizeType } from "StyledHelpers/Fonts";
+import { fontSizeType } from "StyledHelpers/Fonts";
 
 export default interface IImput {
-  BorderColor?: string;
-  Background?: string;
-  FontSize?: FontSizeType;
-  Height?: number;
-  Width?: number;
-  Color?: string;
+  borderColor?: string;
+  background?: string;
+  fontSize?: fontSizeType;
+  height?: number;
+  width?: number;
+  color?: string;
+  focused?: boolean;
 
   id?: string;
   name?: string;
-  Value?: string;
+  value?: string;
 
-  Change?: (a: React.ChangeEvent<HTMLInputElement>) => void;
-  Focus?: (a: React.FocusEvent<HTMLInputElement>) => void;
-  Blur?: (a: React.FocusEvent<HTMLInputElement>) => void;
+  change?: (a: React.ChangeEvent<HTMLInputElement>) => void;
+  focus?: (a: React.FocusEvent<HTMLInputElement>) => void;
+  blur?: (a: React.FocusEvent<HTMLInputElement>) => void;
 }

@@ -8,68 +8,77 @@ import Input from "..";
 //style
 import * as CSS from "./css";
 //interface./..
-import ISearch from "./ILabelInput";
+import ILabelInput from "./ILabelInput";
 
-const InputLabel: FC<ISearch> = (props) => {
-  const [State, SetState] = useState({
-    Focus: false,
-    Value: props.Value || "",
+const InputLabel: FC<ILabelInput> = (props) => {
+  const [state, setState] = useState({
+    focus: false,
+    value: props.value || "",
   });
 
-  const InputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
-    props.Focus && props.Focus(event);
+  const inputFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+    props.focus && props.focus(event);
 
-    SetState({
-      ...State,
-      Focus: true,
+    setState({
+      ...state,
+      focus: true,
     });
   };
 
-  const InputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-    props.Blur && props.Blur(event);
+  const inputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+    props.blur && props.blur(event);
 
-    SetState({
-      ...State,
-      Focus: false,
+    setState({
+      ...state,
+      focus: false,
     });
   };
 
-  const InputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    props.Change && props.Change(event);
+  const inputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    props.change && props.change(event);
 
-    SetState({
-      ...State,
-      Value: event.target.value,
+    setState({
+      ...state,
+      value: event.target.value,
     });
   };
+
+  const focus = (event: React.MouseEvent) => {
+    setState({
+      ...state,
+      focus: true
+    });
+  }
 
   return (
-    <CSS.FieldS Focus={State.Focus} Border={props.Border}>
+    <CSS.FieldS focus={state.focus} border={props.border}>
       <Input
-        BorderColor={props.BorderColor}
-        Background={props.Background}
-        FontSize={props.FontSize}
-        Height={props.Height}
-        Width={props.Width}
-        Color={props.Color}
-        Value={State.Value}
+        borderColor={props.borderColor}
+        background={props.background}
+        fontSize={props.fontSize}
+        height={props.height}
+        width={props.width}
+        color={props.color}
+        value={state.value}
         name={props.name}
         id={props.id}
-        Blur={InputBlur}
-        Focus={InputFocus}
-        Change={InputChange}
+        focused={state.focus}
+        blur={inputBlur}
+        focus={inputFocus}
+        change={inputChange}
       />
       <CSS.LabelS
-        Focus={State.Focus || State.Value.length > 0}
-        FontSize={props.FontSize || "18"}
+        onClick={focus}
+        focus={state.focus || state.value.length > 0}
+        fontSize={props.fontSize || "18"}
       >
-        {props.Label}
+        {props.label}
       </CSS.LabelS>
-      {props.Button && (
+      {props.button && (
         <BoxIcon
-          IconSize={props.IconSize || IconSize.small}
-          IconType={props.ButtonType || IconType.search}
-          Alt="Szukaj"
+          iconSize={props.iconSize || IconSize.small}
+          iconType={props.buttonType || IconType.search}
+          alt="Szukaj"
         />
       )}
     </CSS.FieldS>

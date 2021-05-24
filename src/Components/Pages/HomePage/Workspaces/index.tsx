@@ -14,12 +14,12 @@ const Workspaces: FC = () => {
       <Slider>
         {json.Workspace.map((item, i) => (
           <WorkspacesEl
-            ImageName={item.BgImage}
-            Link={item.Link}
-            Days={item.Days}
-            Users={item.Users}
-            Icon={item.IconID}
-            Name={item.Name}
+            imageName={item.BgImage}
+            link={item.Link}
+            days={item.Days}
+            users={item.Users}
+            icon={item.IconID}
+            name={item.Name}
             key={i}
           />
         ))}

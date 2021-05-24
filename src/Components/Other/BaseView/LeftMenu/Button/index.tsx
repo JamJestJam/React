@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 //data
 import { IconSize } from "Components/Common/Icon/IconSize";
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 //components
 import BoxIcon from "Components/Common/Icon/Boxing";
 //style
@@ -11,21 +11,21 @@ import IButton from "./IButton";
 
 const Button: FC<IButton> = (props) => {
   return (
-    <CSS.ButtonS color={props.Color ? Colors.Bg1 : Colors.Bg2}>
+    <CSS.ButtonS color={props.color ? colors.Bg1 : colors.Bg2}>
       <CSS.ButtonLeftS>
         <BoxIcon
-          IconType={props.Icon}
-          IconSize={IconSize.small}
-          Alt="Przycisk"
+          iconType={props.icon}
+          iconSize={IconSize.small}
+          alt="Przycisk"
         />
         {props.children}
       </CSS.ButtonLeftS>
-      {props.SIcon && (
+      {props.iconRight && (
         <CSS.ButtonRightS>
           <BoxIcon
-            IconType={props.SIcon}
-            IconSize={IconSize.small}
-            Alt="Przycisk"
+            iconType={props.iconRight}
+            iconSize={IconSize.small}
+            alt="Przycisk"
             boxShadow={true}
             boxWidth={30}
             boxHeight={20}

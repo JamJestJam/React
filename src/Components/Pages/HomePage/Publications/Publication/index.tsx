@@ -11,11 +11,11 @@ const Publication: FC<IPublication> = (props) => {
     <CSS.ContentS>
       <div>
         <BoxImage
-          ImageName={props.data?.photo?.url || ""}
-          Alt=""
-          MaxHeight={80}
-          MaxWidth={80}
-          Margin="0"
+          imageName={props.data?.photo?.url || ""}
+          alt=""
+          maxHeight={80}
+          maxWidth={80}
+          margin="0"
         />
       </div>
       <CSS.PublicationS>
@@ -23,12 +23,12 @@ const Publication: FC<IPublication> = (props) => {
         <CSS.PubDataS>
           <div>{props.data ? "" : ""}</div>
           <BoxImage
-            ImageName={props.data?.owner?.photo?.url || ""}
-            Alt=""
-            MaxWidth={20}
-            MaxHeight={20}
-            Rounded={true}
-            Margin="5px"
+            imageName={props.data?.owner?.photo?.url || ""}
+            alt=""
+            maxWidth={20}
+            maxHeight={20}
+            rounded={true}
+            margin="5px"
           />
           <CSS.NameS>{props.data?.owner?.name}</CSS.NameS>
         </CSS.PubDataS>

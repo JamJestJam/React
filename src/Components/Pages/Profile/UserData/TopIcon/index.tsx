@@ -11,7 +11,7 @@ import ITopIcon from "./ITopIcon";
 const TopIcon: FC<ITopIcon> = (props) => {
   return (
     <CSS.FlexS>
-      <Icon IconSize={IconSize.mini} IconType={props.icon} Alt="" />
+      <Icon iconSize={IconSize.mini} iconType={props.icon} alt="" />
       {props.text}
     </CSS.FlexS>
   );

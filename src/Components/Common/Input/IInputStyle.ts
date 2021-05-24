@@ -1,11 +1,11 @@
 //data
-import { FontSizeType } from "StyledHelpers/Fonts";
+import { fontSizeType } from "StyledHelpers/Fonts";
 
 export default interface IImputStyle {
-  BorderColor?: string;
-  Background?: string;
-  FontSize?: FontSizeType;
-  Height?: number;
-  Width?: number;
-  Color?: string;
+  borderColor?: string;
+  background?: string;
+  fontSize?: fontSizeType;
+  jeight?: number;
+  width?: number;
+  color?: string;
 }

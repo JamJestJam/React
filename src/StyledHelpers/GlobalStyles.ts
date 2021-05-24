@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 //data
-import { Colors } from "./Colors";
+import { colors } from "./Colors";
 
 export const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: ${Colors.Bg2};
+    background-color: ${colors.Bg2};
     margin: 0;
-    color: ${Colors.MainFont};
+    color: ${colors.MainFont};
   }
 `;

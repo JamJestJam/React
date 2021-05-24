@@ -5,28 +5,28 @@ import ImageS from "./css";
 import IImage from "./IImage";
 
 const Image: FC<IImage> = (props) => {
-  const [State, SetState] = useState({
+  const [state, setState] = useState({
     active: false,
   });
 
-  const Width = props.MaxWidth || 40;
-  const Height = props.MaxHeight || 40;
+  const width = props.maxWidth || 40;
+  const height = props.maxHeight || 40;
 
   const load = () => {
-    SetState({
-      ...State,
+    setState({
+      ...state,
       active: true,
     });
   };
 
   return (
     <ImageS
-      Bordered={props.Bordered}
-      active={State.active}
-      src={props.ImageName}
-      MaxHeight={Height}
-      MaxWidth={Width}
-      alt={props.Alt}
+      bordered={props.bordered}
+      active={state.active}
+      src={props.imageName}
+      maxHeight={height}
+      maxWidth={width}
+      alt={props.alt}
       onLoad={load}
     />
   );

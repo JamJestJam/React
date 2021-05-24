@@ -1,13 +1,13 @@
 import styled from "styled-components";
 //style
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 //interface
 import IIconStyle from "./IIconStyle";
 
 const IconS = styled.img<IIconStyle>`
-  border: 1px ${(props) => (props.Border ? Colors.Shadow : "transparent")} solid;
-  height: ${(props) => props.Size};
-  width: ${(props) => props.Size};
+  border: 1px ${(props) => (props.border ? colors.Shadow : "transparent")} solid;
+  height: ${(props) => props.size};
+  width: ${(props) => props.size};
   border-radius: 5px;
 `;
 

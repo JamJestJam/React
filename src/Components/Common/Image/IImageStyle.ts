@@ -1,6 +1,6 @@
 export default interface IImageStyle {
-  Bordered?: boolean;
-  MaxHeight: number;
-  MaxWidth: number;
+  bordered?: boolean;
+  maxHeight: number;
+  maxWidth: number;
   active: boolean;
 }

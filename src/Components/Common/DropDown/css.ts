@@ -1,6 +1,6 @@
 import styled from "styled-components";
 //style
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 import { TriangleConent } from "StyledHelpers/Controls";
 //interface
 import IDropDownElement from "./IEmContent";
@@ -13,20 +13,20 @@ export const ExpanderS = styled.div`
 
 export const ExpanderButtonS = styled(TriangleConent) <IDropDownElement>`
   box-shadow: 0px 0px 2px
-    ${(props) => (props.expanded ? Colors.Shadow : "transparent")};
+    ${(props) => (props.expanded ? colors.Shadow : "transparent")};
   transition: 1s all;
 `;
 
 export const ContentS = styled.div<IDropDownElement>`
   position: absolute;
-  background-color: ${Colors.Bg1};
+  background-color: ${colors.Bg1};
   z-index: 200;
   width: 220px;
   padding: 0 5px;
   max-height: ${(props) => (props.expanded ? props.height : "0vh")};
   overflow-y: hidden;
   transition: 0.4s all ease-in;
-  box-shadow: 0px 0px 2px ${Colors.Shadow};
+  box-shadow: 0px 0px 2px ${colors.Shadow};
 `;
 
 export const RoundS = styled.div<IDropDownElement>`

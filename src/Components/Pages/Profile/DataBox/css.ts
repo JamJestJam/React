@@ -1,10 +1,11 @@
 import styled from "styled-components";
 //data
-import { Colors } from "StyledHelpers/Colors";
-import { FontSize } from "StyledHelpers/Fonts";
+import { colors } from "StyledHelpers/Colors";
+import { fontSize } from "StyledHelpers/Fonts";
 
 export const ContentS = styled.div`
-  background-color: ${Colors.Bg1};
+  background-color: ${colors.Bg1};
+  border-bottom: 1px solid ${colors.Shadow};
   position: relative;
   padding: 20px;
 `;
@@ -12,14 +13,14 @@ export const ContentS = styled.div`
 export const NameS = styled.span`
   display: flex;
   align-items: center;
-  color: ${Colors.GrayFont};
-  font-size: ${FontSize[20]};
+  color: ${colors.GrayFont};
+  font-size: ${fontSize[20]};
 `;
 
 export const ContentBoxS = styled.div`
-  background-color: ${Colors.Bg5};
-  color: ${Colors.BlueFont};
-  font-size: ${FontSize[20]};
+  background-color: ${colors.Bg5};
+  color: ${colors.BlueFont};
+  font-size: ${fontSize[20]};
   display: inline-block;
   margin: 5px;
   padding: 5px;

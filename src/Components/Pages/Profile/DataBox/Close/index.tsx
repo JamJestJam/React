@@ -48,9 +48,9 @@ const DataBoxClose: FC<IClose> = (props) => {
       </div>
       <CSS.ButtonsS>
         <BoxIcon
-          IconType={IconType.edit}
-          IconSize={IconSize.small}
-          Alt=""
+          iconType={IconType.edit}
+          iconSize={IconSize.small}
+          alt=""
           onClick={props.open}
         />
       </CSS.ButtonsS>

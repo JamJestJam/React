@@ -1,14 +1,14 @@
 import styled from "styled-components";
 //data
-import { Colors } from "StyledHelpers/Colors";
-import { FontSize } from "StyledHelpers/Fonts";
+import { colors } from "StyledHelpers/Colors";
+import { fontSize } from "StyledHelpers/Fonts";
 
 export const OptionS = styled.option``;
 
 export const SelectS = styled.select`
-  background-color: ${Colors.Bg5};
-  color: ${Colors.BlueFont};
-  font-size: ${FontSize[20]};
+  background-color: ${colors.Bg5};
+  color: ${colors.BlueFont};
+  font-size: ${fontSize[20]};
   display: inline-block;
   margin: 5px;
   padding: 5px;

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 //data
-import { Colors } from "StyledHelpers/Colors";
+import { colors } from "StyledHelpers/Colors";
 import { IconSize } from "Components/Common/Icon/IconSize";
 import { IconType } from "Components/Common/Icon/IconType";
 //components
@@ -14,36 +14,36 @@ import IWorkspaceEl from "./IWorkspaceEl";
 
 const WorkspacesEl: FC<IWorkspaceEl> = (props) => {
   return (
-    <LinkS to={props.Link}>
+    <LinkS to={props.link}>
       <CSS.ElementS>
         <CSS.ImageS>
           <BoxImage
-            ImageName={props.ImageName}
-            Alt=""
-            Background={Colors.Bg3}
-            MaxHeight={100}
-            MaxWidth={250}
+            imageName={props.imageName}
+            alt=""
+            background={colors.Bg3}
+            maxHeight={100}
+            maxWidth={250}
           />
         </CSS.ImageS>
         <CSS.ContentS>
           <CSS.TopS>
             <CSS.IconBoxS>
-              <Icon IconSize={IconSize.large} IconType={props.Icon} Alt="" />
+              <Icon iconSize={IconSize.large} iconType={props.icon} alt="" />
             </CSS.IconBoxS>
-            {props.Name}
+            {props.name}
           </CSS.TopS>
           <CSS.TransformS>
             <CSS.InfoS>
               <CSS.InfoS>
-                <Icon IconSize={IconSize.mini} IconType={IconType.cog} Alt="" />
+                <Icon iconSize={IconSize.mini} iconType={IconType.cog} alt="" />
                 Contract
               </CSS.InfoS>
               <CSS.InfoS>
-                <Icon IconSize={IconSize.mini} IconType={IconType.cog} Alt="" />
-                {props.Users} users
+                <Icon iconSize={IconSize.mini} iconType={IconType.cog} alt="" />
+                {props.users} users
               </CSS.InfoS>
             </CSS.InfoS>
-            <CSS.LastS>Last update {props.Days} days ago</CSS.LastS>
+            <CSS.LastS>Last update {props.days} days ago</CSS.LastS>
           </CSS.TransformS>
         </CSS.ContentS>
       </CSS.ElementS>

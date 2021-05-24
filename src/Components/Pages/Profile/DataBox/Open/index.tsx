@@ -44,9 +44,9 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                     values.expertise.push("0");
                     setValues({ ...values });
                   }}
-                  IconType={IconType.plus}
-                  IconSize={IconSize.mini}
-                  Alt=""
+                  iconType={IconType.plus}
+                  iconSize={IconSize.mini}
+                  alt=""
                   boxHeight={10}
                   boxWidth={20}
                 />
@@ -56,7 +56,7 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                   return (
                     <OptionBox
                       id={`expertise[${i}]`}
-                      Change={handleChange}
+                      onChange={handleChange}
                       value={val}
                       posibleOptions={JSON.Expertise}
                       key={i}
@@ -73,9 +73,9 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                     values.specialties.push("0");
                     setValues({ ...values });
                   }}
-                  IconType={IconType.plus}
-                  IconSize={IconSize.mini}
-                  Alt=""
+                  iconType={IconType.plus}
+                  iconSize={IconSize.mini}
+                  alt=""
                   boxHeight={10}
                   boxWidth={20}
                 />
@@ -85,10 +85,10 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                 {values.specialties.map((val, i) => {
                   return (
                     <OptionBox
-                      id={`expertise[${i}]`}
-                      Change={handleChange}
+                      id={`specialties[${i}]`}
+                      onChange={handleChange}
                       value={val}
-                      posibleOptions={JSON.Expertise}
+                      posibleOptions={JSON.Specialties}
                       key={i}
                     />
                   );
@@ -103,9 +103,9 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                     values.adminssion.push("0");
                     setValues({ ...values });
                   }}
-                  IconType={IconType.plus}
-                  IconSize={IconSize.mini}
-                  Alt=""
+                  iconType={IconType.plus}
+                  iconSize={IconSize.mini}
+                  alt=""
                   boxHeight={10}
                   boxWidth={20}
                 />
@@ -114,10 +114,10 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                 {values.adminssion.map((val, i) => {
                   return (
                     <OptionBox
-                      id={`expertise[${i}]`}
-                      Change={handleChange}
+                      id={`adminssion[${i}]`}
+                      onChange={handleChange}
                       value={val}
-                      posibleOptions={JSON.Expertise}
+                      posibleOptions={JSON.Adminssion}
                       key={i}
                     />
                   );
@@ -132,9 +132,9 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                     values.counties.push("0");
                     setValues({ ...values });
                   }}
-                  IconType={IconType.plus}
-                  IconSize={IconSize.mini}
-                  Alt=""
+                  iconType={IconType.plus}
+                  iconSize={IconSize.mini}
+                  alt=""
                   boxHeight={10}
                   boxWidth={20}
                 />
@@ -143,10 +143,10 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                 {values.counties.map((val, i) => {
                   return (
                     <OptionBox
-                      id={`expertise[${i}]`}
-                      Change={handleChange}
+                      id={`counties[${i}]`}
+                      onChange={handleChange}
                       value={val}
-                      posibleOptions={JSON.Expertise}
+                      posibleOptions={JSON.Counties}
                       key={i}
                     />
                   );
@@ -158,15 +158,15 @@ const DataBoxOpen: FC<IOpen> = (props) => {
                 onClick={() => {
                   handleSubmit();
                 }}
-                IconType={IconType.book}
-                IconSize={IconSize.small}
-                Alt=""
+                iconType={IconType.book}
+                iconSize={IconSize.small}
+                alt=""
               />
               <BoxIcon
                 onClick={props.close}
-                IconType={IconType.exit}
-                IconSize={IconSize.small}
-                Alt=""
+                iconType={IconType.exit}
+                iconSize={IconSize.small}
+                alt=""
               />
             </CSS.ButtonsS>
           </>

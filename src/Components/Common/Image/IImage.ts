@@ -1,7 +1,7 @@
 export default interface IIcon {
-  Bordered?: boolean;
-  MaxHeight?: number;
-  MaxWidth?: number;
-  ImageName: string;
-  Alt: string;
+  bordered?: boolean;
+  maxHeight?: number;
+  maxWidth?: number;
+  imageName: string;
+  alt: string;
 }

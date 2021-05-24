@@ -1,8 +1,8 @@
 export default interface IBoxImageStyle {
-  Background?: string;
-  Rounded?: boolean;
-  Shadow?: boolean;
-  Margin?: string;
-  Height: number;
-  Width: number;
+  background?: string;
+  rounded?: boolean;
+  shadow?: boolean;
+  margin?: string;
+  height: number;
+  width: number;
 }
