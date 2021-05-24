@@ -6,6 +6,7 @@ export const PageContentS = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
+  margin-bottom: 200px;
 `;
 
 export const PageFillS = styled.div`

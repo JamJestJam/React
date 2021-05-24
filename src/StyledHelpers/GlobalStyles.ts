@@ -8,5 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${colors.Bg2};
     margin: 0;
     color: ${colors.MainFont};
+    overflow-y: scroll;
   }
 `;

@@ -1,19 +1,15 @@
 import React, { FC } from "react";
-//component
-import BoxIcon from "Components/Common/Icon/Boxing";
 //data
-import { IconSize } from "Components/Common/Icon/IconSize";
-import { IconType } from "Components/Common/Icon/IconType";
 import JSON from "Data/databox.json"
 //style
-import * as CSS from "../css";
+import * as CSS from "./css";
 //interface
-import IClose from "./IClose";
+import IDataBox from "./IDataBox";
 
-const DataBoxClose: FC<IClose> = (props) => {
+const DataBoxClose: FC<IDataBox> = (props) => {
   const data = props.data;
   return (
-    <>
+    <CSS.ContentS>
       <div>
         <CSS.NameS>Expertise</CSS.NameS>
         <div>
@@ -46,15 +42,7 @@ const DataBoxClose: FC<IClose> = (props) => {
           })}
         </div>
       </div>
-      <CSS.ButtonsS>
-        <BoxIcon
-          iconType={IconType.edit}
-          iconSize={IconSize.small}
-          alt=""
-          onClick={props.open}
-        />
-      </CSS.ButtonsS>
-    </>
+    </CSS.ContentS>
   );
 };
 

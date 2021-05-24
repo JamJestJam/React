@@ -6,11 +6,7 @@ import getPageInfoImage, {
 } from "Actions/PageInfo/getPageInfoImage";
 //components
 import UserData from "./UserData";
-import PanelInformations from "./PanelInformations";
-import Proposals from "./Proposals";
-import InternalRewiews from "./InternalRewiews";
-import AmountFees from "./AmountFees";
-import DataBox from "./DataBox";
+import SwitchMenu from "./SwitchMenu";
 //Style
 import * as CSS from "./css";
 //interfaces
@@ -33,11 +29,7 @@ const Profile: FC = () => {
   return (
     <CSS.ContentS>
       <UserData />
-      <DataBox />
-      <PanelInformations />
-      <Proposals />
-      <InternalRewiews />
-      <AmountFees />
+      <SwitchMenu />
     </CSS.ContentS>
   );
 };
