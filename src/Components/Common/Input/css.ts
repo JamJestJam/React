@@ -13,7 +13,7 @@ export const InputS = styled.input<IImputStyle>`
   font-size: ${(props) => fontSize[props.fontSize || 18]};
   height: ${(props) => (props.jeight ? props.jeight + "px" : "auto")};
   width: ${(props) => (props.width ? props.width + "px" : "100%")};
-  padding: 10px 10px 0px 5px;
+  padding: ${(props) => (props.padding ? props.padding : "10px 10px 0px 5px")};
   transition: all 1s;
   display: block;
 

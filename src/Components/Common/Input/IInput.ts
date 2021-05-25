@@ -10,6 +10,8 @@ export default interface IImput {
   width?: number;
   color?: string;
   focused?: boolean;
+  padding?: string;
+  type?: string;
 
   id?: string;
   name?: string;

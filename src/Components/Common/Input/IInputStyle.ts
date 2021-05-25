@@ -8,4 +8,5 @@ export default interface IImputStyle {
   jeight?: number;
   width?: number;
   color?: string;
+  padding?: string;
 }
