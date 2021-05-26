@@ -6,5 +6,6 @@ export default interface IDropDown {
   leftImage?: string;
   imageIconSwitch: boolean;
   height?: string;
+  width?: string;
   Text: string;
 }

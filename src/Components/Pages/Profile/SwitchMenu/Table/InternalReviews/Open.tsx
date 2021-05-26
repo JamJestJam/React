@@ -53,7 +53,11 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
                     onChange={props.handleChange}
                   >
                     {JSON.Counties.map((val, i) => {
-                      return <option key={i} value={val}>{val}</option>;
+                      return (
+                        <option key={i} value={val}>
+                          {val}
+                        </option>
+                      );
                     })}
                   </select>
                 </td>
@@ -84,6 +88,7 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
           })}
         </tbody>
       </CSS.TableS>
+      <CSS.SeeMore>See more Reviews</CSS.SeeMore>
     </CSS.ContentS>
   );
 };

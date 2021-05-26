@@ -1,4 +1,4 @@
-export default interface IAmountFees{
+export default interface IAmountFees {
     year: number;
     costCenter: string;
     currency: string;
@@ -6,6 +6,6 @@ export default interface IAmountFees{
     lawFirm: string;
 }
 
-export interface IAmountFeesData{
+export interface IAmountFeesData {
     data: IAmountFees[];
 }

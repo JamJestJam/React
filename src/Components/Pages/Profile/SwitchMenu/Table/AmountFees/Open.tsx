@@ -73,7 +73,7 @@ const AmountFeesOpen: FC<IOpen> = (props) => {
                   </select>
                 </td>
                 <td>
-                <Input
+                  <Input
                     id={`data4[${i}].lawFirm`}
                     height={19}
                     padding="0"

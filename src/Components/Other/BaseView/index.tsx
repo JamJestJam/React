@@ -50,13 +50,21 @@ const BaseView: FC = (Props) => {
     ...GS.pageInfo,
   }));
 
+  
+
   return (
     <>
-      <TopBar />
-      <CSS.PageContentS>
-        <LeftMenu />
-        <CSS.PageFillS>{Props.children}</CSS.PageFillS>
-      </CSS.PageContentS>
+      {pageInfo.fullScreen ? (
+        <>{Props.children}</>
+      ) : (
+        <>
+          <TopBar />
+          <CSS.PageContentS>
+            <LeftMenu />
+            <CSS.PageFillS>{Props.children}</CSS.PageFillS>
+          </CSS.PageContentS>
+        </>
+      )}
     </>
   );
 };

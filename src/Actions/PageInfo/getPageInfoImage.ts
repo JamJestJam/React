@@ -7,7 +7,8 @@ import * as types from "./PageInfoTypes";
 const getPageInfoImage = (
   pageName: string,
   pageTitle: string,
-  pageImage: string
+  pageImage: string,
+  fullScreen: boolean = false
 ): Promise<IEnPageInfo> =>
   ((dispatch: Dispatch) => {
     return dispatch({
@@ -17,6 +18,7 @@ const getPageInfoImage = (
         pageTitle: pageTitle,
         pageName: pageName,
         imageIconSwitch: true,
+        fullScreen: fullScreen,
       },
     });
   }) as any;

@@ -27,7 +27,7 @@ interface IOpen {
   data4: IAmountFees[];
 
   close: () => void;
-  save: (a: IDataBoxInfo, b: IPanelInformations, c: IProposals[], d:IAmountFees[]) => void;
+  save: (a: IDataBoxInfo, b: IPanelInformations, c: IProposals[], d: IAmountFees[]) => void;
 }
 
 const Open: FC<IOpen> = (props) => {

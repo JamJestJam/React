@@ -1,4 +1,4 @@
-export default interface IProposals{
+export default interface IProposals {
     name: string;
     entity: string;
     location: string;
@@ -7,6 +7,6 @@ export default interface IProposals{
     firm: string;
 }
 
-export interface IProposalsData{
+export interface IProposalsData {
     data: IProposals[];
 }

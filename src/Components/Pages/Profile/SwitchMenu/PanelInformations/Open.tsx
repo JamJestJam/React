@@ -30,22 +30,22 @@ const PanelInformationsOpen: FC<IOpen> = (p) => {
       <CSS.ElementS>
         <CSS.TopS>Panel information's</CSS.TopS>
         <CSS.BottomS>Hourly fee</CSS.BottomS>
-        <InputLabel label="" value={data.input1} id="data2.input1" change={p.handleChange}/>
+        <InputLabel label="" value={data.input1} id="data2.input1" change={p.handleChange} />
         <CSS.BottomS>Terms & conditions</CSS.BottomS>
-        <InputLabel label="" value={data.input2} id="data2.input2" change={p.handleChange}/>
+        <InputLabel label="" value={data.input2} id="data2.input2" change={p.handleChange} />
         <CSS.BoxS onClick={click}>
-          <CSS.HiddenInputS type="file" ref={ref} onChange={p.handleChange} id="data2.file"/>
+          <CSS.HiddenInputS type="file" ref={ref} onChange={p.handleChange} id="data2.file" />
           <BoxIcon
             iconSize={IconSize.medium}
             iconType={IconType.bell}
-            onClick={() => {}}
+            onClick={() => { }}
             alt=""
             boxShadow={true}
           />
           <div>{data.file}</div>
         </CSS.BoxS>
         <CSS.TopS>Services & projects</CSS.TopS>
-        <InputLabel label="" value={data.input3} id="data2.input3" change={p.handleChange}/>
+        <InputLabel label="" value={data.input3} id="data2.input3" change={p.handleChange} />
         <CSS.TopS>Internal correspondents</CSS.TopS>
         <PanelInformationsUser user={users[1]} />
         <PanelInformationsUser user={users[2]} />

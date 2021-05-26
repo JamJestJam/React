@@ -1,5 +1,5 @@
 //interface
-import IDataBox,{ IDataBoxInfo }  from "./IDataBox";
+import IDataBox, { IDataBoxInfo } from "./IDataBox";
 
 export default interface IOpen extends IDataBox {
     handleChange: (e: React.ChangeEvent<any>) => void;

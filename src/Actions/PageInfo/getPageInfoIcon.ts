@@ -9,7 +9,8 @@ import * as types from "./PageInfoTypes";
 const getPageInfoIcon = (
   pageName: string,
   pageTitle: string,
-  pageIcon: IconType
+  pageIcon: IconType,
+  fullScreen: boolean | null = false
 ): Promise<IEnPageInfo> =>
   ((dispatch: Dispatch) => {
     return dispatch({
@@ -19,6 +20,7 @@ const getPageInfoIcon = (
         pageTitle: pageTitle,
         pageName: pageName,
         imageIconSwitch: false,
+        fullScreen: fullScreen
       },
     });
   }) as any;

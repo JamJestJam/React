@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { colors } from "StyledHelpers/Colors";
 import { TriangleConent } from "StyledHelpers/Controls";
 //interface
-import IDropDownElement from "./IEmContent";
+import IDropDownElement, { IDropDownS } from "./IEmContent";
 
-export const ExpanderS = styled.div`
-  width: 230px;
+export const ExpanderS = styled.div<IDropDownS>`
+  width: ${(props) => (props.width ? props.width : "230px")};
   min-height: 10px;
   margin: 0 10px;
 `;

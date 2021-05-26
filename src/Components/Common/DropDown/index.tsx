@@ -43,7 +43,7 @@ const DropDown: FC<IDropDown> = (props) => {
   });
 
   return (
-    <CSS.ExpanderS onClick={stopProp}>
+    <CSS.ExpanderS onClick={stopProp} width={props.width}>
       <ControlsHelp.LinkS to="#">
         <CSS.ExpanderButtonS onClick={changeExpand} expanded={state.expanded}>
           <ControlsHelp.TriangleConentLeft>

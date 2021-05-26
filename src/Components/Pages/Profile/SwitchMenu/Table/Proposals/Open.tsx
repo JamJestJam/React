@@ -95,6 +95,7 @@ const ProposalsOpen: FC<IOpen> = (props) => {
           })}
         </tbody>
       </CSS.TableS>
+      <CSS.SeeMore>See more proposals</CSS.SeeMore>
     </CSS.ContentS>
   );
 };

@@ -32,7 +32,7 @@ const PanelInformationsClose: FC<IPanelInformationData> = (p) => {
           <BoxIcon
             iconSize={IconSize.medium}
             iconType={IconType.bell}
-            onClick={() => {}}
+            onClick={() => { }}
             alt=""
             boxShadow={true}
           />

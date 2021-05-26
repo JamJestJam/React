@@ -20,8 +20,6 @@ export const TableS = styled.table`
     border-bottom: 1px solid ${colors.Shadow};
     padding: 10px;
   }
-  input{
-  }
 
   select {
     background-color: ${colors.Bg1};
@@ -29,4 +27,11 @@ export const TableS = styled.table`
     -webkit-appearance: none;
     -moz-appearance: none;
   }
+`;
+
+export const SeeMore = styled.div`
+  font-size: ${fontSize[20]};
+  color: ${colors.BlueFont};
+  margin-top: 15px;
+  cursor: pointer;
 `;

@@ -32,6 +32,7 @@ const InternalReviewsClose: FC<IProposalsData> = (props) => {
           })}
         </tbody>
       </CSS.TableS>
+      <CSS.SeeMore>See more Reviews</CSS.SeeMore>
     </CSS.ContentS>
   );
 };

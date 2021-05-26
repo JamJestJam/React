@@ -8,7 +8,7 @@ const postSwitch = (state = defaultState(), action: any) => {
       const paylod: IPhotoTypes["GET_PHOTOS"] = action;
       return {
         ...state,
-        posts: paylod.photos,
+        photos: paylod.photos,
       };
     }
 

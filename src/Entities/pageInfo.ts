@@ -6,4 +6,5 @@ export default interface IEnPageInfo {
   imageIconSwitch: boolean;
   pageTitle: string;
   pageName: string;
+  fullScreen: boolean;
 }

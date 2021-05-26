@@ -7,6 +7,7 @@ const defaultState = (): IPageInfoReducer => ({
     imageIconSwitch: true,
     pageName: "default",
     pageTitle: "default",
+    fullScreen: true
   },
 });
 

@@ -34,6 +34,7 @@ const ProposalsClose: FC<IProposalsData> = (props) => {
           })}
         </tbody>
       </CSS.TableS>
+      <CSS.SeeMore>See more proposals</CSS.SeeMore>
     </CSS.ContentS>
   );
 };

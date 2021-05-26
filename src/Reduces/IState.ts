@@ -1,3 +1,4 @@
+import IPhotoReducer from './photo/IPhotoReducer';
 import ICommentReducer from "./comment/ICommentReducer";
 import IPageInfoReducer from "./pageInfo/IPageInfoReducer";
 import IPostReducer from "./post/IPostReducer";
@@ -8,4 +9,5 @@ export default interface IState {
   pageInfo: IPageInfoReducer;
   posts: IPostReducer;
   comments: ICommentReducer;
+  photos: IPhotoReducer;
 }
