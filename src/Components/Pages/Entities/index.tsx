@@ -32,7 +32,7 @@ const Entities: FC = () => {
 
   useEffect(() => {
     dispatch<GetPageInfoIcon>(
-      getPageInfoIcon("Entities", "Entities", IconType.entities, null)
+      getPageInfoIcon("Entities", "Entities", IconType.entities)
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

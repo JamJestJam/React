@@ -1,3 +1,4 @@
+import { GlobalStyles } from './../../StyledHelpers/GlobalStyles';
 import { Dispatch } from "redux";
 //data
 import { IconType } from "Components/Common/Icon/IconType";
@@ -10,7 +11,7 @@ const getPageInfoIcon = (
   pageName: string,
   pageTitle: string,
   pageIcon: IconType,
-  fullScreen: boolean | null = false
+  fullScreen: boolean | undefined = undefined
 ): Promise<IEnPageInfo> =>
   ((dispatch: Dispatch) => {
     return dispatch({

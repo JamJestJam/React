@@ -8,7 +8,7 @@ const getPageInfoImage = (
   pageName: string,
   pageTitle: string,
   pageImage: string,
-  fullScreen: boolean = false
+  fullScreen: boolean | undefined = undefined
 ): Promise<IEnPageInfo> =>
   ((dispatch: Dispatch) => {
     return dispatch({

@@ -6,8 +6,9 @@ const pageInfoSwitch = (state = defaultState(), action: any) => {
   switch (action.type) {
     case types.GET_PAGE_INFO: {
       const paylod: IPageInfoTypes["GET_PAGE_INFO"] = action;
-      if (paylod.pageInfo.fullScreen === null)
+      if (paylod.pageInfo.fullScreen === undefined)
         paylod.pageInfo.fullScreen = state.pageInfo.fullScreen;
+
       return {
         ...state,
         pageInfo: paylod.pageInfo,
