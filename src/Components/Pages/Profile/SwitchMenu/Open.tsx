@@ -19,15 +19,23 @@ import IPanelInformations from "./PanelInformations/IPanelInformation";
 import IProposals from "./Table/Proposals/IProposals";
 import IAmountFees from "./Table/AmountFees/IAmountFees";
 import InternalReviewsOpen from "./Table/InternalReviews/Open";
+import IInternalReviews from "./Table/InternalReviews/IInternalReviews";
 
 interface IOpen {
   data1: IDataBoxInfo;
   data2: IPanelInformations;
   data3: IProposals[];
-  data4: IAmountFees[];
+  data4: IInternalReviews[];
+  data5: IAmountFees[];
 
   close: () => void;
-  save: (a: IDataBoxInfo, b: IPanelInformations, c: IProposals[], d: IAmountFees[]) => void;
+  save: (
+    a: IDataBoxInfo,
+    b: IPanelInformations,
+    c: IProposals[],
+    d: IInternalReviews[],
+    e: IAmountFees[]
+  ) => void;
 }
 
 const Open: FC<IOpen> = (props) => {
@@ -38,14 +46,16 @@ const Open: FC<IOpen> = (props) => {
         data2: props.data2,
         data3: props.data3,
         data4: props.data4,
+        data5: props.data5,
       }}
       onSubmit={(data) => {
         data.data1.expertise = uniqueArray(data.data1.expertise);
         data.data1.specialties = uniqueArray(data.data1.specialties);
         data.data1.adminssion = uniqueArray(data.data1.adminssion);
         data.data1.counties = uniqueArray(data.data1.counties);
+        console.log(data);
 
-        props.save(data.data1, data.data2, data.data3, data.data4);
+        props.save(data.data1, data.data2, data.data3, data.data4, data.data5);
       }}
     >
       {({ values, handleChange, handleSubmit, setValues }) => {
@@ -66,8 +76,11 @@ const Open: FC<IOpen> = (props) => {
               }}
             />
             <ProposalsOpen data={values.data3} handleChange={handleChange} />
-            <InternalReviewsOpen data={values.data3} handleChange={handleChange} />
-            <AmountFeesOpen data={values.data4} handleChange={handleChange} />
+            <InternalReviewsOpen
+              data={values.data4}
+              handleChange={handleChange}
+            />
+            <AmountFeesOpen data={values.data5} handleChange={handleChange} />
             <CSS.ButtonsS>
               <BoxIcon
                 onClick={() => {

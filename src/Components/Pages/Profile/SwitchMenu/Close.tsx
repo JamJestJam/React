@@ -16,12 +16,14 @@ import { IDataBoxInfo } from "./DataBox/IDataBox";
 import IPanelInformations from "./PanelInformations/IPanelInformation";
 import IProposals from "./Table/Proposals/IProposals";
 import IAmountFees from "./Table/AmountFees/IAmountFees";
+import IInternalReviews from "./Table/InternalReviews/IInternalReviews";
 
 interface IClose {
   data1: IDataBoxInfo;
   data2: IPanelInformations;
   data3: IProposals[];
-  data4: IAmountFees[];
+  data4: IInternalReviews[];
+  data5: IAmountFees[];
   open: () => void;
 }
 
@@ -31,8 +33,8 @@ const Close: FC<IClose> = (props) => {
       <DataBoxClose data={props.data1} />
       <PanelInformationsClose data={props.data2} />
       <ProposalsClose data={props.data3} />
-      <InternalReviewsClose data={props.data3} />
-      <AmountFeesClose data={props.data4} />
+      <InternalReviewsClose data={props.data4} />
+      <AmountFeesClose data={props.data5} />
       <CSS.ButtonsS>
         <BoxIcon
           iconType={IconType.edit}

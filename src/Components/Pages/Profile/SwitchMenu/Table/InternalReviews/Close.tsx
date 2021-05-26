@@ -2,9 +2,9 @@ import { FC } from "react";
 //style
 import * as CSS from "../css";
 //interface
-import { IProposalsData } from "../Proposals/IProposals";
+import { IInternalData } from "./IInternalReviews";
 
-const InternalReviewsClose: FC<IProposalsData> = (props) => {
+const InternalReviewsClose: FC<IInternalData> = (props) => {
   return (
     <CSS.ContentS>
       <CSS.TitleS>Internal reviews</CSS.TitleS>

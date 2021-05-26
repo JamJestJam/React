@@ -4,7 +4,7 @@ import Input from "Components/Common/Input";
 //style
 import * as CSS from "../css";
 //interface
-import IOpen from "../Proposals/IOpen";
+import IOpen from "./IOpen";
 //data
 import JSON from "Data/databox.json";
 
@@ -28,7 +28,7 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
               <tr key={i}>
                 <td>
                   <Input
-                    id={`data3[${i}].name`}
+                    id={`data4[${i}].name`}
                     height={19}
                     padding="0"
                     fontSize="16"
@@ -38,7 +38,7 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
                 </td>
                 <td>
                   <Input
-                    id={`data3[${i}].entity`}
+                    id={`data4[${i}].entity`}
                     height={19}
                     padding="0"
                     fontSize="16"
@@ -49,7 +49,7 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
                 <td>
                   <select
                     defaultValue={val.location}
-                    id={`data3[${i}].location`}
+                    id={`data4[${i}].location`}
                     onChange={props.handleChange}
                   >
                     {JSON.Counties.map((val, i) => {
@@ -64,7 +64,7 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
                 <td>
                   <select
                     defaultValue={val.expertise}
-                    id={`data3[${i}].expertise`}
+                    id={`data4[${i}].expertise`}
                     onChange={props.handleChange}
                   >
                     {JSON.Expertise.map((val, i) => {
@@ -74,7 +74,7 @@ const InternalReviewsOpen: FC<IOpen> = (props) => {
                 </td>
                 <td>
                   <Input
-                    id={`data3[${i}].date`}
+                    id={`data4[${i}].date`}
                     type="date"
                     height={19}
                     padding="0"

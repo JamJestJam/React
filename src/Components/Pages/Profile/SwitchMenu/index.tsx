@@ -9,6 +9,7 @@ import IPanelInframation from "./PanelInformations/IPanelInformation";
 import * as CSS from "./css";
 import IProposals from "./Table/Proposals/IProposals";
 import IAmountFees from "./Table/AmountFees/IAmountFees";
+import IInternalReviews from "./Table/InternalReviews/IInternalReviews";
 
 const SwitchMenu: FC = () => {
   const [state, setState] = useState(false);
@@ -22,6 +23,8 @@ const SwitchMenu: FC = () => {
     input1: "610€/hour (Negotiated)",
     input2: "Monthly 10k€ retainer - see with Seanny Smith",
     input3: "Corporate M&A and internationa acquisitions",
+    user1: 1,
+    user2: 2,
     file: "File not set",
   });
   const [data3, setData3] = useState([
@@ -51,6 +54,29 @@ const SwitchMenu: FC = () => {
     },
   ]);
   const [data4, setData4] = useState([
+    {
+      name: "name 1",
+      entity: "entity 1",
+      location: "Sweden",
+      expertise: "Client expertise",
+      date: "2021-05-26",
+    },
+    {
+      name: "name 2",
+      entity: "entity 2",
+      location: "Sweden",
+      expertise: "Client expertise",
+      date: "2021-05-27",
+    },
+    {
+      name: "name 3",
+      entity: "entity 3",
+      location: "Sweden",
+      expertise: "Client expertise",
+      date: "2021-05-28",
+    },
+  ]);
+  const [data5, setData5] = useState([
     {
       year: 2019,
       costCenter: "CS 153",
@@ -84,12 +110,15 @@ const SwitchMenu: FC = () => {
     data1: IDataBoxInfo,
     data2: IPanelInframation,
     data3: IProposals[],
-    data4: IAmountFees[]
+    data4: IInternalReviews[],
+    data5: IAmountFees[]
   ) => {
+    console.log(data4);
     setData1(data1);
     setData2(data2);
     setData3(data3);
     setData4(data4);
+    setData5(data5);
   };
 
   return (
@@ -100,6 +129,7 @@ const SwitchMenu: FC = () => {
           data2={data2}
           data3={data3}
           data4={data4}
+          data5={data5}
           close={close}
           save={save}
         />
@@ -109,6 +139,7 @@ const SwitchMenu: FC = () => {
           data2={data2}
           data3={data3}
           data4={data4}
+          data5={data5}
           open={open}
         />
       )}

@@ -25,7 +25,7 @@ const AmountFeesOpen: FC<IOpen> = (props) => {
             return (
               <tr key={i}>
                 <td>
-                  <select defaultValue={val.year} id={`data4[${i}].year`}>
+                  <select defaultValue={val.year} id={`data5[${i}].year`}>
                     {[...Array(40)].map((val, i) => {
                       return (
                         <option value={year - i} key={i}>
@@ -37,7 +37,7 @@ const AmountFeesOpen: FC<IOpen> = (props) => {
                 </td>
                 <td>
                   <Input
-                    id={`data4[${i}].costCenter`}
+                    id={`data5[${i}].costCenter`}
                     height={19}
                     padding="0"
                     fontSize="16"
@@ -47,7 +47,7 @@ const AmountFeesOpen: FC<IOpen> = (props) => {
                 </td>
                 <td>
                   <Input
-                    id={`data4[${i}].totalAmount`}
+                    id={`data5[${i}].totalAmount`}
                     type="number"
                     height={19}
                     padding="0"
@@ -59,7 +59,7 @@ const AmountFeesOpen: FC<IOpen> = (props) => {
                 <td>
                   <select
                     defaultValue={val.currency}
-                    id={`data4[${i}].currency`}
+                    id={`data5[${i}].currency`}
                     onChange={props.handleChange}
                   >
                     <option value="$">USD</option>
@@ -74,7 +74,7 @@ const AmountFeesOpen: FC<IOpen> = (props) => {
                 </td>
                 <td>
                   <Input
-                    id={`data4[${i}].lawFirm`}
+                    id={`data5[${i}].lawFirm`}
                     height={19}
                     padding="0"
                     fontSize="16"

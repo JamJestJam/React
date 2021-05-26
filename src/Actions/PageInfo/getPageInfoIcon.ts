@@ -1,4 +1,3 @@
-import { GlobalStyles } from './../../StyledHelpers/GlobalStyles';
 import { Dispatch } from "redux";
 //data
 import { IconType } from "Components/Common/Icon/IconType";

@@ -17,7 +17,6 @@ const PanelInformationsClose: FC<IPanelInformationData> = (p) => {
   const { users } = useSelector<IState, IUsersReducer>((GS) => ({
     ...GS.user,
   }));
-
   return (
     <CSS.ContentS>
       <CSS.ElementS>
@@ -32,7 +31,7 @@ const PanelInformationsClose: FC<IPanelInformationData> = (p) => {
           <BoxIcon
             iconSize={IconSize.medium}
             iconType={IconType.bell}
-            onClick={() => { }}
+            onClick={() => {}}
             alt=""
             boxShadow={true}
           />
@@ -41,8 +40,14 @@ const PanelInformationsClose: FC<IPanelInformationData> = (p) => {
         <CSS.TopS>Services & projects</CSS.TopS>
         <CSS.InputBoxS>{p.data.input3}</CSS.InputBoxS>
         <CSS.TopS>Internal correspondents</CSS.TopS>
-        <PanelInformationsUser user={users[1]} />
-        <PanelInformationsUser user={users[2]} />
+        <PanelInformationsUser
+          user={users.find((a) => a.id === +p.data.user1)}
+          id={-1}
+        />
+        <PanelInformationsUser
+          user={users.find((a) => a.id === +p.data.user2)}
+          id={-1}
+        />
       </CSS.ElementS>
     </CSS.ContentS>
   );
