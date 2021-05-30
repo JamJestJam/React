@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
 import React, { FC, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 //actions
 import setCommentsLink, {
   SetCommentsLink,
@@ -21,7 +21,7 @@ import * as CSS from "./css";
 import IPageInfoReducer from "Reduces/pageInfo/IPageInfoReducer";
 import IState from "Reduces/IState";
 
-const BaseView: FC = (Props) => {
+const BaseView: FC = (props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     const user = dispatch<GetUsers>(getUsers());
@@ -50,21 +50,13 @@ const BaseView: FC = (Props) => {
     ...GS.pageInfo,
   }));
 
-  
-
   return (
     <>
-      {pageInfo.fullScreen ? (
-        <>{Props.children}</>
-      ) : (
-        <>
-          <TopBar />
-          <CSS.PageContentS>
-            <LeftMenu />
-            <CSS.PageFillS>{Props.children}</CSS.PageFillS>
-          </CSS.PageContentS>
-        </>
-      )}
+      {pageInfo.fullScreen ? <></> : <TopBar />}
+      <CSS.PageContentS>
+        {pageInfo.fullScreen ? <></> : <LeftMenu />}
+        <CSS.PageFillS>{props.children}</CSS.PageFillS>
+      </CSS.PageContentS>
     </>
   );
 };

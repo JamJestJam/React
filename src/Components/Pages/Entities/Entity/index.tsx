@@ -7,9 +7,9 @@ import IEntity from "./IEntity";
 
 const Entity: FC<IEntity> = (props) => {
   return (
-    <CSS.ContentS>
+    <CSS.ContentS direction={props.direction}>
       <CSS.LeftS>
-        <BoxImage imageName={props.photo} alt="" maxHeight={100} maxWidth={100}/>
+        <BoxImage imageName={props.photo} alt="" maxHeight={100} maxWidth={100} />
       </CSS.LeftS>
       <CSS.RightS>
         <CSS.TopS>{props.title}</CSS.TopS>

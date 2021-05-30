@@ -47,28 +47,31 @@ const DropDown: FC<IDropDown> = (props) => {
       <ControlsHelp.LinkS to="#">
         <CSS.ExpanderButtonS onClick={changeExpand} expanded={state.expanded}>
           <ControlsHelp.TriangleConentLeft>
-            {props.imageIconSwitch ? (
-              <BoxImage
-                imageName={props.leftImage || ""}
-                background={colors.Bg3}
-                alt=""
-                boxShadow={true}
-                rounded={true}
-                maxHeight={30}
-                maxWidth={30}
-                margin="5px"
-              />
+            {props.imageIconSwitch !== undefined ? (
+              props.imageIconSwitch ? (
+                <BoxImage
+                  imageName={props.leftImage || ""}
+                  background={colors.Bg3}
+                  alt=""
+                  boxShadow={true}
+                  rounded={true}
+                  maxHeight={30}
+                  maxWidth={30}
+                  margin="5px"
+                />
+              ) : (
+                <BoxIcon
+                  iconType={props.leftIcon || 0}
+                  iconSize={IconSize.small}
+                  alt="Icon"
+                />
+              )
             ) : (
-              <BoxIcon
-                iconType={props.leftIcon || 0}
-                iconSize={IconSize.small}
-                alt="Icon"
-              />
+              <></>
             )}
-
             {props.Text}
           </ControlsHelp.TriangleConentLeft>
-          <ControlsHelp.TriangleConentRight>
+          <CSS.FlexRight>
             <CSS.RoundS expanded={state.expanded}>
               <BoxIcon
                 // Expanded={State.Expanded}
@@ -77,7 +80,7 @@ const DropDown: FC<IDropDown> = (props) => {
                 alt="Icon"
               />
             </CSS.RoundS>
-          </ControlsHelp.TriangleConentRight>
+          </CSS.FlexRight>
         </CSS.ExpanderButtonS>
       </ControlsHelp.LinkS>
       <CSS.ContentS expanded={state.expanded} height={props.height || "100vh"}>

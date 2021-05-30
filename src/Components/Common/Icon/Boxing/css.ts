@@ -19,7 +19,7 @@ export const BoxIconS = styled.div<IBoxIconStyle>`
   align-items: center;
   position: relative;
   display: flex;
-  cursor: ${props => props.click ? "pointer" : "auto"}
+  ${(props) => (props.click ? "cursor: pointer;" : "")}
 `;
 
 export const BoxIconValueS = styled.div`

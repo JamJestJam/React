@@ -10,20 +10,29 @@ import broadcast from "./Icons/broadcast.svg";
 import comments from "./Icons/comments.svg";
 import entities from "./Icons/entities.svg";
 import settings from "./Icons/settings.svg";
+import collapse from "./Icons/collapse.svg";
 import network from "./Icons/network.svg";
 import privacy from "./Icons/privacy.svg";
 import house2 from "./Icons/house2.svg";
 import logout from "./Icons/logout.svg";
 import people from "./Icons/people.svg";
 import search from "./Icons/search.svg";
+import expand from "./Icons/expand.svg";
+import mosaic from "./Icons/mosaic.svg";
+import filter from "./Icons/filter.svg";
 import house from "./Icons/house.svg";
+import share from "./Icons/share.svg";
 import logo from "./Icons/logo.svg";
 import bell from "./Icons/bell.svg";
 import plus from "./Icons/plus.svg";
 import book from "./Icons/book.svg";
 import edit from "./Icons/edit.svg";
 import exit from "./Icons/exit.svg";
+import list from "./Icons/list.svg";
+import more from "./Icons/more.svg";
+import sort from "./Icons/sort.svg";
 import cog from "./Icons/cog.svg";
+import rec from "./Icons/rec.svg";
 
 export enum IconType {
   administration = 0,
@@ -34,6 +43,7 @@ export enum IconType {
   ecosystem = 3,
   entities2 = 4,
   user_plus = 5,
+  collapse = 28,
   comments = 6,
   entities = 7,
   settings = 8,
@@ -43,14 +53,22 @@ export enum IconType {
   house2 = 12,
   logout = 13,
   search = 14,
+  mosaic = 26,
+  expand = 27,
+  filter = 32,
+  share = 29,
   house = 15,
+  sort = 33,
   plus = 16,
   bell = 17,
   logo = 18,
   book = 22,
   edit = 23,
   exit = 24,
+  list = 25,
+  more = 31,
   cog = 19,
+  rec = 30,
 }
 
 export const GetIcon = (type: IconType): string => {
@@ -69,6 +87,8 @@ export const GetIcon = (type: IconType): string => {
       return entities2;
     case IconType.user_plus:
       return user_plus;
+    case IconType.collapse:
+      return collapse;
     case IconType.broadcast:
       return broadcast;
     case IconType.comments:
@@ -89,6 +109,8 @@ export const GetIcon = (type: IconType): string => {
       return logout;
     case IconType.search:
       return search;
+    case IconType.expand:
+      return expand;
     case IconType.house:
       return house;
     case IconType.plus:
@@ -105,5 +127,19 @@ export const GetIcon = (type: IconType): string => {
       return exit;
     case IconType.cog:
       return cog;
+    case IconType.mosaic:
+      return mosaic;
+    case IconType.list:
+      return list;
+    case IconType.share:
+      return share;
+    case IconType.rec:
+      return rec;
+    case IconType.more:
+      return more;
+    case IconType.filter:
+      return filter;
+    case IconType.sort:
+      return sort;
   }
 };

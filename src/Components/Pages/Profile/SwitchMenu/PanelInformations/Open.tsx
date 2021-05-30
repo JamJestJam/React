@@ -52,7 +52,7 @@ const PanelInformationsOpen: FC<IOpen> = (p) => {
           <BoxIcon
             iconSize={IconSize.medium}
             iconType={IconType.bell}
-            onClick={() => {}}
+            onClick={() => { }}
             alt=""
             boxShadow={true}
           />
