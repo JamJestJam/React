@@ -3,7 +3,7 @@
     {
       "Name": "Client contract",
       "BgImage": "./Image/Sample3.jpg",
-      "Link": "/ClientContract",
+      "Link": "/Workspace/ClientContract",
       "IconID": 20,
       "Users": 150,
       "Days": 2
@@ -11,31 +11,31 @@
     {
       "Name": "Supplier contract",
       "BgImage": "./Image/Sample3.jpg",
-      "Link": "/SupplierContract",
+      "Link": "/Workspace/SupplierContract",
       "IconID": 20,
       "Users": 25,
       "Days": 5
     },
     {
       "Name": "Corporate",
-      "BgImage": "./Image/Sample3.jpg",
-      "Link": "/Corporate",
+      "BgImage": "./Image/Sample1.jpg",
+      "Link": "/Workspace/Corporate",
       "IconID": 4,
       "Users": 50,
       "Days": 3
     },
     {
       "Name": "Group norms",
-      "BgImage": "./Image/Sample3.jpg",
-      "Link": "/GroupNorms",
+      "BgImage": "./Image/Sample2.jpg",
+      "Link": "/Workspace/GroupNorms",
       "IconID": 22,
       "Users": 250,
       "Days": 30
     },
     {
       "Name": "Real estate contracts",
-      "BgImage": "./Image/Sample3.jpg",
-      "Link": "/RealEstateContracts",
+      "BgImage": "./Image/Sample2.jpg",
+      "Link": "/Workspace/RealEstateContracts",
       "IconID": 20,
       "Users": 50,
       "Days": 1

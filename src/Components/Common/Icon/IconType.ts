@@ -11,8 +11,10 @@ import comments from "./Icons/comments.svg";
 import entities from "./Icons/entities.svg";
 import settings from "./Icons/settings.svg";
 import collapse from "./Icons/collapse.svg";
+import calendar from "./Icons/calendar.svg";
 import network from "./Icons/network.svg";
 import privacy from "./Icons/privacy.svg";
+import diagram from "./Icons/diagram.svg";
 import house2 from "./Icons/house2.svg";
 import logout from "./Icons/logout.svg";
 import people from "./Icons/people.svg";
@@ -44,11 +46,13 @@ export enum IconType {
   entities2 = 4,
   user_plus = 5,
   collapse = 28,
+  calendar = 34,
   comments = 6,
   entities = 7,
   settings = 8,
-  network = 9,
   privacy = 10,
+  diagram = 35,
+  network = 9,
   people = 11,
   house2 = 12,
   logout = 13,
@@ -141,5 +145,9 @@ export const GetIcon = (type: IconType): string => {
       return filter;
     case IconType.sort:
       return sort;
+    case IconType.diagram:
+      return diagram;
+    case IconType.calendar:
+      return calendar;
   }
 };

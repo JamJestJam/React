@@ -4,24 +4,23 @@ import { useDispatch } from "react-redux";
 import getPageInfoIcon, {
   GetPageInfoIcon,
 } from "Actions/PageInfo/getPageInfoIcon";
-//data
-import { IconType } from "Components/Common/Icon/IconType";
+//JSON
+import JSON from "Data/Pages.json";
+//component
+import Remind from "../Remind";
 
 const ClientContract: FC = () => {
   const dispatch = useDispatch();
+  const ele = JSON.Workspace.find((a) => a.Name === "Client contract");
+  if(ele === undefined)
+    throw new TypeError('something went wrong');
 
   useEffect(() => {
-    dispatch<GetPageInfoIcon>(
-      getPageInfoIcon(
-        "ClientContract",
-        "ClientContract",
-        IconType.administration
-      )
-    );
+    dispatch<GetPageInfoIcon>(getPageInfoIcon(ele.Name, ele.Name, ele.IconID));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <>ClientContract</>;
+  return <Remind icon={ele.IconID} name={ele.Name} image={ele.BgImage} />;
 };
 
 export default ClientContract;

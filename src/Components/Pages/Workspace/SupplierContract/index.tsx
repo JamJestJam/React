@@ -4,23 +4,23 @@ import { useDispatch } from "react-redux";
 import getPageInfoIcon, {
   GetPageInfoIcon,
 } from "Actions/PageInfo/getPageInfoIcon";
-//data
-import { IconType } from "Components/Common/Icon/IconType";
+//JSON
+import JSON from "Data/Pages.json";
+//component
+import Remind from "../Remind";
 
 const SupplierContract: FC = () => {
   const dispatch = useDispatch();
+  const ele = JSON.Workspace.find((a) => a.Name === "Supplier contract");
+  if(ele === undefined)
+    throw new TypeError('something went wrong');
 
   useEffect(() => {
-    dispatch<GetPageInfoIcon>(
-      getPageInfoIcon(
-        "SupplierContract",
-        "SupplierContract",
-        IconType.administration
-      )
-    );
+    dispatch<GetPageInfoIcon>(getPageInfoIcon(ele.Name, ele.Name, ele.IconID));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return <>Supplier contract</>;
+
+  return <Remind icon={ele.IconID} name={ele.Name} image={ele.BgImage} />;
 };
 
 export default SupplierContract;
