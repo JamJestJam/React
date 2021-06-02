@@ -1,6 +1,5 @@
 import { Dispatch } from "redux";
 //entity
-import IEnUser from "Entities/user";
 import IEnComment from "Entities/comment";
 import IEnPost from "Entities/post";
 //action types
@@ -8,8 +7,7 @@ import * as types from "./CommentTypes";
 
 const setCommentsLink = (
   comments: IEnComment[],
-  posts: IEnPost[],
-  owners: IEnUser[]
+  posts: IEnPost[]
 ): Promise<IEnComment[]> =>
   ((dispatch: Dispatch) => {
     for (let i = 0; i < comments.length; i++) {

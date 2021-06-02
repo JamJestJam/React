@@ -2,7 +2,6 @@ import { Dispatch } from "redux";
 //entity
 import IEnUser from "Entities/user";
 import IEnPhoto from "Entities/photo";
-import IEnComment from "Entities/comment";
 import IEnPost from "Entities/post";
 //action types
 import * as types from "./UserTypes";
@@ -10,8 +9,7 @@ import * as types from "./UserTypes";
 const setUsersLink = (
   users: IEnUser[],
   photos: IEnPhoto[],
-  posts: IEnPost[],
-  comments: IEnComment[]
+  posts: IEnPost[]
 ): Promise<IEnUser[]> =>
   ((dispatch: Dispatch) => {
     for (let i = 0; i < users.length; i++) {

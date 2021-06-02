@@ -32,9 +32,9 @@ const BaseView: FC = (props) => {
     Promise.all([user, post, comm, phot])
       .then(([user, post, comm, phot]) => {
         return Promise.all([
-          dispatch<SetUsersLink>(setUsersLink(user, phot, post, comm)),
+          dispatch<SetUsersLink>(setUsersLink(user, phot, post)),
           dispatch<SetPostsLink>(setPostsLink(post, phot, user, comm)),
-          dispatch<SetCommentsLink>(setCommentsLink(comm, post, user)),
+          dispatch<SetCommentsLink>(setCommentsLink(comm, post)),
         ]);
       })
       .then(([user, post, comm]) => {
