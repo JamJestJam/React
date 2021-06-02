@@ -36,7 +36,7 @@ function App() {
           <Route path="/People" component={People} exact />
           <Route path="/" component={HomePage} exact />
 
-          <Route path="/Workspace" component={Workspace}/>
+          <Route path="/Workspace" component={Workspace} />
         </Switch>
       </BaseView>
     </Router>

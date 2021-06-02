@@ -12,7 +12,7 @@ import Remind from "../Remind";
 const SupplierContract: FC = () => {
   const dispatch = useDispatch();
   const ele = JSON.Workspace.find((a) => a.Name === "Supplier contract");
-  if(ele === undefined)
+  if (ele === undefined)
     throw new TypeError('something went wrong');
 
   useEffect(() => {

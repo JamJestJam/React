@@ -1,3 +1,3 @@
-export default interface IEntityS{
-    direction:string;
+export default interface IEntityS {
+    direction: string;
 }

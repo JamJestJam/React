@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import DropDown from "Components/Common/DropDown";
 import InputLabel from "Components/Common/Input/LabelInput";
 import SingleComment from "./Comment";
+import BoxIcon from "Components/Common/Icon/Boxing";
+import Icon from "Components/Common/Icon";
 //Data
 import { IconType } from "Components/Common/Icon/IconType";
 //style
@@ -16,11 +18,12 @@ import ICommentReducer from "Reduces/comment/ICommentReducer";
 import compare from "Functions/compare";
 import IUsersReducer from "Reduces/user/IUsersReducer";
 import Paggination from "./Pagination";
-import BoxIcon from "Components/Common/Icon/Boxing";
+import IResumeYourWork from "./IResumeYourWork";
+import { colors } from "StyledHelpers/Colors";
 
 const commentPerPage = 8;
 
-const ResumeYourWork: FC = () => {
+const ResumeYourWork: FC<IResumeYourWork> = (props) => {
   const { comments, user } = useSelector<
     IState,
     ICommentReducer & IUsersReducer
@@ -132,6 +135,62 @@ const ResumeYourWork: FC = () => {
           </DropDown>
         </Controls.TriangleConentRight>
       </Controls.TriangleConent>
+      {props.icons ? (
+        <CSS.ContentS>
+          <CSS.ElementS bgColor="#eaecf5" color={colors.BlueFont}>All</CSS.ElementS>
+          <CSS.ElementS bgColor="#d0e6cc" color="#459a1d" >
+            <Icon
+              iconSize={IconSize.small}
+              iconType={IconType.entities}
+              alt={""}
+            />
+            SAS
+          </CSS.ElementS>
+          <CSS.ElementS bgColor="#eef6fa" color="#499fd1" >
+            <Icon
+              iconSize={IconSize.small}
+              iconType={IconType.entities}
+              alt={""}
+            />
+            SARL
+          </CSS.ElementS>
+          <CSS.ElementS bgColor="#f2e6c3" color="#d6ae34" >
+            <Icon
+              iconSize={IconSize.small}
+              iconType={IconType.entities}
+              alt={""}
+            />
+            Secondary business
+          </CSS.ElementS>
+          <CSS.ElementS bgColor="#cdcdcd" color="#62687b" >
+            <Icon
+              iconSize={IconSize.small}
+              iconType={IconType.diagram}
+              alt={""}
+            />
+            Communities
+          </CSS.ElementS>
+          <CSS.ElementS bgColor="#e9e9e9" color="#73798a" >
+            <Icon
+              iconSize={IconSize.small}
+              iconType={IconType.image_editing}
+              alt={""}
+            />
+            POA
+          </CSS.ElementS>
+          <CSS.ElementS bgColor="#ffffff" color="#777c8e" >
+            <Icon
+              iconSize={IconSize.small}
+              iconType={IconType.calendar}
+              alt={""}
+            />
+            Survey
+          </CSS.ElementS>
+          <CSS.ElementS bgColor="#ffffff" color="#777c8e" >...</CSS.ElementS>
+        </CSS.ContentS>
+      ) : (
+        <></>
+      )}
       <div>
         {state.data
           .slice(

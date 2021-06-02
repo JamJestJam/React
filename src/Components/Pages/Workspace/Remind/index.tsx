@@ -89,7 +89,7 @@ const Remind: FC<IRemind> = (props) => {
           </CSS.TRightS>
         </CSS.TContS>
       </CSS.MidBarS>
-      <ResumeYourWork />
+      <ResumeYourWork icons={true} />
     </>
   );
 };

@@ -42,10 +42,30 @@
     }
   ],
   "Platform": [
-    { "Name": "Home", "Link": "/", "IconID": 12 },
-    { "Name": "Publications", "Link": "/Publications", "IconID": 1 },
-    { "Name": "People", "Link": "/People", "IconID": 11 },
-    { "Name": "Entities", "Link": "/Entities", "IconID": 4 },
-    { "Name": "Administration", "Link": "/Administration", "IconID": 0 }
+    {
+      "Name": "Home",
+      "Link": "/",
+      "IconID": 12
+    },
+    {
+      "Name": "Publications",
+      "Link": "/Publications",
+      "IconID": 1
+    },
+    {
+      "Name": "People",
+      "Link": "/People",
+      "IconID": 11
+    },
+    {
+      "Name": "Entities",
+      "Link": "/Entities",
+      "IconID": 4
+    },
+    {
+      "Name": "Administration",
+      "Link": "/Administration",
+      "IconID": 0
+    }
   ]
 }

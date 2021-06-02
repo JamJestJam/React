@@ -12,7 +12,7 @@ import Remind from "../Remind";
 const RealEstateContracts: FC = () => {
   const dispatch = useDispatch();
   const ele = JSON.Workspace.find((a) => a.Name === "Real estate contracts");
-  if(ele === undefined)
+  if (ele === undefined)
     throw new TypeError('something went wrong');
 
   useEffect(() => {

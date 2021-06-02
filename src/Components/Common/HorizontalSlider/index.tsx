@@ -1,76 +1,87 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React from "react";
 //style
 import * as CSS from "./css";
 //functions
 import * as F from "./function";
+//interfaces
+import ISliderState, { ISlider } from "./ISlider";
 
-const Slider: FC = (props) => {
-  const ref = useRef(null);
-  const [state, setState] = useState({
-    moving: false,
-    move: false,
-    maxWidth: 0,
-    padding: 5,
-    transform: 0,
-  });
-  function start(even: React.MouseEvent<HTMLDivElement>) {
-    F.stopProp(even);
-    setState({ ...state, moving: true });
+class Slider extends React.Component<ISlider, ISliderState> {
+  ref: React.RefObject<HTMLDivElement>;
+
+  constructor(props: ISlider) {
+    super(props);
+
+    this.state = {
+      moving: false,
+      move: false,
+      maxWidth: 0,
+      padding: 5,
+      transform: 0,
+    };
+
+    this.ref = React.createRef();
   }
-  const move = (event: React.MouseEvent) => {
+
+  start = (even: React.MouseEvent<HTMLDivElement>) => {
+    F.stopProp(even);
+    this.setState((state) => ({
+      moving: true,
+    }));
+  };
+
+  move = (event: React.MouseEvent) => {
     F.stopProp(event);
 
-    if (state.moving) {
-      const calcmove = F.calcMove(state, event.movementX);
-      setState({
-        ...state,
+    if (this.state.moving) {
+      const calcmove = F.calcMove(this.state, event.movementX);
+      this.setState((state) => ({
         transform: calcmove,
         move: true,
-      });
+      }));
     }
   };
 
-  const stop = (event: React.MouseEvent) => {
+  stop = (event: React.MouseEvent) => {
     F.stopProp(event);
 
-    if (state.moving) setState({ ...state, moving: false, move: false });
+    if (this.state.moving)
+      this.setState((state) => ({ moving: false, move: false }));
   };
 
-  const select = () => {
+  select = () => {
     return false;
   };
 
-  useEffect(() => {
+  componentDidMount = () => {
     const element: HTMLDivElement =
-      ref.current || document.createElement("div");
+      this.ref.current || document.createElement("div");
 
-    setState({
-      ...state,
+    this.setState((state) => ({
       maxWidth: element.scrollWidth - element.offsetWidth + state.padding,
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ref]);
+    }));
+  };
 
-  return (
-    <CSS.SliderS
-      onSelectCapture={select}
-      onMouseDown={start}
-      onMouseLeave={stop}
-      onMouseMove={move}
-      onSelect={select}
-      onMouseUp={stop}
+  render() {
+    return <CSS.SliderS
+      onSelectCapture={this.select}
+      onMouseDown={this.start}
+      onMouseLeave={this.stop}
+      onMouseMove={this.move}
+      onSelect={this.select}
+      onMouseUp={this.stop}
     >
       <CSS.ContentS
-        moving={state.move}
-        ref={ref}
+        moving={this.state.move}
+        ref={this.ref}
         style={{
-          transform: "translateX(" + state.transform + "px)",
+          transform: "translateX(" + this.state.transform + "px)",
         }}
       >
-        {props.children}
+        {this.props.children}
       </CSS.ContentS>
-    </CSS.SliderS>
-  );
-};
+    </CSS.SliderS>;
+  }
+}
 
 export default Slider;
