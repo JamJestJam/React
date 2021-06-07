@@ -106,6 +106,8 @@ const Entities: FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.sort, state.text]);
 
+  const format = state.line ? "column" : "row";
+
   return (
     <CSS.ContentS>
       <CSS.LineS>
@@ -232,7 +234,7 @@ const Entities: FC = () => {
         </CSS.RightS>
       </CSS.LineS>
       {state.filter ? <Filter /> : <></>}
-      <CSS.EntitiesS direction={state.line ? "column" : "row"}>
+      <CSS.EntitiesS direction={format}>
         {state.entities.map((val, i) => {
           const photo = photos?.find((a) => a.id === val.photoID);
           return (

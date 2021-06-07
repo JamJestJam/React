@@ -4,7 +4,7 @@ import { fontSize } from "StyledHelpers/Fonts";
 import IEntityS from "./IEntityS";
 
 export const ContentS = styled.div<IEntityS>`
-  width: ${(props) => (props.direction ? "calc(100% - 10px)" : "250px")};
+  width: ${(props) => (props.line ? "calc(100% - 10px)" : "250px")};
   display: flex;
   padding: 5px;
   margin: 10px 0;

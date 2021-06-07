@@ -7,7 +7,7 @@ import IEntity from "./IEntity";
 
 const Entity: FC<IEntity> = (props) => {
   return (
-    <CSS.ContentS direction={props.direction}>
+    <CSS.ContentS line={props.direction}>
       <CSS.LeftS>
         <BoxImage imageName={props.photo} alt="" maxHeight={100} maxWidth={100} />
       </CSS.LeftS>
