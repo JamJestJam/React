@@ -40,7 +40,7 @@ const userSwitch = (state = defaultState(), action: any) => {
         user.phone = paylod.phone;
         user.email = paylod.email;
       }
-      console.log(user);
+      
       return {
         ...state,
         user: user,

@@ -53,7 +53,6 @@ const Open: FC<IOpen> = (props) => {
         data.data1.specialties = uniqueArray(data.data1.specialties);
         data.data1.adminssion = uniqueArray(data.data1.adminssion);
         data.data1.counties = uniqueArray(data.data1.counties);
-        console.log(data);
 
         props.save(data.data1, data.data2, data.data3, data.data4, data.data5);
       }}

@@ -113,7 +113,6 @@ const SwitchMenu: FC = () => {
     data4: IInternalReviews[],
     data5: IAmountFees[]
   ) => {
-    console.log(data4);
     setData1(data1);
     setData2(data2);
     setData3(data3);
